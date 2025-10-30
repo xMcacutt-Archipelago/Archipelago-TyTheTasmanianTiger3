@@ -21,7 +21,7 @@ def can_zap(world, state):
     return (state.has("Air Stone", world.player)),
 
 def can_swing(world, state):
-    return (state.has("Lash Chassis", world.player))
+    return (state.has("Lash Chassis", world.player)),
 
 def can_tp(world, state):
     return (state.has("Warp Stone", world.player)),
