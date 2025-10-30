@@ -383,25 +383,25 @@ mission_dict: Dict[str, LocData] = {
     "Quinkan Armada": LocData(0x6d000007, "Backwood Blizzard", 7),
     "Egg Hunt": LocData(0x6d00008, "Backwood Blizzard", 8), #satellite strike
     "Rescue Julius": LocData(0x6d000009, "Razorback Stream", 10),
-    "All Your Base": LocData(0x6d00000a, "SR Desert", 11),
+    "All Your Base": LocData(0x6d00000a, "SR Desert", 11), #gunyip mission
     "Heinous Hexaquin": LocData(0x6d00000b, "SR Desert", 12),
     "Meet Shazza": LocData(0x6d00000c, "Dead Dingo Marsh", 13),
-    "Sea Change": LocData(0x6d00000d, "Kaka Boom Island", 14),
+    "Sea Change": LocData(0x6d00000d, "Kaka Boom Island", 14), #airship in pippy beach flown by Duke
     "Dennis Dilemma": LocData(0x6d00000e, "SR Swamp", 15),
     "Demolition Derby": LocData(0x6d00000f, "Pippy Beach", 16),
     "Power Struggle": LocData(0x6d000010, "Winter Woods", 17), #grav grenade, shadow beam
     "Meltdown": LocData(0x6d000011, "Winter Woods", 18), #thermo cannon
     "Battle Arena Gamma": LocData(0x6d000012, "SR Swamp", 19),
-    "Aero Coast Guard": LocData(0x6d000014, "SR Swamp", 21),
-    "Wrath of the Dragonquin": LocData(0x6d000015, "Pippy Beach", 22),
+    "Aero Coast Guard": LocData(0x6d000014, "SR Swamp", 21), #gunyip mission
+    "Wrath of the Dragonquin": LocData(0x6d000015, "Pippy Beach", 22), #gunyip mission
     "The Search for Steve": LocData(0x6d000018, "Gooboo Gully", 23),
-    "Find the Shadowring": LocData(0x6d000019, "Mount Boom Basin", 24),
+    "Find the Shadowring": LocData(0x6d000019, "Mount Boom Basin", 24), #airship in SR Desert flown by Duke
     "Battle Arena Zeta": LocData(0x6d00001b, "SR Swamp", 26),
     "Respect Effect": LocData(0x6d00001c, "SR Desert", 27),
     "Redback Stash": LocData(0x6d00001d, "SR Swamp", 28),
     "Ranger Endanger": LocData(0x6d00001e, "Frozen Forest", 29), #shadow beam
     "Redback Rundown": LocData(0x6d00001f, "Frozen Forest", 30), #thermo cannon, satellite strike
-    "Forest Firepower": LocData(0x6d000020, "SR Desert", 31),
+    "Forest Firepower": LocData(0x6d000020, "SR Desert", 31), #gunyip mission
     "Quinking": LocData(0x6d000023, "SR Swamp - Quinking", 34), #goal
 }
 
