@@ -189,11 +189,11 @@ stone_dict: Dict[str, LocData] = {
     "Stone 19": LocData(0x4612, "Razorback Stream"), #ultra The Big Race reward
     "Stone 20": LocData(0x4613, "SR Desert"), #fire Experi Mental Cart reward
     "Stone 21": LocData(0x4614, "SR Desert"), #ultra Respect Effect reward
-    "Stone 22": LocData(0x4615, "SR Desert"), #fire ALl Your Base reward
-    "Stone 23": LocData(0x4616, "SR Desert"), #zoom Forest Firepower reward
+    "Stone 22": LocData(0x4615, "SR Desert - Duke"), #fire ALl Your Base reward
+    "Stone 23": LocData(0x4616, "SR Desert - Duke"), #zoom Forest Firepower reward
     "Stone 24": LocData(0x4617, "SR Swamp"), #earth Demolition Derby reward,
     "Stone 25": LocData(0x4618, "SR Swamp"), #earth Redback Stash reward
-    "Stone 26": LocData(0x4619, "SR Swamp"), #ultra Aero Coast Guard reward
+    "Stone 26": LocData(0x4619, "SR Swamp - Duke"), #ultra Aero Coast Guard reward
     "Stone 27": LocData(0x461A, "SR Swamp"), #shadow Dennis Dilemma reward
     "Stone 28": LocData(0x461B, "New Burramudgee"), #fire in rock wall by tree #earth
     "Stone 29": LocData(0x461C, "New Burramudgee"), #multi on ledge above trailer #3x magnet required
@@ -252,9 +252,9 @@ picture_frame_dict: Dict[str, LocData] = {
     "Picture Frame 13": LocData(0x500C, "Cassopolis"),
     "Picture Frame 14": LocData(0x500D, "Dead Dingo Marsh"),
     "Picture Frame 15": LocData(0x500E, "Dead Dingo Marsh"),
-    "Picture Frame 16": LocData(0x500F, "Dead Dingo Marsh"), #Lash
+    "Picture Frame 16": LocData(0x500F, "Dead Dingo Marsh"), #lash
     "Picture Frame 17": LocData(0x5010, "Dead Dingo Marsh"), #earth, zoom or mega, lash
-    "Picture Frame 18": LocData(0x5011, "Kaka Boom Island"), #KBI FRAMES NEED A SECOND RUN THROUGH
+    "Picture Frame 18": LocData(0x5011, "Kaka Boom Island"),
     "Picture Frame 19": LocData(0x5012, "Kaka Boom Island"),
     "Picture Frame 20": LocData(0x5013, "Kaka Boom Island"),
     "Picture Frame 21": LocData(0x5014, "Kaka Boom Island"),
@@ -383,7 +383,7 @@ mission_dict: Dict[str, LocData] = {
     "Quinkan Armada": LocData(0x6d000007, "Backwood Blizzard", 7),
     "Egg Hunt": LocData(0x6d00008, "Backwood Blizzard", 8), #satellite strike
     "Rescue Julius": LocData(0x6d000009, "Razorback Stream", 10),
-    "All Your Base": LocData(0x6d00000a, "SR Desert", 11), #gunyip mission
+    "All Your Base": LocData(0x6d00000a, "SR Desert - Duke", 11), #gunyip mission
     "Heinous Hexaquin": LocData(0x6d00000b, "SR Desert", 12),
     "Meet Shazza": LocData(0x6d00000c, "Dead Dingo Marsh", 13),
     "Sea Change": LocData(0x6d00000d, "Kaka Boom Island", 14), #airship in pippy beach flown by Duke
@@ -392,8 +392,8 @@ mission_dict: Dict[str, LocData] = {
     "Power Struggle": LocData(0x6d000010, "Winter Woods", 17), #grav grenade, shadow beam
     "Meltdown": LocData(0x6d000011, "Winter Woods", 18), #thermo cannon
     "Battle Arena Gamma": LocData(0x6d000012, "SR Swamp", 19),
-    "Aero Coast Guard": LocData(0x6d000014, "SR Swamp", 21), #gunyip mission
-    "Wrath of the Dragonquin": LocData(0x6d000015, "Pippy Beach", 22), #gunyip mission
+    "Aero Coast Guard": LocData(0x6d000014, "SR Swamp - Duke", 21), #gunyip mission
+    "Wrath of the Dragonquin": LocData(0x6d000015, "SR Swamp - Duke", 22), #gunyip mission
     "The Search for Steve": LocData(0x6d000018, "Gooboo Gully", 23),
     "Find the Shadowring": LocData(0x6d000019, "Mount Boom Basin", 24), #airship in SR Desert flown by Duke
     "Battle Arena Zeta": LocData(0x6d00001b, "SR Swamp", 26),
@@ -401,8 +401,8 @@ mission_dict: Dict[str, LocData] = {
     "Redback Stash": LocData(0x6d00001d, "SR Swamp", 28),
     "Ranger Endanger": LocData(0x6d00001e, "Frozen Forest", 29), #shadow beam
     "Redback Rundown": LocData(0x6d00001f, "Frozen Forest", 30), #thermo cannon, satellite strike
-    "Forest Firepower": LocData(0x6d000020, "SR Desert", 31), #gunyip mission
-    "Quinking": LocData(0x6d000023, "SR Swamp - Quinking", 34), #goal
+    "Forest Firepower": LocData(0x6d000020, "SR Desert - Duke", 31), #gunyip mission
+    "Quinking": LocData(0x6d000023, "Quinking", 34), #goal
 }
 
 full_location_dict: Dict[str, LocData] = {** story_dict,

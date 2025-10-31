@@ -75,19 +75,10 @@ def add_mission_complete_events(world):
         try:
             item_name = "Mission Complete"
             if world.options.gate_unlock.value == 0:
-                if mission_name == "Beat Patchy":
-                    item_name = "Patchy Barriers"
-                if mission_name == "Beat Buster":
-                    item_name = "Buster Barriers"
-                if mission_name == "Beat Fluffy":
-                    item_name = "Fluffy Barriers"
-
-            if mission_name == "Complete Patchy":
-                item_name = "Patchy Defeated"
-            if mission_name == "Complete Buster the Nanobot Boss":
-                item_name = "Buster Defeated"
-            if mission_name == "Complete Fluffy":
-                item_name = "Fluffy Defeated"
+                if mission_name == "Heinous Hexaquin":
+                    item_name = "SR Gate"
+            if mission_name == "Heinous Hexaquin":
+                item_name = "Hexaquin Defeated"
             location = world.multiworld.get_location(mission_name, world.player)
             event_item = Ty3Item(item_name, ItemClassification.progression, None, world.player)
             location.place_locked_item(event_item)
@@ -231,20 +222,22 @@ def get_filler(world) -> Dict[str, ItemData]:
 
 junk_items: Dict[str, ItemData] = {
     "Opal": ItemData(0x22, ItemClassification.filler),
-    "10 Opals": ItemData(0x23, ItemClassification.filler),
-    "25 Opals": ItemData(0x24, ItemClassification.filler),
-    "100 Opals": ItemData(0x25, ItemClassification.filler),
-    "200 Opals": ItemData(0x26, ItemClassification.filler),
-    "Full Pie": ItemData(0x27, ItemClassification.filler),
+    "50 Opals": ItemData(0x23, ItemClassification.filler),
+    "100 Opals": ItemData(0x24, ItemClassification.filler),
+    "200 Opals": ItemData(0x25, ItemClassification.filler),
+    "500 Opals": ItemData(0x26, ItemClassification.filler),
+    "Pie Slice": ItemData(0x27, ItemClassification.filler),
+    "Full Heal": ItemData(0x28, ItemClassification.filler),
 }
 
 junk_weights = {
-    "Opal": 0,
-    "10 Opals": 30,
-    "25 Opals": 20,
-    "100 Opals": 10,
-    "200 Opals": 5,
-    "Full Pie": 10,
+    "Opal": 5,
+    "50 Opals": 30,
+    "100 Opals": 20,
+    "200 Opals": 15,
+    "500 Opals": 5,
+    "Pie Slice": 10,
+    "Full Heal": 15,
 }
 
 full_item_dict: Dict[str, ItemData] = {**item_dict, **individual_rangs, **progressive_rangs, **parking_bays, **barriers, **progressive_parking_bays, **collectibles, **junk_items}

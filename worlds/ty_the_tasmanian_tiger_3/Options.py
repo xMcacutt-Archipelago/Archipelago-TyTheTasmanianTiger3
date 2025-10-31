@@ -7,9 +7,11 @@ class Goal(Choice):
     Determines the goal of the seed
 
     Quinking: Defeat the Quinking
+    All Missions: Complete all missions (including defeat Quinking)
     """
     display_name = "Goal"
     option_final_battle = 0
+    option_all_missions = 1
     default = 0
 
 class TotalMissionsForGoal(Range):
