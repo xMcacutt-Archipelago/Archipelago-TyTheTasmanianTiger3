@@ -2,7 +2,7 @@ from typing import Dict
 
 from BaseClasses import Region, Location, Entrance
 
-ty1_levels: Dict[str, str] = {
+ty3_levels: Dict[str, str] = {
     "M1": "The Dreaming",
     "T1": "New Burramudgee",
     "T2": "Cassopolis",
