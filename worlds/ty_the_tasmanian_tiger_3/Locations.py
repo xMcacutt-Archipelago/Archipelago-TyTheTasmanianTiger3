@@ -376,33 +376,34 @@ def get_mission_complete_events(world):
 
 mission_dict: Dict[str, LocData] = {
     "Save the Dreaming": LocData(0x6d000001, "The Dreaming", 1), #prologue
-    "Rescue the General": LocData(0x6d000002, "New Burramudgee - Prologue", 2), #prologue
-    "Brown Kiwi Down": LocData(0x6d000003, "Cinder Canyon", 3),
-    "The Big Race": LocData(0x6d000005, "Razorback Stream", 5),
-    "Experi Mental Cart": LocData(0x6d000006, "SR Desert", 6),
-    "Quinkan Armada": LocData(0x6d000007, "Backwood Blizzard", 7),
-    "Egg Hunt": LocData(0x6d00008, "Backwood Blizzard", 8), #satellite strike
-    "Rescue Julius": LocData(0x6d000009, "Razorback Stream", 10),
-    "All Your Base": LocData(0x6d00000a, "SR Desert - Duke", 11), #gunyip mission
-    "Heinous Hexaquin": LocData(0x6d00000b, "SR Desert", 12),
-    "Meet Shazza": LocData(0x6d00000c, "Dead Dingo Marsh", 13),
-    "Sea Change": LocData(0x6d00000d, "Kaka Boom Island", 14), #airship in pippy beach flown by Duke
-    "Dennis Dilemma": LocData(0x6d00000e, "SR Swamp", 15),
-    "Demolition Derby": LocData(0x6d00000f, "Pippy Beach", 16),
-    "Power Struggle": LocData(0x6d000010, "Winter Woods", 17), #grav grenade, shadow beam
-    "Meltdown": LocData(0x6d000011, "Winter Woods", 18), #thermo cannon
-    "Battle Arena Gamma": LocData(0x6d000012, "SR Swamp", 19),
-    "Aero Coast Guard": LocData(0x6d000014, "SR Swamp - Duke", 21), #gunyip mission
-    "Wrath of the Dragonquin": LocData(0x6d000015, "SR Swamp - Duke", 22), #gunyip mission
-    "The Search for Steve": LocData(0x6d000018, "Gooboo Gully", 23),
-    "Find the Shadowring": LocData(0x6d000019, "Mount Boom Basin", 24), #airship in SR Desert flown by Duke
-    "Battle Arena Zeta": LocData(0x6d00001b, "SR Swamp", 26),
-    "Respect Effect": LocData(0x6d00001c, "SR Desert", 27),
-    "Redback Stash": LocData(0x6d00001d, "SR Swamp", 28),
-    "Ranger Endanger": LocData(0x6d00001e, "Frozen Forest", 29), #shadow beam
-    "Redback Rundown": LocData(0x6d00001f, "Frozen Forest", 30), #thermo cannon, satellite strike
-    "Forest Firepower": LocData(0x6d000020, "SR Desert - Duke", 31), #gunyip mission
-    "Quinking": LocData(0x6d000023, "Quinking", 34), #goal
+    "Rescue the General": LocData(0x6d000002, "New Burramudgee - Prologue", 2), #prologue #save the dreaming
+    "Brown Kiwi Down": LocData(0x6d000003, "Cinder Canyon", 3), #resuce the general
+    "The Big Race": LocData(0x6d000005, "Razorback Stream", 5), #rescue the general
+    "Experi Mental Cart": LocData(0x6d000006, "SR Desert", 6), #brown kiwi down, the big race, rescue julius
+    "Quinkan Armada": LocData(0x6d000007, "Backwood Blizzard", 7), #brown kiwi down, the big race, rescue julius
+    "Egg Hunt": LocData(0x6d00008, "Backwood Blizzard", 8), #satellite strike #quinkan armada, all your base
+    "Rescue Julius": LocData(0x6d000009, "Razorback Stream", 10), #rescue the general
+    "All Your Base": LocData(0x6d00000a, "SR Desert - Duke", 11), #gunyip #brown kiwi down, the big race, rescue julius
+    "Heinous Hexaquin": LocData(0x6d00000b, "SR Desert", 12), #3 of experi mental cart, quinkan armada, egg hunt, all your base
+    "Meet Shazza": LocData(0x6d00000c, "Dead Dingo Marsh", 13), #heinous hexaquin
+    "Sea Change": LocData(0x6d00000d, "Kaka Boom Island", 14), #duke pippy beach #dennis dilemma, power struggle, aero coast guard
+    "Dennis Dilemma": LocData(0x6d00000e, "SR Swamp", 15), #go find boss cass
+    "Demolition Derby": LocData(0x6d00000f, "Pippy Beach", 16), #dennis dilemma, power struggle, aero coast guard
+    "Power Struggle": LocData(0x6d000010, "Winter Woods", 17), #grav grenade, shadow beam #go find boss cass
+    "Meltdown": LocData(0x6d000011, "Winter Woods", 18), #thermo cannon #sea change, power struggle
+    "Battle Arena Gamma": LocData(0x6d000012, "SR Swamp", 19), #dennis dilemma, power struggle, aero coast guard
+    "Aero Coast Guard": LocData(0x6d000014, "SR Swamp - Duke", 21), #gunyip #go find boss cass
+    "Wrath of the Dragonquin": LocData(0x6d000015, "SR Swamp - Duke", 22), #gunyip  #sea change, demolition derby, meltdown, battle arena gamma
+    "The Search for Steve": LocData(0x6d000018, "Gooboo Gully", 23), #wrath of the dragonquin
+    "Find the Shadowring": LocData(0x6d000019, "Mount Boom Basin", 24), #SR desert duke, #respect effect, forest firepower
+    "Battle Arena Zeta": LocData(0x6d00001b, "SR Swamp", 26), #find the shadowring
+    "Respect Effect": LocData(0x6d00001c, "SR Desert", 27), #the search for steve
+    "Redback Stash": LocData(0x6d00001d, "SR Swamp", 28), #find the shadowring
+    "Ranger Endanger": LocData(0x6d00001e, "Frozen Forest", 29), #shadow beam #find the shadowring
+    "Redback Rundown": LocData(0x6d00001f, "Frozen Forest", 30), #thermo cannon, satellite strike #find the shadowring, battle arena zeta, redback stash, ranger endanger #optional
+    "Forest Firepower": LocData(0x6d000020, "SR Desert - Duke", 31), #gunyip #the search for steve
+    "Quinking": LocData(0x6d000023, "Quinking", 34), #goal #battle arena zeta, redback stash, ranger endanger
+    "Go find Boss Cass": LocData(0x6d000046, "Cassopolis", 70), #meet shazza
 }
 
 full_location_dict: Dict[str, LocData] = {** story_dict,
