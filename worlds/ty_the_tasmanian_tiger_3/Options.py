@@ -21,7 +21,7 @@ class TotalMissionsForGoal(Range):
     display_name = "Missions For Goal"
     range_start = 0
     range_end = 29
-    default = 27
+    default = 26
 
 #class StartingLocation(Choice):
 #    """
