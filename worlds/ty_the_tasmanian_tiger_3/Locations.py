@@ -48,17 +48,17 @@ shop_location_dict: Dict[str, LocData] = {
     "Rang Shop Korb 7": LocData(20, "New Burramudgee"), #Ridge Skin
     "Rang Shop Korb 8": LocData(21, "New Burramudgee"), #Ghost Tiger Skin
 
-    "Cassopolis Rang Shack 1": LocData(22, "Cassopolis"), #air
-    "Cassopolis Rang Shack 2": LocData(23, "Cassopolis"), #multi
-    "Cassopolis Rang Shack 3": LocData(24, "Cassopolis"), #magnet
-    "Cassopolis Rang Shack 4": LocData(25, "Cassopolis"), #zoom
-    "Cassopolis Rang Shack 5": LocData(26, "Cassopolis"), #warp
-    "Cassopolis Rang Shack 6": LocData(27, "Cassopolis"), #earth
-    "Cassopolis Rang Shack 7": LocData(28, "Cassopolis"), #mega chassis
-    "Cassopolis Rang Shack 8": LocData(29, "Cassopolis"), #chrono
-    "Cassopolis Rang Shack 9": LocData(30, "Cassopolis"), #smash chassis
-    "Cassopolis Rang Shack 10": LocData(31, "Cassopolis"), #ring chassis
-    "Cassopolis Rang Shack 11": LocData(32, "Cassopolis"), #doom chassis
+    "Cassopolis Rang Shop 1": LocData(22, "Cassopolis"), #air
+    "Cassopolis Rang Shop 2": LocData(23, "Cassopolis"), #multi
+    "Cassopolis Rang Shop 3": LocData(24, "Cassopolis"), #magnet
+    "Cassopolis Rang Shop 4": LocData(25, "Cassopolis"), #zoom
+    "Cassopolis Rang Shop 5": LocData(26, "Cassopolis"), #warp
+    "Cassopolis Rang Shop 6": LocData(27, "Cassopolis"), #earth
+    "Cassopolis Rang Shop 7": LocData(28, "Cassopolis"), #mega chassis
+    "Cassopolis Rang Shop 8": LocData(29, "Cassopolis"), #chrono
+    "Cassopolis Rang Shop 9": LocData(30, "Cassopolis"), #smash chassis
+    "Cassopolis Rang Shop 10": LocData(31, "Cassopolis"), #ring chassis
+    "Cassopolis Rang Shop 11": LocData(32, "Cassopolis"), #doom chassis
     "Naomi's Ice Cream Truck 1": LocData(74, "New Burramudgee"), #Shadow Beam
     "Naomi's Ice Cream Truck 2": LocData(75, "New Burramudgee"), #Grav Grenade
     "Naomi's Ice Cream Truck 3": LocData(76, "New Burramudgee"), #Satellite Strike
@@ -377,7 +377,7 @@ def get_mission_complete_events(world):
 mission_dict: Dict[str, LocData] = {
     "Save the Dreaming": LocData(0x6d000001, "The Dreaming", 1), #prologue
     "Rescue the General": LocData(0x6d000002, "New Burramudgee - Prologue", 2), #prologue #save the dreaming
-    "Brown Kiwi Down": LocData(0x6d000003, "Cinder Canyon", 3), #resuce the general
+    "Brown Kiwi Down": LocData(0x6d000003, "Cinder Canyon", 3), #rescue the general
     "The Big Race": LocData(0x6d000005, "Razorback Stream", 5), #rescue the general
     "Experi Mental Cart": LocData(0x6d000006, "SR Desert", 6), #brown kiwi down, the big race, rescue julius
     "Quinkan Armada": LocData(0x6d000007, "Backwood Blizzard", 7), #brown kiwi down, the big race, rescue julius
