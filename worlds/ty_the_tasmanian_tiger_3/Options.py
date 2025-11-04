@@ -23,6 +23,14 @@ class TotalMissionsForGoal(Range):
     range_end = 29
     default = 26
 
+class QuinkingRequiresShadow(Choice):
+    """
+    Determines if you need the completed Shadow Chassis and 3 shadow stones to defeat Quinking.
+    """
+    display_name = "Require Shadow"
+    option_shadow = 0
+    option_rawdog = 1
+
 #class StartingLocation(Choice):
 #    """
 #    Determines whether you start the game in New Burramudgee after the prologue (after saving Dennis),
@@ -182,6 +190,7 @@ class Ty3OptionGroups(PerGameCommonOptions):
 class Ty3Options(PerGameCommonOptions):
     goal: Goal
     missions_for_goal: TotalMissionsForGoal
+    require_shadow: QuinkingRequiresShadow
     #starting_location: StartingLocation
     gate_unlock: SouthernRiversGateUnlock
     shop_difficulty: ShopPrices
