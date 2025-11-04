@@ -32,11 +32,20 @@ class Ty3World(World):
     """
     game = "Ty the Tasmanian Tiger 3"
     web = Ty3Web()
+
     options_dataclass = Ty3Options
+
     options: Ty3Options
+
+    topology_present = True
+
     option_groups = Ty3OptionGroups
-    item_name_to_id: ClassVar[Dict[str, int]] = {item_name: item_data.code for item_name, item_data in full_item_dict.items()}
-    location_name_to_id: ClassVar[Dict[str, int]] = {loc_name: loc_data.code for loc_name, loc_data in full_location_dict.items()}
+
+    item_name_to_id: ClassVar[Dict[str, int]] = {item_name: item_data.code for item_name,
+    item_data in full_item_dict.items()}
+
+    location_name_to_id: ClassVar[Dict[str, int]] = {loc_name: loc_data.code for loc_name,
+    loc_data in full_location_dict.items()}
 
     def __init__(self, multiworld, player):
         super().__init__(multiworld, player)
