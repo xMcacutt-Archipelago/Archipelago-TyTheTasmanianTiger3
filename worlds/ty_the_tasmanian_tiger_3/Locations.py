@@ -67,7 +67,7 @@ shop_location_dict: Dict[str, LocData] = {
     "Naomi's Ice Cream Truck 6": LocData(79, "New Burramudgee"), #Orbidrills
     "Naomi's Ice Cream Truck Berry Blast 1": LocData(80, "New Burramudgee"), #Midnight Crab Skin
     "Naomi's Ice Cream Truck Berry Blast 2": LocData(81, "New Burramudgee"), #Crab Tank Crab Skin
-    "Naomi's Ice Cream Turck Berry Blast 3": LocData(82, "New Burramudgee"), #White Knight Crab Skin
+    "Naomi's Ice Cream Truck Berry Blast 3": LocData(82, "New Burramudgee"), #White Knight Crab Skin
     "Naomi's Ice Cream Truck Berry Blast 4": LocData(83, "New Burramudgee"), #Mean Green Crab Skin
     "Naomi's Ice Cream Truck Bilby Banana Split 1": LocData(84, "New Burramudgee"), #Cammo Gunyip Skin
     "Naomi's Ice Cream Truck Bilby Banana Split 2": LocData(85, "New Burramudgee"), #Bush Rescue Gunyip Skin
@@ -79,7 +79,7 @@ shop_location_dict: Dict[str, LocData] = {
 
 gooboo_berry_dict: Dict[str, LocData] = {
     "Gooboo Berry 1": LocData(0x4300, "Cinder Canyon"), #Earth
-    "Gooboo Berry 2": LocData(0x4301, "SR All Your Base"), #Behind crabs
+    "Gooboo Berry 2": LocData(0x4301, "SR Desert - Duke"), #Behind crabs at All Your Base airship
     "Gooboo Berry 3": LocData(0x4302, "Dead Dingo Marsh"), #Lash
     "Gooboo Berry 4": LocData(0x4303, "Mount Boom Basin"), #Flame, Lash
     "Gooboo Berry 5": LocData(0x4304, "New Burramudgee"),
