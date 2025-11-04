@@ -56,6 +56,7 @@ def get_rules(world):
                 state.has("Kromium Orb", world.player, sum(world.orb_prices[:2])),
             "Madam Mopoke's 3": lambda state:
                 state.has("Kromium Orb", world.player, sum(world.orb_prices[:3])),
+
             #Missions
             "Haunted Hassle": lambda state:
                 has_infra(world, state),
@@ -105,6 +106,7 @@ def get_rules(world):
                 state.has("Burramudgee Town ParkingBay", world.player) and (state.has("Patchy Barriers", world.player) or state.has("Buster Barriers", world.player)),
             "Complete Ripper Nipper": lambda state:
                 state.has("Wobbygon Bay ParkingBay", world.player) and state.has("Ripper Nipper ParkingBay", world.player),
+
             #Cogs
             "Platinum Cog 2": lambda state:
                 can_smash_wall(world, state),
@@ -138,6 +140,7 @@ def get_rules(world):
                 can_burn(world, state),
             "Platinum Cog 50": lambda state:
                 has_infra(world, state),
+
             #Orbs
             "Kromium Orb 1": lambda state:
                 can_swing(world, state),
@@ -163,6 +166,7 @@ def get_rules(world):
                 can_swing(world, state),
             "Kromium Orb 28": lambda state:
                 can_smash_wall(world, state),
+
             #Bilbies
             "Bilby 1": lambda state:
                 can_smash_wall(world,state),
@@ -184,6 +188,7 @@ def get_rules(world):
                 can_tp(world, state),
             "Bilby 28": lambda state:
                 can_freeze(world, state),
+
             #Frills
             "Disguised Frill 1": lambda state:
                 has_infra(world, state)
@@ -241,10 +246,21 @@ def get_rules(world):
                 has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
 
             #Steves
-            "Steve - Outback Oasis": lambda state:
+            "Steve - Razorback Stream": lambda state:
+                can_burn(world, state),
+            "Steve - Kaka Boom Island": lambda state:
+                can_smash(world, state),
+
+            #Berries
+            "Gooboo Berry 1": lambda state:
+                can_smash(world, state),
+            "Gooboo Berry 3": lambda state:
                 can_swing(world, state),
-            "Steve - MountBoom": lambda state:
-                state.has("Thermo Bunyip Key", world.player),
+            "Gooboo Berry 4": lambda state:
+                can_swing(world, state) and can_burn(world, state),
+            "Gooboo Berry 6": lambda state:
+                can_smash(world, state),
+
             #Frames
             "Picture Frame 1": lambda state:
                 can_tp(world, state),
