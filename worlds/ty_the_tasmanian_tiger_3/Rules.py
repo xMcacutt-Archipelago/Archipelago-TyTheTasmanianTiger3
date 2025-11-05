@@ -318,102 +318,12 @@ def get_rules(world):
                 lambda state: (state.has("Hexaquin Defeated", world.player) and world.options.gate_unlock == 0) or
                               (state.has("Southern Rivers Gate", world.player) and world.options.gate_unlock == 1) or
                               world.options.gate_unlock == 2,
-            "MountBoom Start Lava":
-                lambda state: state.has("Thermo Bunyip Key", world.player),
-            "MountBoom End Lava":
-                lambda state: state.has("Thermo Bunyip Key", world.player),
-            "MountBoom End ParkingBay":
-                lambda state: state.has("MountBoom End ParkingBay", world.player),
-            "Burramudgee ParkingBay":
-                lambda state: state.has("Burramudgee Town ParkingBay", world.player),
-            "Min Min Plains ParkingBay":
-                lambda state: state.has("Min Min Plains ParkingBay", world.player),
-            "Freeway Training Grounds ParkingBay":
-                lambda state: state.has("Freeway Training Grounds ParkingBay", world.player),
-            "Beach Training Grounds ParkingBay":
-                lambda state: state.has("Beach Training Grounds ParkingBay", world.player),
-            "Dennis Freeway ParkingBay":
-                lambda state: state.has("Dennis Freeway ParkingBay", world.player),
-            "Wobbygon Bay ParkingBay":
-                lambda state: state.has("Wobbygon Bay ParkingBay", world.player),
-            "Lava Falls Race ParkingBay":
-                lambda state: state.has("Lava Falls Race ParkingBay", world.player),
-            "Frill Neck Forest ParkingBay":
-                lambda state: state.has("Frill Neck Forest ParkingBay", world.player),
-            "Old Stony Creek ParkingBay":
-                lambda state: state.has("Old Stony Creek ParkingBay", world.player),
-            "Camping ParkingBay":
-                lambda state: state.has("Camping ParkingBay", world.player),
-            "Outback Oasis ParkingBay":
-                lambda state: state.has("Outback Oasis ParkingBay", world.player),
-            "Refinery Run ParkingBay":
-                lambda state: state.has("Refinery Run ParkingBay", world.player),
-            "Fire Fight ParkingBay":
-                lambda state: state.has("Fire Fight ParkingBay", world.player),
-            "Sly ParkingBay":
-                lambda state: state.has("Sly ParkingBay", world.player),
-            "Outback Dash ParkingBay":
-                lambda state: state.has("Outback Dash ParkingBay", world.player),
-            "Never Never Road ParkingBay":
-                lambda state: state.has("Never Never Road ParkingBay", world.player),
-            "Truck Tragedy ParkingBay":
-                lambda state: state.has("Truck Tragedy ParkingBay", world.player),
-            "Truck Stop ParkingBay":
-                lambda state: state.has("Truck Stop ParkingBay", world.player),
-            "Plutonium Panic ParkingBay":
-                lambda state: state.has("Plutonium Panic ParkingBay", world.player),
-            "50 Foot Squeaver ParkingBay":
-                lambda state: state.has("50 Foot Squeaver ParkingBay", world.player),
-            "Never Never ParkingBay":
-                lambda state: state.has("Never Never ParkingBay", world.player),
-            "Lava Falls ParkingBay":
-                lambda state: state.has("Lava Falls ParkingBay", world.player),
-            "Min Min Mining ParkingBay":
-                lambda state: state.has("Min Min Mining ParkingBay", world.player),
-            "Turbo Track ParkingBay":
-                lambda state: state.has("Turbo Track ParkingBay", world.player),
-            "King Squeaver ParkingBay":
-                lambda state: state.has("King Squeaver ParkingBay", world.player),
-            "Bush Fire ParkingBay":
-                lambda state: state.has("Bush Fire ParkingBay", world.player),
-            "Sulphur Rocks ParkingBay":
-                lambda state: state.has("Sulphur Rocks ParkingBay", world.player),
-            "Lake Burramudgee ParkingBay":
-                lambda state: state.has("Lake Burramudgee ParkingBay", world.player),
-            "Muddy Bottom ParkingBay":
-                lambda state: state.has("Muddy Bottom ParkingBay", world.player),
-            "Dusty Barrows ParkingBay":
-                lambda state: state.has("Dusty Barrows ParkingBay", world.player),
-            "Ripper Nipper ParkingBay":
-                lambda state: state.has("Ripper Nipper ParkingBay", world.player),
-            "Faire Dinkum ParkingBay":
-                lambda state: state.has("Faire Dinkum ParkingBay", world.player),
-            "Wetlands ParkingBay":
-                lambda state: state.has("Wetlands ParkingBay", world.player),
-            "Hearty Beach ParkingBay":
-                lambda state: state.has("Hearty Beach ParkingBay", world.player),
-            "Patchy Barriers West":
-                lambda state: state.has("Patchy Barriers", world.player),
-            "Patchy Barriers South":
-                lambda state: state.has("Patchy Barriers", world.player),
-            "Fluffy Barriers South":
-                lambda state: state.has("Fluffy Barriers", world.player),
-            "Fluffy Barriers North":
-                lambda state: state.has("Fluffy Barriers", world.player),
-            "Buster Barriers West":
-                lambda state: state.has("Buster Barriers", world.player),
-            "Buster Barriers East":
-                lambda state: state.has("Buster Barriers", world.player),
-            "Truck Stop Clear":
-                lambda state: state.has("Truck Stop ParkingBay", world.player),
-            "Patchy ParkingBay":
-                lambda state: state.has("Patchy ParkingBay", world.player),
-            "Oil Rig ParkingBay":
-                lambda state: state.has("Oil Rig ParkingBay", world.player),
-            "Oil Rig Button":
-                lambda state: state.has("Thermo Bunyip Key", world.player),
-            "Fluffy ParkingBay":
-                lambda state: state.has("Fluffy ParkingBay", world.player),
+            "Portal":
+                lambda state: (state.has("Hexaquin Defeated", world.player) and world.options.gate_unlock == 0) or
+                              (state.has("Southern Rivers Gate", world.player) and world.options.gate_unlock == 1) or
+                              world.options.gate_unlock == 2,
+            "Hexaquin Arena Parking Bay":
+                lambda state: state.has("Hexaquin Arena Parking Bay", world.player),
             "Airship - Quinking":
                 lambda state: state.has("Mission Complete", world.player, world.options.missions_for_goal.value),
         }
