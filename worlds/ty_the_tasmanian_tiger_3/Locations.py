@@ -389,7 +389,7 @@ mission_dict: Dict[str, LocData] = {
     "Egg Hunt": LocData(0x6d00008, "Backwood Blizzard", 8), #satellite strike #quinkan armada, all your base
     "Rescue Julius": LocData(0x6d000009, "Razorback Stream", 10), #rescue the general
     "All Your Base": LocData(0x6d00000a, "SR Desert - Duke", 11), #gunyip #brown kiwi down, the big race, rescue julius
-    "Heinous Hexaquin": LocData(0x6d00000b, "Hexaquin Arena", 12), #3 of experi mental cart, quinkan armada, egg hunt, all your base
+    "Heinous Hexaquin": LocData(0x6d00000b, "SR Desert", 12), #3 of experi mental cart, quinkan armada, egg hunt, all your base
     "Meet Shazza": LocData(0x6d00000c, "Dead Dingo Marsh", 13), #heinous hexaquin
     "Sea Change": LocData(0x6d00000d, "Kaka Boom Island", 14), #duke pippy beach #dennis dilemma, power struggle, aero coast guard
     "Dennis Dilemma": LocData(0x6d00000e, "SR Swamp", 15), #go find boss cass

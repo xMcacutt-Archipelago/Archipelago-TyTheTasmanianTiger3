@@ -44,14 +44,12 @@ class QuinkingRequiresShadow(Choice):
 class SouthernRiversGateUnlock(Choice):
     """
     When should the gate between Southern Rivers Desert and Swamp be unlocked? (this does not affect parking pads)
-    Vanilla: When Hexaquin is defeated
     On Item Receive: Unlocks when you receive Southern Rivers Gate
     Open World: Southern Rivers is completely open
     """
     display_name = "Gate Unlock Conditions"
-    option_vanilla = 0
-    option_items = 1
-    option_open_world = 2
+    option_items = 0
+    option_open_world = 1
     default = 0
 
 class ShopPrices(Choice):
