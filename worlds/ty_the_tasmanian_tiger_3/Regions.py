@@ -88,7 +88,7 @@ def connect_ty3_regions(world):
                     "Desert Duke Airship", 1)
     connect_regions(world, "SR Desert", "SR Desert - Sly",
                     "Desert Sly Airship", 1)
-    connect_regions(world, "SR Desert - Sly", "Frozen Forests",
+    connect_regions(world, "SR Desert - Sly", "Frozen Forest",
                     "Sly Airship - FF", 1)
     connect_regions(world, "SR Desert - Sly", "Backwood Blizzard",
                     "Sly Airship - BB", 1)
