@@ -48,6 +48,7 @@ def create_ty3_regions(world, location_dict):
     create_region(world, "Kaka Boom Island", location_dict)
     create_region(world, "Gooboo Gully", location_dict)
     create_region(world, "Mount Boom Basin", location_dict)
+    create_region(world, "Hexaquin Arena", location_dict)
     create_region(world, "SR Desert", location_dict)
     create_region(world, "SR Swamp", location_dict)
     create_region(world, "Razorback Stream", location_dict)
@@ -92,7 +93,7 @@ def connect_ty3_regions(world):
                     "Sly Airship - FF", 1)
     connect_regions(world, "SR Desert - Sly", "Backwood Blizzard",
                     "Sly Airship - BB", 1)
-    connect_regions(world, "SR Desert - Duke", "Mt Boom Basin",
+    connect_regions(world, "SR Desert - Duke", "Mount Boom Basin",
                     "Duke Airship - MBB", 1)
     connect_regions(world, "SR Desert", "Hexaquin Arena",
                     "Hexaquin Arena Parking Bay", 1)
@@ -113,7 +114,7 @@ def connect_ty3_regions(world):
     connect_regions(world, "SR Swamp", "Pippy Beach",
                     "Pippy Beach Parking Bay", 1)
     connect_regions(world, "Pippy Beach", "SR Swamp - Duke",
-                    "Swamp Duke Airship",1 )
+                    "Pippy Beach Duke Airship",1 )
     connect_regions(world, "SR Swamp - Duke", "Kaka Boom Island",
                     "Duke Airship - KBI",1 )
     connect_regions(world, "SR Swamp", "SR Swamp - Quinking",

@@ -134,20 +134,24 @@ class Ty3World(World):
     def create_items(self):
         create_ty3_items(self)
 
-        self.push_precollected(Item("Burramudgee Town ParkingBay", ItemClassification.progression,
-                                    self.item_name_to_id["Burramudgee Town ParkingBay"], self.player))
+        #self.push_precollected(Item("Burramudgee Town ParkingBay", ItemClassification.progression,
+                                    #self.item_name_to_id["Burramudgee Town ParkingBay"], self.player))
 
-        self.push_precollected(Item("Boomerang", ItemClassification.progression,
-                                        self.item_name_to_id["Boomerang"], self.player))
+        self.push_precollected(Item("Mono Chassis", ItemClassification.progression,
+                                        self.item_name_to_id["Mono Chassis"], self.player))
 
 
         if self.options.start_with_maps.value:
             self.push_precollected(Item("Missing Persons Map", ItemClassification.useful,
                                         self.item_name_to_id["Missing Persons Map"], self.player))
-            self.push_precollected(Item("Cog Map", ItemClassification.useful,
-                                        self.item_name_to_id["Cog Map"], self.player))
-            self.push_precollected(Item("Mysterious Anomalies Map", ItemClassification.useful,
-                                        self.item_name_to_id["Mysterious Anomalies Map"], self.player))
+            self.push_precollected(Item("Sekrit Map", ItemClassification.useful,
+                                        self.item_name_to_id["Sekrit Map"], self.player))
+            self.push_precollected(Item("Shiny Thing Map", ItemClassification.useful,
+                                        self.item_name_to_id["Shiny Thing Map"], self.player))
+            self.push_precollected(Item("Priceless Art Map", ItemClassification.useful,
+                                        self.item_name_to_id["Priceless Art Map"], self.player))
+            self.push_precollected(Item("Forbidden Fruit Map", ItemClassification.useful,
+                                        self.item_name_to_id["Forbidden Fruit Map"], self.player))
 
         if self.options.gate_unlock.value == 2:
             self.push_precollected(Item("Patchy Barriers", ItemClassification.progression,
