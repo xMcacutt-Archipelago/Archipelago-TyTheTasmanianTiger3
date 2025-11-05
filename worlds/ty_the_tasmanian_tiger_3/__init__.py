@@ -134,8 +134,6 @@ class Ty3World(World):
     def create_items(self):
         create_ty3_items(self)
 
-        #self.push_precollected(Item("Burramudgee Town ParkingBay", ItemClassification.progression,
-                                    #self.item_name_to_id["Burramudgee Town ParkingBay"], self.player))
 
         self.push_precollected(Item("Mono Chassis", ItemClassification.progression,
                                         self.item_name_to_id["Mono Chassis"], self.player))
@@ -153,14 +151,9 @@ class Ty3World(World):
             self.push_precollected(Item("Forbidden Fruit Map", ItemClassification.useful,
                                         self.item_name_to_id["Forbidden Fruit Map"], self.player))
 
-        if self.options.gate_unlock.value == 2:
-            self.push_precollected(Item("Patchy Barriers", ItemClassification.progression,
-                                        self.item_name_to_id["Patchy Barriers"], self.player))
-            self.push_precollected(Item("Buster Barriers", ItemClassification.progression,
-                                        self.item_name_to_id["Buster Barriers"], self.player))
-            self.push_precollected(Item("Fluffy Barriers", ItemClassification.progression,
-                                        self.item_name_to_id["Fluffy Barriers"], self.player))
-
+        if self.options.gate_unlock.value == 1:
+            self.push_precollected(Item("Southern Rivers Gate", ItemClassification.progression,
+                                        self.item_name_to_id["Southern Rivers Gate"], self.player))
 
     def set_rules(self):
         set_rules(self)

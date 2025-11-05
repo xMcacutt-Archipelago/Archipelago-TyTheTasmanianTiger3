@@ -5,7 +5,7 @@ from typing import Dict
 from BaseClasses import ItemClassification, Item
 from typing import Optional
 
-from worlds.ty_the_tasmanian_tiger_3.Locations import get_mission_complete_events
+#from worlds.ty_the_tasmanian_tiger_3.Locations import get_mission_complete_events
 
 
 class Ty3Item(Item):
@@ -50,7 +50,7 @@ def create_ty3_items(world):
         if item_name in starting_items:
             continue
         create_item(world, item_name, item_data.classification, item_data.amount)
-    if world.options.gate_unlock.value == 1:
+    if world.options.gate_unlock.value == 0:
         for item_name, item_data in gate.items():
             create_item(world, item_name, item_data.classification, item_data.amount)
 
@@ -90,13 +90,14 @@ def create_ty3_items(world):
 
 barriers: Dict[str, ItemData] = {
     "Sly": ItemData(980, ItemClassification.progression),
-    "Duke": ItemData(982, ItemClassification.progression),
-    "Hexaquin Arena Parking Bay": ItemData(981, ItemClassification.progression),
+    "Duke": ItemData(981, ItemClassification.progression),
+    "Hexaquin Arena Parking Bay": ItemData(982, ItemClassification.progression),
 }
 
 gate: Dict[str, ItemData] = {
     "Southern Rivers Gate": ItemData(983, ItemClassification.progression),
 }
+
 item_dict: Dict[str, ItemData] = {
     "Shadow Beam": ItemData(51, ItemClassification.progression),
     "Grav Grenade": ItemData(52, ItemClassification.progression),
@@ -136,7 +137,7 @@ bunyip_stones: Dict[str, ItemData] = {
     "Water Stone": ItemData(3689, ItemClassification.progression),
     "Air Stone": ItemData(3688, ItemClassification.progression),
     "Earth Stone": ItemData(4092, ItemClassification.progression),
-    "Chrono Stone": ItemData(3692, ItemClassification.progression),
+    "Chrono Stone": ItemData(3692, ItemClassification.useful),
     "Warp Stone": ItemData(3306, ItemClassification.progression),
     "Ultra Stone": ItemData(3285, ItemClassification.useful),
     "Mega Stone": ItemData(3287, ItemClassification.progression),

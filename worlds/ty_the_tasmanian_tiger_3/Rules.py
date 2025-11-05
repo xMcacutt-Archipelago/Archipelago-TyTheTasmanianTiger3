@@ -304,33 +304,29 @@ def get_rules(world):
         },
         "entrances": {
             "Desert Duke Airship":
-                lambda state: state.has("Duke", world.player),
+                lambda state: can_gunyip(world, state),
             "Desert Sly Airship":
-                lambda state: state.has("Sly", world.player),
+                lambda state: can_bunyip(world, state),
             "Swamp Duke Airship":
-                lambda state: state.has("Duke", world.player),
+                lambda state: can_gunyip(world, state),
             "Swamp Sly Airship":
-                lambda state: state.has("Sly", world.player),
+                lambda state: can_bunyip(world, state),
             "Sly Airship - FF":
-                lambda state: state.has("Sly", world.player),
+                lambda state: can_bunyip(world, state),
             "Sly Airship - BB":
-                lambda state: state.has("Sly", world.player),
+                lambda state: can_bunyip(world, state),
             "Sly Airship - WW":
-                lambda state: state.has("Sly", world.player),
+                lambda state: can_bunyip(world, state),
             "Duke Airship - MBB":
-                lambda state: state.has("Duke", world.player),
+                lambda state: can_gunyip(world, state),
             "Duke Airship - KBI":
-                lambda state: state.has("Duke", world.player),
+                lambda state: can_gunyip(world, state),
             "SR Gate":
-                lambda state: (state.has("Hexaquin Defeated", world.player) and world.options.gate_unlock == 0) or
-                              (state.has("Southern Rivers Gate", world.player) and world.options.gate_unlock == 1) or
-                              world.options.gate_unlock == 2,
+                lambda state: (state.has("Southern Rivers Gate", world.player) and world.options.gate_unlock == 0) or
+                              world.options.gate_unlock == 1,
             "Portal":
-                lambda state: (state.has("Hexaquin Defeated", world.player) and world.options.gate_unlock == 0) or
-                              (state.has("Southern Rivers Gate", world.player) and world.options.gate_unlock == 1) or
-                              world.options.gate_unlock == 2,
-            "Hexaquin Arena Parking Bay":
-                lambda state: state.has("Hexaquin Arena Parking Bay", world.player),
+                lambda state: world.options.gate_unlock == 0 and state.has("Southern Rivers Gate", world.player)
+                              or world.options.gate_unlock == 1,
             "Airship - Quinking":
                 lambda state: state.has("Mission Complete", world.player, world.options.missions_for_goal.value),
         }
