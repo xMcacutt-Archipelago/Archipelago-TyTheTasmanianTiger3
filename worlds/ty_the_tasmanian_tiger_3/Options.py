@@ -15,12 +15,12 @@ class Goal(Choice):
 
 class TotalMissionsForGoal(Range):
     """
-    How Many Missions do you need to unlock the area that leads to Quinking?
+    How Many Missions do you need to unlock the airship that leads to Quinking?
     """
     display_name = "Missions For Goal"
     range_start = 0
-    range_end = 29
-    default = 26
+    range_end = 28
+    default = 20
 
 class QuinkingRequiresShadow(Choice):
     """
