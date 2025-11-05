@@ -11,7 +11,6 @@ class Goal(Choice):
     """
     display_name = "Goal"
     option_final_battle = 0
-    option_all_missions = 1
     default = 0
 
 class TotalMissionsForGoal(Range):
