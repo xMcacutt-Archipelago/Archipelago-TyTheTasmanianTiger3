@@ -30,6 +30,7 @@ story_dict: Dict[str, LocData] = {
     "Shadowring Piece 1": LocData(0x901, "Mount Boom Basin"),
     "Shadowring Piece 2": LocData(0x902, "Mount Boom Basin"),
     "Shadowring Piece 3": LocData(0x903, "Mount Boom Basin"),
+    "Quinking": LocData(0x6d000023, "Quinking"),  # goal #battle arena zeta, redback stash, ranger endanger
     }
 shop_location_dict: Dict[str, LocData] = {
     "Rang Shop 1": LocData(8, "New Burramudgee"), #water
@@ -374,9 +375,6 @@ def get_mission_complete_events(world):
         new_ingame_id = loc_data.id + 100  # Add 100 to ingame ID
 
         complete_mission_dict[new_name] = LocData(None, loc_data.region, new_ingame_id)
-
-    if world.options.gate_unlock.value == 0:
-        complete_mission_dict["Heinous Hexaquin"] = LocData(None, "Hexaquin", 980)
     return complete_mission_dict
 
 mission_dict: Dict[str, LocData] = {
@@ -407,7 +405,6 @@ mission_dict: Dict[str, LocData] = {
     "Ranger Endanger": LocData(0x6d00001e, "Frozen Forest", 29), #shadow beam #find the shadowring
     "Redback Rundown": LocData(0x6d00001f, "Frozen Forest", 30), #thermo cannon, satellite strike #find the shadowring, battle arena zeta, redback stash, ranger endanger #optional
     "Forest Firepower": LocData(0x6d000020, "SR Desert - Duke", 31), #gunyip #the search for steve
-    "Quinking": LocData(0x6d000023, "Quinking", 34), #goal #battle arena zeta, redback stash, ranger endanger
     "Go find Boss Cass": LocData(0x6d000046, "Cassopolis", 70), #meet shazza
 }
 
