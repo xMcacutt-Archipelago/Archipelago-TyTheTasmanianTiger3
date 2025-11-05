@@ -35,7 +35,7 @@ def create_ty3_items(world):
 
     total_location_count = len(world.multiworld.get_unfilled_locations(world.player))
     print(total_location_count)
-    total_location_count -= add_mission_complete_events(world)
+    #total_location_count -= add_mission_complete_events(world)
     print(total_location_count)
     for item_name, item_data in get_rangs(world).items():
         create_item(world, item_name, item_data.classification, item_data.amount)
@@ -67,26 +67,26 @@ def create_ty3_items(world):
     #     create_single(name, world, player)
     world.multiworld.itempool += world.itempool
 
-def add_mission_complete_events(world):
-    complete_mission_dict = get_mission_complete_events(world)
-    count = 0
-    for mission_name, loc_data in complete_mission_dict.items():
+#def add_mission_complete_events(world):
+    #complete_mission_dict = get_mission_complete_events(world)
+    #count = 0
+    #for mission_name, loc_data in complete_mission_dict.items():
         # Assuming your locations are named exactly as the mission_name
-        try:
-            item_name = "Mission Complete"
-            if world.options.gate_unlock.value == 0:
-                if mission_name == "Heinous Hexaquin":
-                    item_name = "Hexaquin Defeated"
-            if world.options.gate_unlock.value == 1:
-                if mission_name == "Heinous Hexaquin":
-                    item_name = "Southern Rivers Gate"
-            location = world.multiworld.get_location(mission_name, world.player)
-            event_item = Ty3Item(item_name, ItemClassification.progression, None, world.player)
-            location.place_locked_item(event_item)
-            count+=1
-        except KeyError:
-            print(f"Location {mission_name} not found in multiworld, skipping.")
-    return count
+        #try:
+            #item_name = "Mission Complete"
+            #if world.options.gate_unlock.value == 0:
+                #if mission_name == "Heinous Hexaquin":
+                    #item_name = "Hexaquin Defeated"
+            #if world.options.gate_unlock.value == 1:
+                #if mission_name == "Heinous Hexaquin":
+                    #item_name = "Southern Rivers Gate"
+            #location = world.multiworld.get_location(mission_name, world.player)
+            #event_item = Ty3Item(item_name, ItemClassification.progression, None, world.player)
+            #location.place_locked_item(event_item)
+            #count+=1
+        #except KeyError:
+            #print(f"Location {mission_name} not found in multiworld, skipping.")
+   # return count
 
 barriers: Dict[str, ItemData] = {
     "Sly": ItemData(980, ItemClassification.progression),
@@ -116,7 +116,7 @@ def get_rangs(world) -> Dict[str, ItemData]:
         return individual_rangs
 
 individual_rangs: Dict[str, ItemData] = {
-    "Mono Chassis": ItemData(0x13, ItemClassification.useful),
+    "Mono Chassis": ItemData(0x13, ItemClassification.progression),
     "Duo Chassis": ItemData(0x01, ItemClassification.useful),
     "Lash Chassis": ItemData(0x02, ItemClassification.useful),
     "Smash Chassis": ItemData(0x03, ItemClassification.useful),
@@ -166,13 +166,13 @@ def get_filler(world) -> Dict[str, ItemData]:
     return junk_items
 
 junk_items: Dict[str, ItemData] = {
-    "Opal": ItemData(0x22, ItemClassification.filler),
-    "50 Opals": ItemData(0x23, ItemClassification.filler),
-    "100 Opals": ItemData(0x24, ItemClassification.filler),
-    "200 Opals": ItemData(0x25, ItemClassification.filler),
-    "500 Opals": ItemData(0x26, ItemClassification.filler),
-    "Pie Slice": ItemData(0x27, ItemClassification.filler),
-    "Full Heal": ItemData(0x28, ItemClassification.filler),
+    "Opal": ItemData(0x24, ItemClassification.filler),
+    "50 Opals": ItemData(0x25, ItemClassification.filler),
+    "100 Opals": ItemData(0x26, ItemClassification.filler),
+    "200 Opals": ItemData(0x27, ItemClassification.filler),
+    "500 Opals": ItemData(0x28, ItemClassification.filler),
+    "Pie Slice": ItemData(0x29, ItemClassification.filler),
+    "Full Heal": ItemData(0x2A, ItemClassification.filler),
 }
 
 junk_weights = {

@@ -167,8 +167,8 @@ bilby_dict: Dict[str, LocData] = {
     "Bilby 36": LocData(0x4223, "Razorback Stream"), #Warp, possible without
     "Bilby 37": LocData(0x4224, "SR Swamp"),
     "Bilby 38": LocData(0x4225, "SR Desert"), #in building with final redback race mission
-    "Bilby 39": LocData(0x4225, "SR Desert"),
-    "Bilby 40": LocData(0x4226, "Winter Woods"),
+    "Bilby 39": LocData(0x4226, "SR Desert"),
+    "Bilby 40": LocData(0x4227, "Winter Woods"),
 }
 
 
