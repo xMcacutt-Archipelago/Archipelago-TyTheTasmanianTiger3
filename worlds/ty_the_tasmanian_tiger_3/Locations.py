@@ -129,7 +129,7 @@ bilby_dict: Dict[str, LocData] = {
     "Bilby 3": LocData(0x4202, "Cinder Canyon"), #fire
     "Bilby 4": LocData(0x4203, "Cinder Canyon"), #warp
     "Bilby 5": LocData(0x4204, "Winter Woods"),
-    "Bilby 6": LocData(0x4205, "Backwood Blizzard"), #grasv grenade or satellite strike
+    "Bilby 6": LocData(0x4205, "Backwood Blizzard"), #grav grenade or satellite strike
     "Bilby 7": LocData(0x4206, "Backwood Blizzard"), #grav grenade or satellite strike
     "Bilby 8": LocData(0x4207, "Winter Woods"),
     "Bilby 9": LocData(0x4208, "Dead Dingo Marsh"), #lash
@@ -189,7 +189,7 @@ stone_dict: Dict[str, LocData] = {
     "Stone 19": LocData(0x4612, "Razorback Stream"), #ultra The Big Race reward
     "Stone 20": LocData(0x4613, "SR Desert"), #fire Experi Mental Cart reward
     "Stone 21": LocData(0x4614, "SR Desert"), #ultra Respect Effect reward
-    "Stone 22": LocData(0x4615, "SR Desert - Duke"), #fire ALl Your Base reward
+    "Stone 22": LocData(0x4615, "SR Desert - Duke"), #fire All Your Base reward
     "Stone 23": LocData(0x4616, "SR Desert - Duke"), #zoom Forest Firepower reward
     "Stone 24": LocData(0x4617, "SR Swamp"), #earth Demolition Derby reward,
     "Stone 25": LocData(0x4618, "SR Swamp"), #earth Redback Stash reward
@@ -207,14 +207,14 @@ stone_dict: Dict[str, LocData] = {
     #"Stone 37": LocData(0x4624, "UNKNOWN"),
     #"Stone 38": LocData(0x4625, "UNKNOWN"), #water files indicate turkey in Cinder Canyon that doesn't exist
     "Stone 39": LocData(0x4626, "Cinder Canyon"), #fire ledge after houses #3x magnet required
-    "Stone 40": LocData(0x4627, "Cinder Canyon"), #fire behind rockwall at top of elevators
+    "Stone 40": LocData(0x4627, "Cinder Canyon"), #fire behind rock wall at top of elevators
     "Stone 41": LocData(0x4628, "Mount Boom Basin"), #Warp from Steve
     "Stone 42": LocData(0x4629, "Mount Boom Basin"), #Chrono behind spiderwebs #flame, ultra
     "Stone 43": LocData(0x462A, "Mount Boom Basin"), #end of mount boom
     "Stone 44": LocData(0x462B, "Frozen Forests"), #magnet on ice blocks
     "Stone 45": LocData(0x462C, "Frozen Forests"), #water on middle platform #extreme
     "Stone 46": LocData(0x462D, "Winter Woods"), #earth in lava tube #extreme
-    "Stone 47": LocData(0x462E, "Winter Woods"), #mega #might need grav/satellite
+    "Stone 47": LocData(0x462E, "Winter Woods"), #mega
     "Stone 48": LocData(0x462F, "Winter Woods"), #Zoom in lava tube #extreme
     "Stone 49": LocData(0x4630, "Cassopolis"), #ultra at end of lash portal parkour #lash
     "Stone 50": LocData(0x4631, "Cassopolis"), #ultra
