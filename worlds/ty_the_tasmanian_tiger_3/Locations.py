@@ -74,6 +74,11 @@ shop_location_dict: Dict[str, LocData] = {
     "Naomi's Ice Cream Truck Bilby Banana Split 3": LocData(86, "New Burramudgee"), #Nightmare Gunyip Skin
     "Naomi's Ice Cream Truck Bilby Banana Split 4": LocData(87, "New Burramudgee"), #Sky Force Gunyip Skin
     "Naomi's Ice Cream Truck Bilby Banana Split 5": LocData(88, "New Burramudgee"), #Spitfire Gunyip Skin
+    "Parrotbeard's Shop - Bilby Map": LocData(89, "Pippy Beach"),
+    "Parrotbeard's Shop - Kromium Orb Map": LocData(90, "Pippy Beach"),
+    "Parrotbeard's Shop - Steve Map": LocData(91, "Pippy Beach"),
+    "Parrotbeard's Shop - Picture Frame Map": LocData(92, "Pippy Beach"),
+    "Parrotbeard's Shop - Gooboo Berry Map": LocData(93, "Pippy Beach"),
 
 }
 
