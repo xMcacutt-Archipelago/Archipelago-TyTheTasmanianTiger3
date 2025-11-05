@@ -76,9 +76,9 @@ class Ty3World(World):
 
         min_price, max_price = 3000, 10000
         if self.options.shop_difficulty.value == 1:
-            min_price, max_price = 10000, 25000
+            min_price, max_price = 10000, 20000
         elif self.options.shop_difficulty.value == 2:
-            min_price, max_price = 15000, 30000
+            min_price, max_price = 15000, 25000
         self.cassopolis_prices = self.generate_shop(11,1000000,min_price, max_price)
 
         min_price, max_price = 2000, 5000
@@ -107,16 +107,16 @@ class Ty3World(World):
 
         min_price, max_price = 1, 2
         if self.options.shop_difficulty.value == 1:
-            min_price, max_price = 3, 4
+            min_price, max_price = 2, 3
         elif self.options.shop_difficulty.value == 2:
-            min_price, max_price = 4, 5
+            min_price, max_price = 3, 3
         self.orb_prices = self.generate_shop(8,30, min_price, max_price)
 
         min_price, max_price = 1, 2
         if self.options.shop_difficulty.value == 1:
             min_price, max_price = 1, 2
         elif self.options.shop_difficulty.value == 2:
-            min_price, max_price = 2, 3
+            min_price, max_price = 2, 2
         self.berry_prices = self.generate_shop(4,10, min_price, max_price)
 
     def create_regions(self):
