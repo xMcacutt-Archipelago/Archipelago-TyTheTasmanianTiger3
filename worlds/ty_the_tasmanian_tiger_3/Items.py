@@ -76,9 +76,9 @@ def add_mission_complete_events(world):
             item_name = "Mission Complete"
             if world.options.gate_unlock.value == 0:
                 if mission_name == "Heinous Hexaquin":
-                    item_name = "SR Gate"
+                    item_name = "Hexaquin Defeated"
             if mission_name == "Heinous Hexaquin":
-                item_name = "Hexaquin Defeated"
+                item_name = "SR Gate"
             location = world.multiworld.get_location(mission_name, world.player)
             event_item = Ty3Item(item_name, ItemClassification.progression, None, world.player)
             location.place_locked_item(event_item)

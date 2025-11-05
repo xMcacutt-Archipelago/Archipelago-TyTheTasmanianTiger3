@@ -296,37 +296,28 @@ def get_rules(world):
                 has_infra(world, state),
         },
         "entrances": {
-            "Burramudgee HQ -> Infra":
-                lambda state: not world.options.require_infra
-                or has_infra(world, state),
-            "Burramudgee Town -> Infra":
-                lambda state: not world.options.require_infra
-                              or has_infra(world, state),
-            "Outback Oasis -> Infra":
-                lambda state: not world.options.require_infra
-                              or has_infra(world, state),
-            "MountBoom -> Infra":
-                lambda state: not world.options.require_infra
-                              or has_infra(world, state),
-            "Frill Neck Forest -> Infra":
-                lambda state: not world.options.require_infra
-                              or has_infra(world, state),
-            "Wetlands -> Infra":
-                lambda state: not world.options.require_infra
-                              or has_infra(world, state),
-            "Faire Dinkum -> Infra":
-                lambda state: not world.options.require_infra
-                              or has_infra(world, state),
-            "Never Never -> Infra":
-                lambda state: not world.options.require_infra
-                              or has_infra(world, state),
-            "Sulphur Rocks -> Infra":
-                lambda state: not world.options.require_infra
-                              or has_infra(world, state),
-            "Wetlands Teleport":lambda state:
-                can_tp(world, state),
-            "MountBoom Start ParkingBay":
-                lambda state: state.has("MountBoom Start ParkingBay", world.player),
+            "Desert Duke Airship":
+                lambda state: state.has("Duke", world.player),
+            "Desert Sly Airship":
+                lambda state: state.has("Sly", world.player),
+            "Swamp Duke Airship":
+                lambda state: state.has("Duke", world.player),
+            "Swamp Sly Airship":
+                lambda state: state.has("Sly", world.player),
+            "Sly Airship - FF":
+                lambda state: state.has("Sly", world.player),
+            "Sly Airship - BB":
+                lambda state: state.has("Sly", world.player),
+            "Sly Airship - WW":
+                lambda state: state.has("Sly", world.player),
+            "Duke Airship - MBB":
+                lambda state: state.has("Duke", world.player),
+            "Duke Airship - KBI":
+                lambda state: state.has("Duke", world.player),
+            "SR Gate":
+                lambda state: (state.has("Hexaquin Defeated", world.player) and world.options.gate_unlock == 0) or
+                              (state.has("Southern Rivers Gate", world.player) and world.options.gate_unlock == 1) or
+                              world.options.gate_unlock == 2,
             "MountBoom Start Lava":
                 lambda state: state.has("Thermo Bunyip Key", world.player),
             "MountBoom End Lava":
@@ -395,7 +386,6 @@ def get_rules(world):
                 lambda state: state.has("Dusty Barrows ParkingBay", world.player),
             "Ripper Nipper ParkingBay":
                 lambda state: state.has("Ripper Nipper ParkingBay", world.player),
-
             "Faire Dinkum ParkingBay":
                 lambda state: state.has("Faire Dinkum ParkingBay", world.player),
             "Wetlands ParkingBay":
