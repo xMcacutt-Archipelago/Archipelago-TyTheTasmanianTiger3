@@ -176,13 +176,13 @@ junk_items: Dict[str, ItemData] = {
 }
 
 junk_weights = {
-    "Opal": 1,
-    "50 Opals": 31,
-    "100 Opals": 21,
-    "200 Opals": 15,
+    "Opal": 0,
+    "50 Opals": 15,
+    "100 Opals": 20,
+    "200 Opals": 20,
     "500 Opals": 5,
-    "Pie Slice": 11,
-    "Full Heal": 16,
+    "Pie Slice": 10,
+    "Full Heal": 15,
 }
 
 full_item_dict: Dict[str, ItemData] = {**item_dict, **individual_rangs,
