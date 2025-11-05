@@ -94,6 +94,8 @@ def connect_ty3_regions(world):
                     "Sly Airship - BB", 1)
     connect_regions(world, "SR Desert - Duke", "Mt Boom Basin",
                     "Duke Airship - MBB", 1)
+    connect_regions(world, "SR Desert", "Hexaquin Arena",
+                    "Hexaquin Arena Parking Bay", 1)
     connect_regions(world, "SR Desert", "SR Swamp",
                     "SR Gate", 1)
     connect_regions(world, "SR Swamp", "Dead Dingo Marsh",
