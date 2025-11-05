@@ -70,8 +70,8 @@ class ExtraBerries(Range):
     """
     display_name = "Extra Berries"
     range_start = 0
-    range_end = 10
-    default = 5
+    range_end = 5
+    default = 2
 
 class ExtraBilbies(Range):
     """
