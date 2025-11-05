@@ -95,8 +95,10 @@ def get_rules(world):
             "Forest Firepower": lambda state:
                 can_gunyip(world, state),
             "Quinking": lambda state:
-                world.options.require_shadow == 0
+                (state.has("Bunyip Gauntlet", world.player)
+                and world.options.require_shadow == 0)
                 or (world.options.require_shadow == 1
+                and state.has(world.player, "Bunyip Gauntlet")
                 and state.has(world.player, "Shadow Chassis")
                 and state.has(world.player, "Shadow Stone", 3)),
 
