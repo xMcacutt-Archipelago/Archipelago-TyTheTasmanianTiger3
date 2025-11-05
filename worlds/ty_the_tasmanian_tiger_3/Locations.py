@@ -139,8 +139,8 @@ bilby_dict: Dict[str, LocData] = {
     "Bilby 8": LocData(0x4207, "Winter Woods"),
     "Bilby 9": LocData(0x4208, "Dead Dingo Marsh"), #lash
     "Bilby 10": LocData(0x4209, "Dead Dingo Marsh"),
-    "Bilby 11": LocData(0x420A, "Frozen Forests"),
-    "Bilby 12": LocData(0x420B, "Frozen Forests"), #grav grenade
+    "Bilby 11": LocData(0x420A, "Frozen Forest"),
+    "Bilby 12": LocData(0x420B, "Frozen Forest"), #grav grenade
     "Bilby 13": LocData(0x420C, "Dead Dingo Marsh"),
     "Bilby 14": LocData(0x420D, "Cassopolis"),
     "Bilby 15": LocData(0x420E, "Cassopolis"), #hardcore parkour
@@ -163,7 +163,7 @@ bilby_dict: Dict[str, LocData] = {
     "Bilby 32": LocData(0x421F, "Backwood Blizzard"),
     "Bilby 33": LocData(0x4220, "Cassopolis"),
     "Bilby 34": LocData(0x4221, "Cinder Canyon"),
-    "Bilby 35": LocData(0x4222, "Frozen Forests"),
+    "Bilby 35": LocData(0x4222, "Frozen Forest"),
     "Bilby 36": LocData(0x4223, "Razorback Stream"), #Warp, possible without
     "Bilby 37": LocData(0x4224, "SR Swamp"),
     "Bilby 38": LocData(0x4225, "SR Desert"), #in building with final redback race mission
@@ -216,8 +216,8 @@ stone_dict: Dict[str, LocData] = {
     "Stone 41": LocData(0x4628, "Mount Boom Basin"), #Warp from Steve
     "Stone 42": LocData(0x4629, "Mount Boom Basin"), #Chrono behind spiderwebs #flame, ultra
     "Stone 43": LocData(0x462A, "Mount Boom Basin"), #end of mount boom
-    "Stone 44": LocData(0x462B, "Frozen Forests"), #magnet on ice blocks
-    "Stone 45": LocData(0x462C, "Frozen Forests"), #water on middle platform #extreme
+    "Stone 44": LocData(0x462B, "Frozen Forest"), #magnet on ice blocks
+    "Stone 45": LocData(0x462C, "Frozen Forest"), #water on middle platform #extreme
     "Stone 46": LocData(0x462D, "Winter Woods"), #earth in lava tube #extreme
     "Stone 47": LocData(0x462E, "Winter Woods"), #mega
     "Stone 48": LocData(0x462F, "Winter Woods"), #Zoom in lava tube #extreme
