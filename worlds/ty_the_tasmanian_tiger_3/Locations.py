@@ -14,7 +14,7 @@ class LocData(NamedTuple):
 def create_ty3_locations(world):
     all_locations = {** story_dict, **shop_location_dict, **gooboo_berry_dict,
                      **kromium_orb_dict, **bilby_dict, **mission_dict}
-    all_locations.update(get_mission_complete_events(world))
+    #all_locations.update(get_mission_complete_events(world))
 
     if world.options.stone_sanity.value:
         all_locations.update(stone_dict)
@@ -364,20 +364,20 @@ picture_frame_dict: Dict[str, LocData] = {
     "Picture Frame 120": LocData(0x5077, "Dead Dingo Marsh"), #ultra
 }
 
-def get_mission_complete_events(world):
-    complete_mission_dict = {}
-    for name, loc_data in mission_dict.items():
-        if loc_data.code is None:
-            continue
+#def get_mission_complete_events(world):
+    #complete_mission_dict = {}
+    #for name, loc_data in mission_dict.items():
+        #if loc_data.code is None:
+            #continue
 
-        new_name = f"Complete {name}"
-        new_ingame_id = loc_data.id + 100  # Add 100 to ingame ID
+        #new_name = f"Complete {name}"
+        #new_ingame_id = loc_data.id + 100  # Add 100 to ingame ID
 
-        complete_mission_dict[new_name] = LocData(None, loc_data.region, new_ingame_id)
+        #complete_mission_dict[new_name] = LocData(None, loc_data.region, new_ingame_id)
 
-    if world.options.gate_unlock.value == 0:
-        complete_mission_dict["Heinous Hexaquin"] = LocData(None, "Hexaquin", 980)
-    return complete_mission_dict
+    #if world.options.gate_unlock.value == 0:
+        #complete_mission_dict["Heinous Hexaquin"] = LocData(None, "Hexaquin", 980)
+    #return complete_mission_dict
 
 mission_dict: Dict[str, LocData] = {
     "Save the Dreaming": LocData(0x6d000001, "The Dreaming", 1), #prologue
