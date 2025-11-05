@@ -6,6 +6,15 @@ from worlds.ty_the_tasmanian_tiger_3.Locations import Ty3Location, mission_dict
 def has_infra(world, state):
     return (state.has("Ultra Stone", world.player)),
 
+def can_magnet(world, state):
+    return (state.has("Magnet Stone", world.player, 3)),
+
+def can_bunyip(world, state):
+    return (state.has("Sly", world.player)),
+
+def can_gunyip(world, state):
+    return (state.has("Duke", world.player)),
+
 def can_smash(world, state):
     return (state.has("Earth Stone", world.player)
             or state.has("Smash Chassis", world.player)
@@ -30,220 +39,146 @@ def get_rules(world):
     rules = {
         "locations": {
             #collectable shops
-            "Trader Bob's Cog 1": lambda state:
-                state.has("Platinum Cog", world.player, sum(world.cog_prices[:1])),
-            "Trader Bob's Cog 2": lambda state:
-                state.has("Platinum Cog", world.player, sum(world.cog_prices[:2])),
-            "Trader Bob's Cog 3": lambda state:
-                state.has("Platinum Cog", world.player, sum(world.cog_prices[:3])),
-            "Trader Bob's Cog 4": lambda state:
-                state.has("Platinum Cog", world.player, sum(world.cog_prices[:4])),
-            "Trader Bob's Cog 5": lambda state:
-                state.has("Platinum Cog", world.player, sum(world.cog_prices[:5])),
-            "Trader Bob's Cog 6": lambda state:
-                state.has("Platinum Cog", world.player, sum(world.cog_prices[:6])),
-            "Trader Bob's Cog 7": lambda state:
-                state.has("Platinum Cog", world.player, sum(world.cog_prices[:7])),
-            "Trader Bob's Cog 8": lambda state:
-                state.has("Platinum Cog", world.player, sum(world.cog_prices[:8])),
-            "Trader Bob's Cog 9": lambda state:
-                state.has("Platinum Cog", world.player, sum(world.cog_prices[:9])),
-            "Trader Bob's Cog 10": lambda state:
-                state.has("Platinum Cog", world.player, sum(world.cog_prices[:10])),
-            "Madam Mopoke's 1": lambda state:
+            "Naomi's Ice Cream Truck Berry Blast 1": lambda state:
+                state.has("Gooboo Berry", world.player, sum(world.berry_prices[:1])),
+            "Naomi's Ice Cream Truck Berry Blast 2": lambda state:
+                state.has("Gooboo Berry", world.player, sum(world.berry_prices[:2])),
+            "Naomi's Ice Cream Truck Berry Blast 3": lambda state:
+                state.has("Gooboo Berry", world.player, sum(world.berry_prices[:3])),
+            "Naomi's Ice Cream Truck Berry Blast 4": lambda state:
+                state.has("Gooboo Berry", world.player, sum(world.berry_prices[:4])),
+            "Naomi's Ice Cream Truck Bilby Banana Split 1": lambda state:
+            state.has("Bilby", world.player, sum(world.bilby_prices[:1])),
+            "Naomi's Ice Cream Truck Bilby Banana Split 2": lambda state:
+            state.has("Bilby", world.player, sum(world.bilby_prices[:2])),
+            "Naomi's Ice Cream Truck Bilby Banana Split 3": lambda state:
+            state.has("Bilby", world.player, sum(world.bilby_prices[:3])),
+            "Naomi's Ice Cream Truck Bilby Banana Split 4": lambda state:
+            state.has("Bilby", world.player, sum(world.bilby_prices[:4])),
+            "Naomi's Ice Cream Truck Bilby Banana Split 5": lambda state:
+            state.has("Bilby", world.player, sum(world.bilby_prices[:5])),
+
+            "Rang Shop Korb 1": lambda state:
                 state.has("Kromium Orb", world.player, sum(world.orb_prices[:1])),
-            "Madam Mopoke's 2": lambda state:
+            "MRang Shop Korb 2": lambda state:
                 state.has("Kromium Orb", world.player, sum(world.orb_prices[:2])),
-            "Madam Mopoke's 3": lambda state:
+            "Rang Shop Korb 3": lambda state:
                 state.has("Kromium Orb", world.player, sum(world.orb_prices[:3])),
+            "Rang Shop Korb 4": lambda state:
+                state.has("Kromium Orb", world.player, sum(world.orb_prices[:4])),
+            "Rang Shop Korb 5": lambda state:
+                state.has("Kromium Orb", world.player, sum(world.orb_prices[:5])),
+            "Rang Shop Korb 6": lambda state:
+                state.has("Kromium Orb", world.player, sum(world.orb_prices[:6])),
+            "Rang Shop Korb 7": lambda state:
+                state.has("Kromium Orb", world.player, sum(world.orb_prices[:7])),
+            "Rang Shop Korb 8": lambda state:
+                state.has("Kromium Orb", world.player, sum(world.orb_prices[:8])),
 
             #Missions
-            "Haunted Hassle": lambda state:
-                has_infra(world, state),
-            "Lava Chill Out": lambda state:
-                can_swing(world, state) or can_cold(world, state),
-            "Hidden Danger": lambda state:
-                has_infra(world, state),
-            "Deep Sea Scare": lambda state:
-                state.has("Sub Bunyip Key", world.player),
-            "Sea Lab": lambda state:
-                state.has("Sub Bunyip Key", world.player),
-            "Oil Rig Fire": lambda state:
-                state.has("Thermo Bunyip Key", world.player),
-            "Truck Tragedy": lambda state:
-                state.has("Lifter Bunyip Key", world.player),
-            "Truck Stop": lambda state:
-                state.has("Lifter Bunyip Key", world.player),
-            "Bush Fire": lambda state:
-                state.has("Thermo Bunyip Key", world.player),
-            "Killer Koala": lambda state:
-                has_infra(world, state),
-            "Grub Grab": lambda state:
-                state.has("Burramudgee Town ParkingBay", world.player) and (state.has("Patchy Barriers", world.player) or state.has("Buster Barriers", world.player)),
-            "Ripper Nipper": lambda state:
-                state.has("Wobbygon Bay ParkingBay", world.player) and state.has("Ripper Nipper ParkingBay", world.player),
-            "Complete Haunted Hassle": lambda state:
-                has_infra(world, state),
-            "Complete Lava Chill Out": lambda state:
-                can_swing(world, state) or can_cold(world, state),
-            "Complete Hidden Danger": lambda state:
-                has_infra(world, state),
-            "Complete Deep Sea Scare": lambda state:
-                state.has("Sub Bunyip Key", world.player),
-            "Complete Sea Lab": lambda state:
-                state.has("Sub Bunyip Key", world.player),
-            "Complete Oil Rig Fire": lambda state:
-                state.has("Thermo Bunyip Key", world.player),
-            "Complete Truck Tragedy": lambda state:
-                state.has("Lifter Bunyip Key", world.player),
-            "Complete Truck Stop": lambda state:
-                state.has("Lifter Bunyip Key", world.player),
-            "Complete Bush Fire": lambda state:
-                state.has("Thermo Bunyip Key", world.player),
-            "Complete Killer Koala": lambda state:
-                has_infra(world, state),
-            "Complete Grub Grab": lambda state:
-                state.has("Burramudgee Town ParkingBay", world.player) and (state.has("Patchy Barriers", world.player) or state.has("Buster Barriers", world.player)),
-            "Complete Ripper Nipper": lambda state:
-                state.has("Wobbygon Bay ParkingBay", world.player) and state.has("Ripper Nipper ParkingBay", world.player),
-
-            #Cogs
-            "Platinum Cog 2": lambda state:
-                can_smash_wall(world, state),
-            "Platinum Cog 4": lambda state:
-                can_smash_wall(world, state),
-            "Platinum Cog 6": lambda state:
-                can_smash_wall(world, state),
-            "Platinum Cog 12": lambda state:
-                can_swing(world, state)  or can_cold(world, state),
-            "Platinum Cog 17": lambda state:
-                has_infra(world, state),
-            "Platinum Cog 18": lambda state:
-                can_swing(world, state),
-            "Platinum Cog 20": lambda state:
-                can_smash_wall(world, state),
-            "Platinum Cog 21": lambda state:
-                can_smash_wall(world, state),
-            "Platinum Cog 24": lambda state:
-                can_freeze(world, state),
-            "Platinum Cog 25": lambda state:
-                state.has("Lifter Bunyip Key", world.player),
-            "Platinum Cog 32": lambda state:
-                can_tp(world, state),
-            "Platinum Cog 38": lambda state:
-                can_tp(world, state),
-            "Platinum Cog 40": lambda state:
-                can_tp(world, state),
-            "Platinum Cog 42": lambda state:
-                can_smash_wall(world, state),
-            "Platinum Cog 45": lambda state:
-                can_burn(world, state),
-            "Platinum Cog 50": lambda state:
-                has_infra(world, state),
+            "Egg Hunt": lambda state:
+                state.has("Satellite Strike", world.player),
+            "Power Struggle": lambda state:
+                state.has("Grav Grenade", world.player) and state.has("Shadow Beam", world.player),
+            "Meltdown": lambda state:
+                state.has("Thermo Cannon", world.player),
+            "Ranger Endanger": lambda state:
+                state.has("Shadow Beam", world.player),
+            "Redback Rundown": lambda state:
+                state.has("Thermo Cannon", world.player),
+            "All Your Base": lambda state:
+                can_gunyip(world, state),
+            "Aero Coast Guard": lambda state:
+                can_gunyip(world, state),
+            "Wrath of the Dragonquin": lambda state:
+                can_gunyip(world, state),
+            "Forest Firepower": lambda state:
+                can_gunyip(world, state),
 
             #Orbs
             "Kromium Orb 1": lambda state:
-                can_swing(world, state),
+                has_infra(world, state),
+            "Kromium Orb 2": lambda state:
+                has_infra(world, state),
             "Kromium Orb 3": lambda state:
-                can_swing(world, state),
+                can_smash(world, state),
             "Kromium Orb 4": lambda state:
-                can_swing(world, state)  or can_freeze(world, state),
+                can_burn(world, state),
+            "Kromium Orb 6": lambda state:
+                can_swing(world, state) and can_smash(world, state) and
+                (state.has("Zoom Stone", world.player) or state.has("Mega Stone", world.player)),
+            "Kromium Orb 7": lambda state:
+                has_infra(world, state),
             "Kromium Orb 8": lambda state:
-                can_tp(world, state) and can_smash_wall(world, state),
+                can_smash(world, state),
             "Kromium Orb 10": lambda state:
-                can_smash_wall(world, state),
+                has_infra(world, state),
             "Kromium Orb 14": lambda state:
+                can_smash(world, state),
+            "Kromium Orb 18": lambda state:
+                can_freeze(world, state),
+            "Kromium Orb 22": lambda state:
                 has_infra(world, state),
-            "Kromium Orb 15": lambda state:
-                has_infra(world, state),
-            "Kromium Orb 16": lambda state:
-                can_smash_wall(world, state),
-            "Kromium Orb 17": lambda state:
-                can_swing(world, state),
             "Kromium Orb 23": lambda state:
+                has_infra(world, state),
+            "Kromium Orb 25": lambda state:
                 can_swing(world, state),
             "Kromium Orb 26": lambda state:
-                can_swing(world, state),
-            "Kromium Orb 28": lambda state:
-                can_smash_wall(world, state),
+                has_infra(world, state),
+            "Kromium Orb 27": lambda state:
+                has_infra(world, state),
 
             #Bilbies
-            "Bilby 1": lambda state:
-                can_smash_wall(world,state),
-            "Bilby 5": lambda state:
-                can_swing(world, state) or can_cold(world, state),
-            "Bilby 16": lambda state:
-                has_infra(world, state),
-            "Bilby 17": lambda state:
-                can_swing(world, state),
-            "Bilby 19": lambda state:
-                can_swing(world, state),
-            "Bilby 20": lambda state:
-                can_swing(world, state),
-            "Bilby 22": lambda state:
+            "Bilby 2": lambda state:
+                can_zap(world,state),
+            "Bilby 3": lambda state:
                 can_burn(world, state),
-            "Bilby 23": lambda state:
-                can_burn(world, state),
-            "Bilby 26": lambda state:
+            "Bilby 4": lambda state:
                 can_tp(world, state),
-            "Bilby 28": lambda state:
-                can_freeze(world, state),
+            "Bilby 6": lambda state:
+                state.has("Grav Grenade", world.player) or state.has("Satellite Strike", world.player),
+            "Bilby 7": lambda state:
+            state.has("Grav Grenade", world.player) or state.has("Satellite Strike", world.player),
+            "Bilby 9": lambda state:
+                can_swing(world, state),
+            "Bilby 12": lambda state:
+                state.has("Grav Grenade", world.player),
+            "Bilby 19": lambda state:
+                state.has("Grav Grenade", world.player),
+            "Bilby 22": lambda state:
+                can_smash(world, state),
+            "Bilby 24": lambda state:
+                can_smash(world, state),
+            "Bilby 36": lambda state:
+                can_tp(world, state), #jump is possible without warp
 
-            #Frills
-            "Disguised Frill 1": lambda state:
-                has_infra(world, state)
-                and state.can_reach_region("Burramudgee Town", world.player)
-                and can_smash_wall(world, state),
-            "Disguised Frill 2": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 3": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 4": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 5": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 6": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 7": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 8": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 9": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 10": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 11": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 12": lambda state:
-                has_infra(world, state)
-                and state.can_reach_region("Burramudgee Town", world.player)
-                and can_swing(world, state),
-            "Disguised Frill 13": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 14": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 15": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 16": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 17": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 18": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 19": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 20": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 21": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 22": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 23": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 24": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
-            "Disguised Frill 25": lambda state:
-                has_infra(world, state) and state.can_reach_region("Burramudgee Town", world.player),
+            #Stones
+            "Stone 3": lambda state:
+                has_infra(world, state) and can_swing(world, state),
+            "Stone 6": lambda state:
+                can_magnet(world, state),
+            "Stone 8": lambda state:
+                can_magnet(world, state),
+            "Stone 16": lambda state:
+                state.has("Grav Grenade", world.player),
+            "Stone 28": lambda state:
+                can_smash(world, state),
+            "Stone 29": lambda state:
+                can_magnet(world, state),
+            "Stone 31": lambda state:
+                can_burn(world, state),
+            "Stone 39": lambda state:
+                can_magnet(world, state),
+            "Stone 42": lambda state:
+                has_infra(world, state) and can_burn(world, state),
+            "Stone 49": lambda state:
+                can_swing(world, state),
+            "Stone 50": lambda state:
+                has_infra(world, state),
+            "Stone 55": lambda state:
+                has_infra(world, state),
+            "Stone 56": lambda state:
+                can_burn(world, state) and can_zap(world, state),
 
             #Steves
             "Steve - Razorback Stream": lambda state:
@@ -263,36 +198,107 @@ def get_rules(world):
 
             #Frames
             "Picture Frame 1": lambda state:
-                can_tp(world, state),
+                has_infra(world, state),
             "Picture Frame 2": lambda state:
-                can_tp(world, state),
+                has_infra(world, state) and can_smash(world, state),
             "Picture Frame 3": lambda state:
-                can_tp(world, state),
+                has_infra(world, state) and can_smash(world, state),
+            "Picture Frame 4": lambda state:
+                has_infra(world, state) and can_smash(world, state),
             "Picture Frame 5": lambda state:
+                has_infra(world, state) and can_smash(world, state),
+            "Picture Frame 6": lambda state:
+                has_infra(world, state) and can_smash(world, state),
+            "Picture Frame 8": lambda state:
                 can_swing(world, state),
-            "Picture Frame 7": lambda state:
-                can_swing(world, state) or can_cold(world, state),
-            "Picture Frame 13": lambda state:
-                can_smash_wall(world, state),
+            "Picture Frame 12": lambda state:
+                can_smash(world, state),
+            "Picture Frame 16": lambda state:
+                can_swing(world, state),
+            "Picture Frame 17": lambda state:
+                can_swing(world, state) and can_smash(world, state) and
+                (state.has("Zoom Stone", world.player) or state.has("Mega Stone", world.player)),
+            "Picture Frame 27": lambda state:
+                has_infra(world, state),
+            "Picture Frame 28": lambda state:
+                has_infra(world, state),
+            "Picture Frame 29": lambda state:
+                has_infra(world, state),
+            "Picture Frame 30": lambda state:
+                has_infra(world, state),
             "Picture Frame 31": lambda state:
-                can_smash_wall(world, state),
+                has_infra(world, state),
             "Picture Frame 32": lambda state:
-                can_smash_wall(world, state),
-            "Picture Frame 36": lambda state:
-                can_swing(world, state),
-            "Picture Frame 37": lambda state:
-                can_swing(world, state),
-            "Picture Frame 38": lambda state:
-                can_swing(world, state),
-            "Picture Frame 62": lambda state:
-                can_swing(world, state),
+                has_infra(world, state),
+            "Picture Frame 33": lambda state:
+                state.has("Grav Grenade", world.player),
+            "Picture Frame 42": lambda state:
+                state.has("Grav Grenade", world.player),
+            "Picture Frame 52": lambda state:
+                can_smash(world, state),
+            "Picture Frame 53": lambda state:
+                can_smash(world, state),
+            "Picture Frame 54": lambda state:
+                can_smash(world, state),
+            "Picture Frame 55": lambda state:
+                can_smash(world, state),
+            "Picture Frame 56": lambda state:
+                has_infra(world, state),
+            "Picture Frame 57": lambda state:
+                has_infra(world, state),
+            "Picture Frame 58": lambda state:
+                has_infra(world, state),
+            "Picture Frame 59": lambda state:
+                has_infra(world, state),
+            "Picture Frame 60": lambda state:
+                has_infra(world, state),
+            "Picture Frame 61": lambda state:
+                has_infra(world, state),
+            "Picture Frame 70": lambda state:
+                can_smash(world, state),
+            "Picture Frame 71": lambda state:
+                can_smash(world, state),
+            "Picture Frame 72": lambda state:
+                can_smash(world, state),
+            "Picture Frame 73": lambda state:
+                can_smash(world, state),
+            "Picture Frame 74": lambda state:
+                can_smash(world, state),
+            "Picture Frame 81": lambda state:
+                state.has("Grav Grenade", world.player) or state.has("Satellite Cannon", world.player),
+            "Picture Frame 82": lambda state:
+                state.has("Grav Grenade", world.player) or state.has("Satellite Cannon", world.player),
+            "Picture Frame 96": lambda state:
+                has_infra(world, state),
+            "Picture Frame 104": lambda state:
+                state.has("Magnet Stone", world.player, 2),
+            "Picture Frame 108": lambda state:
+                can_smash(world, state),
+            "Picture Frame 109": lambda state:
+                can_smash(world, state),
+            "Picture Frame 111": lambda state:
+                can_smash(world, state) and can_swing(world, state),
+            "Picture Frame 112": lambda state:
+                can_smash(world, state),
+            "Picture Frame 114": lambda state:
+                can_smash(world, state),
+            "Picture Frame 115": lambda state:
+                can_smash(world, state),
+            "Picture Frame 116": lambda state:
+                has_infra(world, state),
+            "Picture Frame 117": lambda state:
+                has_infra(world, state),
+            "Picture Frame 118": lambda state:
+                has_infra(world, state),
+            "Picture Frame 119": lambda state:
+                has_infra(world, state),
+            "Picture Frame 120": lambda state:
+                has_infra(world, state),
         },
         "entrances": {
             "Burramudgee HQ -> Infra":
                 lambda state: not world.options.require_infra
                 or has_infra(world, state),
-            "Burramudgee HQ -> Crates":
-                lambda state: can_smash_crate(world, state),
             "Burramudgee Town -> Infra":
                 lambda state: not world.options.require_infra
                               or has_infra(world, state),
@@ -418,12 +424,8 @@ def get_rules(world):
                 lambda state: state.has("Thermo Bunyip Key", world.player),
             "Fluffy ParkingBay":
                 lambda state: state.has("Fluffy ParkingBay", world.player),
-            "Bush Rescue Plane":
-                lambda state: (state.has("Mission Complete", world.player, world.options.missions_for_goal.value)
-                               and state.has("Patchy Defeated", world.player)
-                               and state.has("Buster Defeated", world.player)
-                               and state.has("Fluffy Defeated", world.player)
-                               ) if world.options.require_bosses.value else state.has("Mission Complete", world.player, world.options.missions_for_goal.value),
+            "Airship - Quinking":
+                lambda state: state.has("Mission Complete", world.player, world.options.missions_for_goal.value),
         }
     }
     return rules
