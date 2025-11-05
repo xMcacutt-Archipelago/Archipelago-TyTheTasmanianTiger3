@@ -161,6 +161,7 @@ class Ty3World(World):
             "ShopDifficulty": self.options.shop_difficulty.value,
             "RangShopPrices": self.rang_prices,
             "CassopolisPrices": self.cassopolis_prices,
+            "MapPrices": self.map_prices,
             "BunyipPrices": self.bunyip_prices,
             "BerryPrices": self.berry_prices,
             "BilbyPrices": self.bilby_prices,
