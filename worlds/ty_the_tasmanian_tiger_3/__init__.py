@@ -60,7 +60,7 @@ class Ty3World(World):
 
         self.bilby_prices = []
         self.orb_prices = []
-
+        self.berry_prices = []
 
     def generate_early(self) -> None:
         self.locations = create_ty3_locations(self)
@@ -159,13 +159,15 @@ class Ty3World(World):
             "MissionsToGoal": self.options.missions_for_goal.value,
             "GateUnlock": self.options.gate_unlock.value,
             "ShopDifficulty": self.options.shop_difficulty.value,
-            "RangPrices": self.rang_prices,
-            "SlyPrices": self.sly_prices,
-            "CopPrices": self.cop_prices,
+            "RangShopPrices": self.rang_prices,
+            "CassopolisPrices": self.cassopolis_prices,
+            "BunyipPrices": self.bunyip_prices,
+            "BerryPrices": self.berry_prices,
             "BilbyPrices": self.bilby_prices,
             "OrbPrices": self.orb_prices,
             "ExtraBilbies": self.options.extra_bilbies.value,
             "ExtraOrbs": self.options.extra_orbs.value,
+            "ExtraBerries": self.options.extra_berries.value,
             "ChecksRequireInfra": self.options.require_infra.value,
             "FrameSanity": self.options.frame_sanity.value,
             "SteveSanity": self.options.steve_sanity.value,
