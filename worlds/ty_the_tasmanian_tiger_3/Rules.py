@@ -100,7 +100,9 @@ def get_rules(world):
                 or (world.options.require_shadow == 1
                 and state.has(world.player, "Bunyip Gauntlet")
                 and state.has(world.player, "Shadow Chassis")
-                and state.has(world.player, "Shadow Stone", 3)),
+                and state.has(world.player, "Shadow Stone 1")
+                and state.has(world.player, "Shadow Stone 2")
+                and state.has(world.player, "Shadow Stone 3")),
 
             #Orbs
             "Kromium Orb 1": lambda state:

@@ -5,7 +5,7 @@ from typing import Dict
 from BaseClasses import ItemClassification, Item
 from typing import Optional
 
-#from worlds.ty_the_tasmanian_tiger_3.Locations import get_mission_complete_events
+from worlds.ty_the_tasmanian_tiger_3.Locations import get_mission_complete_events
 
 
 class Ty3Item(Item):
@@ -66,26 +66,26 @@ def create_ty3_items(world):
     #     create_single(name, world, player)
     world.multiworld.itempool += world.itempool
 
-#def add_mission_complete_events(world):
-    #complete_mission_dict = get_mission_complete_events(world)
-    #count = 0
-    #for mission_name, loc_data in complete_mission_dict.items():
+def add_mission_complete_events(world):
+    complete_mission_dict = get_mission_complete_events(world)
+    count = 0
+    for mission_name, loc_data in complete_mission_dict.items():
         # Assuming your locations are named exactly as the mission_name
-        #try:
-            #item_name = "Mission Complete"
+        try:
+            item_name = "Mission Complete"
             #if world.options.gate_unlock.value == 0:
                 #if mission_name == "Heinous Hexaquin":
                     #item_name = "Hexaquin Defeated"
             #if world.options.gate_unlock.value == 1:
                 #if mission_name == "Heinous Hexaquin":
                     #item_name = "Southern Rivers Gate"
-            #location = world.multiworld.get_location(mission_name, world.player)
-            #event_item = Ty3Item(item_name, ItemClassification.progression, None, world.player)
-            #location.place_locked_item(event_item)
-            #count+=1
-        #except KeyError:
-            #print(f"Location {mission_name} not found in multiworld, skipping.")
-   # return count
+            location = world.multiworld.get_location(mission_name, world.player)
+            event_item = Ty3Item(item_name, ItemClassification.progression, None, world.player)
+            location.place_locked_item(event_item)
+            count+=1
+        except KeyError:
+            print(f"Location {mission_name} not found in multiworld, skipping.")
+    return count
 
 barriers: Dict[str, ItemData] = {
     "Sly": ItemData(980, ItemClassification.progression),
@@ -110,7 +110,9 @@ item_dict: Dict[str, ItemData] = {
     "Priceless Art Map": ItemData(80, ItemClassification.useful),
     "Forbidden Fruit Map": ItemData(81, ItemClassification.useful),
     "Bunyip Gauntlet": ItemData(82, ItemClassification.progression),
-    "Shadow Stone": ItemData(83, ItemClassification.progression, 3),
+    "Shadow Stone 1": ItemData(83, ItemClassification.progression),
+    "Shadow Stone 2": ItemData(84, ItemClassification.progression),
+    "Shadow Stone 3": ItemData(85, ItemClassification.progression),
 }
 
 def get_rangs(world) -> Dict[str, ItemData]:

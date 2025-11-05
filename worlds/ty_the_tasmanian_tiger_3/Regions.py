@@ -56,7 +56,6 @@ def create_ty3_regions(world, location_dict):
     create_region(world, "Frozen Forest", location_dict)
     create_region(world, "Backwood Blizzard", location_dict)
     create_region(world, "Quinking", location_dict)
-    create_region(world, "SR Swamp - Quinking", location_dict)
     create_region(world, "SR Desert - Duke", location_dict)
     create_region(world, "SR Desert - Sly", location_dict)
     create_region(world, "SR Swamp - Duke", location_dict)
