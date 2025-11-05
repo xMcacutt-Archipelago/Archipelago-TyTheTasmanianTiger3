@@ -55,8 +55,9 @@ class Ty3World(World):
         self.trap_weights = {}
 
         self.rang_prices = []
-        self.sly_prices = []
-        self.cop_prices = []
+        self.cassopolis_prices = []
+        self.map_prices = []
+        self.bunyip_prices = []
 
         self.bilby_prices = []
         self.orb_prices = []
@@ -70,39 +71,53 @@ class Ty3World(World):
             min_price, max_price = 1000, 5000
         elif self.options.shop_difficulty.value == 2:
             min_price, max_price = 3000, 7000
-        self.rang_prices = self.generate_shop(8,1000000,min_price, max_price)
+        self.rang_prices = self.generate_shop(6,1000000,min_price, max_price)
 
 
-        min_price, max_price = 5000, 15000
+        min_price, max_price = 3000, 10000
         if self.options.shop_difficulty.value == 1:
             min_price, max_price = 10000, 25000
         elif self.options.shop_difficulty.value == 2:
-            min_price, max_price = 12000, 40000
-        self.sly_prices = self.generate_shop(11,1000000,min_price, max_price)
+            min_price, max_price = 15000, 30000
+        self.cassopolis_prices = self.generate_shop(11,1000000,min_price, max_price)
+
+        min_price, max_price = 2000, 5000
+        if self.options.shop_difficulty.value == 1:
+            min_price, max_price = 5000, 10000
+        elif self.options.shop_difficulty.value == 2:
+            min_price, max_price = 10000, 15000
+        self.bunyip_prices = self.generate_shop(6, 1000000, min_price, max_price)
 
 
         min_price, max_price = 1000, 4000
         if self.options.shop_difficulty.value == 1:
             min_price, max_price = 3000, 6000
         elif self.options.shop_difficulty.value == 2:
-            min_price, max_price = 4000, 7500
-        self.cop_prices = self.generate_shop(5,1000000,min_price, max_price)
+            min_price, max_price = 5000, 8000
+        self.map_prices = self.generate_shop(5,1000000,min_price, max_price)
 
 
         min_price, max_price = 1, 3
         if self.options.shop_difficulty.value == 1:
-            min_price, max_price = 2, 4
-        elif self.options.shop_difficulty.value == 2:
             min_price, max_price = 3, 6
-        self.bilby_prices = self.generate_shop(10,50,min_price, max_price)
-
-
-        min_price, max_price = 3, 6
-        if self.options.shop_difficulty.value == 1:
-            min_price, max_price = 5, 8
         elif self.options.shop_difficulty.value == 2:
-            min_price, max_price = 7, 10
-        self.orb_prices = self.generate_shop(3,30, min_price, max_price)
+            min_price, max_price = 6, 8
+        self.bilby_prices = self.generate_shop(5,40,min_price, max_price)
+
+
+        min_price, max_price = 1, 2
+        if self.options.shop_difficulty.value == 1:
+            min_price, max_price = 3, 4
+        elif self.options.shop_difficulty.value == 2:
+            min_price, max_price = 4, 5
+        self.orb_prices = self.generate_shop(8,30, min_price, max_price)
+
+        min_price, max_price = 1, 2
+        if self.options.shop_difficulty.value == 1:
+            min_price, max_price = 1, 2
+        elif self.options.shop_difficulty.value == 2:
+            min_price, max_price = 2, 3
+        self.berry_prices = self.generate_shop(4,10, min_price, max_price)
 
     def create_regions(self):
         create_ty3_regions(self, self.locations)
