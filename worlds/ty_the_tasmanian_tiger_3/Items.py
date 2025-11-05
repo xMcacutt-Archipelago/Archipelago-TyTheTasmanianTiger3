@@ -109,10 +109,11 @@ item_dict: Dict[str, ItemData] = {
     "Sekrit Map": ItemData(79, ItemClassification.useful),
     "Priceless Art Map": ItemData(80, ItemClassification.useful),
     "Forbidden Fruit Map": ItemData(81, ItemClassification.useful),
+    "Bunyip Gauntlet": ItemData(82, ItemClassification.progression),
+    "Shadow Stone": ItemData(83, ItemClassification.progression, 3),
 }
 
 def get_rangs(world) -> Dict[str, ItemData]:
-        print("individual rangs")
         return individual_rangs
 
 individual_rangs: Dict[str, ItemData] = {
@@ -132,18 +133,17 @@ def get_bunyip_stones(world) -> Dict[str, ItemData]:
 
 
 bunyip_stones: Dict[str, ItemData] = {
-    "Fire Stone": ItemData(3736, ItemClassification.progression, 3),
-    "Water Stone": ItemData(3689, ItemClassification.progression, 3),
-    "Air Stone": ItemData(3688, ItemClassification.progression, 3),
-    "Earth Stone": ItemData(4092, ItemClassification.progression, 3),
-    "Chrono Stone": ItemData(3692, ItemClassification.useful, 6),
-    "Warp Stone": ItemData(3306, ItemClassification.progression, 3),
-    "Ultra Stone": ItemData(3285, ItemClassification.useful, 3),
-    "Mega Stone": ItemData(3287, ItemClassification.progression, 3),
-    "Multi Stone": ItemData(3712, ItemClassification.useful, 3),
-    "Zoom Stone": ItemData(3735, ItemClassification.progression, 3),
-    "Magnet Stone": ItemData(3694, ItemClassification.progression, 3),
-    "Shadow Stone": ItemData(3693, ItemClassification.progression, 3),
+    "Fire Stone": ItemData(3736, ItemClassification.progression),
+    "Water Stone": ItemData(3689, ItemClassification.progression),
+    "Air Stone": ItemData(3688, ItemClassification.progression),
+    "Earth Stone": ItemData(4092, ItemClassification.progression,),
+    "Chrono Stone": ItemData(3692, ItemClassification.useful),
+    "Warp Stone": ItemData(3306, ItemClassification.progression),
+    "Ultra Stone": ItemData(3285, ItemClassification.useful),
+    "Mega Stone": ItemData(3287, ItemClassification.progression),
+    "Multi Stone": ItemData(3712, ItemClassification.useful),
+    "Zoom Stone": ItemData(3735, ItemClassification.progression),
+    "Magnet Stone": ItemData(3694, ItemClassification.progression),
 }
 
 
