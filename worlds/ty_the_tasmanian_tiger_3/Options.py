@@ -96,11 +96,11 @@ class StartWithMaps(Toggle):
 
 class ChecksRequireInfra(Toggle):
     """
-    Determines whether the generator considers checks using invisible objects logically require the Infrarang
+    Determines whether the generator considers checks using invisible objects logically require an Ultra Stone
 
     This also affects Frame Sanity
     """
-    display_name = "Frames Require Infra"
+    display_name = "Checks Require Ultra"
 
 class FrameSanity(Toggle):
     """
