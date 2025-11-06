@@ -34,7 +34,7 @@ def create_ty3_items(world):
 
     total_location_count = len(world.multiworld.get_unfilled_locations(world.player))
     print(total_location_count)
-    #total_location_count -= add_mission_complete_events(world)
+    total_location_count -= add_mission_complete_events(world)
     print(total_location_count)
     for item_name, item_data in get_rangs(world).items():
         create_item(world, item_name, item_data.classification, item_data.amount)
@@ -129,17 +129,17 @@ def get_bunyip_stones(world) -> Dict[str, ItemData]:
 
 
 bunyip_stones: Dict[str, ItemData] = {
-    "Fire Stone": ItemData(3736, ItemClassification.progression),
-    "Water Stone": ItemData(3689, ItemClassification.progression),
-    "Air Stone": ItemData(3688, ItemClassification.progression),
-    "Earth Stone": ItemData(4092, ItemClassification.progression,),
-    "Chrono Stone": ItemData(3692, ItemClassification.useful),
-    "Warp Stone": ItemData(3306, ItemClassification.progression),
-    "Ultra Stone": ItemData(3285, ItemClassification.useful),
-    "Mega Stone": ItemData(3287, ItemClassification.progression),
-    "Multi Stone": ItemData(3712, ItemClassification.useful),
-    "Zoom Stone": ItemData(3735, ItemClassification.progression),
-    "Magnet Stone": ItemData(3694, ItemClassification.progression),
+    "Fire Stone": ItemData(3736, ItemClassification.progression, 3),
+    "Water Stone": ItemData(3689, ItemClassification.progression, 3),
+    "Air Stone": ItemData(3688, ItemClassification.progression, 3),
+    "Earth Stone": ItemData(4092, ItemClassification.progression, 3),
+    "Chrono Stone": ItemData(3692, ItemClassification.useful, 6),
+    "Warp Stone": ItemData(3306, ItemClassification.progression, 3),
+    "Ultra Stone": ItemData(3285, ItemClassification.useful, 3),
+    "Mega Stone": ItemData(3287, ItemClassification.progression, 3),
+    "Multi Stone": ItemData(3712, ItemClassification.useful, 3),
+    "Zoom Stone": ItemData(3735, ItemClassification.progression, 3),
+    "Magnet Stone": ItemData(3694, ItemClassification.progression, 3),
 }
 
 

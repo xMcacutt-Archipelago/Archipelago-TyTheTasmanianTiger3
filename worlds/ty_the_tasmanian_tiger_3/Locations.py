@@ -30,7 +30,7 @@ story_dict: Dict[str, LocData] = {
     "Shadowring Piece 1": LocData(0x901, "Mount Boom Basin"),
     "Shadowring Piece 2": LocData(0x902, "Mount Boom Basin"),
     "Shadowring Piece 3": LocData(0x903, "Mount Boom Basin"),
-    "Quinking": LocData(0x6d000023, "Quinking"),  # goal #battle arena zeta, redback stash, ranger endanger
+    "Quinking": LocData(None, "Quinking"),  # goal #battle arena zeta, redback stash, ranger endanger
     }
 shop_location_dict: Dict[str, LocData] = {
     "Rang Shop 1": LocData(8, "New Burramudgee"), #water
