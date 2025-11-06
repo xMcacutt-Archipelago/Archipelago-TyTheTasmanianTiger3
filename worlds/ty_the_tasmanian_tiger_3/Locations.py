@@ -371,7 +371,7 @@ def get_mission_complete_events(world):
         if loc_data.code is None:
             continue
 
-        new_name = f"Complete {name}"
+        new_name = f"Mission Complete {name}"
         new_ingame_id = loc_data.id + 100  # Add 100 to ingame ID
 
         complete_mission_dict[new_name] = LocData(None, loc_data.region, new_ingame_id)
