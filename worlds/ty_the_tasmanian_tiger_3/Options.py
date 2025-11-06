@@ -19,8 +19,8 @@ class TotalMissionsForGoal(Range):
     """
     display_name = "Missions For Goal"
     range_start = 0
-    range_end = 28
-    default = 20
+    range_end = 26
+    default = 15
 
 class QuinkingRequiresShadow(Choice):
     """
