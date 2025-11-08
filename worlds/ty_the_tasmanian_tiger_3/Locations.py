@@ -43,7 +43,7 @@ shop_location_dict: Dict[str, LocData] = {
     "Rang Shop Korb 1": LocData(14, "New Burramudgee"), #Original Ty Skin
     "Rang Shop Korb 2": LocData(15, "New Burramudgee"), #Sly Skin
     "Rang Shop Korb 3": LocData(16, "New Burramudgee"), #Team Krome Skin
-    "Rang SHop Korb 4": LocData(17, "New Burramudgee"), #Commando Skin
+    "Rang Shop Korb 4": LocData(17, "New Burramudgee"), #Commando Skin
     "Rang Shop Korb 5": LocData(18, "New Burramudgee"), #Zombie Skin
     "Rang Shop Korb 6": LocData(19, "New Burramudgee"), #Quinkan Skin
     "Rang Shop Korb 7": LocData(20, "New Burramudgee"), #Ridge Skin
