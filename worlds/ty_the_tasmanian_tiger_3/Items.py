@@ -152,10 +152,9 @@ def get_collectable_currencies(world) -> Dict[str, ItemData]:
 
 
 collectibles: Dict[str, ItemData] = {
-    "Gooboo Steve": ItemData(0x20, ItemClassification.progression_skip_balancing, 6),
-    "Kromium Orb": ItemData(0x21, ItemClassification.progression_skip_balancing, 30),
-    "Gooboo Berry": ItemData(0x22, ItemClassification.progression_skip_balancing, 9),
-    "Bilby": ItemData(0x23, ItemClassification.progression_skip_balancing, 40)
+    "Kromium Orb": ItemData(0x20, ItemClassification.progression_skip_balancing, 30),
+    "Gooboo Berry": ItemData(0x21, ItemClassification.progression_skip_balancing, 9),
+    "Bilby": ItemData(0x22, ItemClassification.progression_skip_balancing, 40)
 }
 
 def get_filler(world) -> Dict[str, ItemData]:
