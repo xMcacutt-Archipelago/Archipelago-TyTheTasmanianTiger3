@@ -1,6 +1,6 @@
 from typing import NamedTuple, Optional, Dict
 
-from BaseClasses import Location
+from BaseClasses import Location, Region
 
 
 class Ty3Location(Location):
