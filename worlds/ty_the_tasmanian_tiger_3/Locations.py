@@ -84,92 +84,92 @@ shop_location_dict: Dict[str, LocData] = {
 }
 
 gooboo_berry_dict: Dict[str, LocData] = {
-    "Gooboo Berry 1": LocData(0x4300, "Cinder Canyon"), #Earth
-    "Gooboo Berry 2": LocData(0x4301, "SR Desert - Duke"), #Behind crabs at All Your Base airship
-    "Gooboo Berry 3": LocData(0x4302, "Dead Dingo Marsh"), #Lash
-    "Gooboo Berry 4": LocData(0x4303, "Mount Boom Basin"), #Flame, Lash
-    "Gooboo Berry 5": LocData(0x4304, "New Burramudgee"),
-    "Gooboo Berry 6": LocData(0x4305, "Kaka Boom Island"), #Earth
-    "Gooboo Berry 7": LocData(0x4306, "SR Swamp"),
-    "Gooboo Berry 8": LocData(0x4307, "Pippy Beach"),
-    "Gooboo Berry 9": LocData(0x4308, "Cassopolis"),
-    "Gooboo Berry 10": LocData(0x4309, "Gooboo Gully"),
+    "Gooboo Berry 1": LocData(0x4000, "Cinder Canyon"), #Earth
+    "Gooboo Berry 2": LocData(0x4001, "SR Desert - Duke"), #Behind crabs at All Your Base airship
+    "Gooboo Berry 3": LocData(0x4002, "Dead Dingo Marsh"), #Lash
+    "Gooboo Berry 4": LocData(0x4003, "Mount Boom Basin"), #Flame, Lash
+    "Gooboo Berry 5": LocData(0x4004, "New Burramudgee"),
+    "Gooboo Berry 6": LocData(0x4005, "Kaka Boom Island"), #Earth
+    "Gooboo Berry 7": LocData(0x4006, "SR Swamp"),
+    "Gooboo Berry 8": LocData(0x4007, "Pippy Beach"),
+    "Gooboo Berry 9": LocData(0x4008, "Cassopolis"),
+    "Gooboo Berry 10": LocData(0x4009, "Gooboo Gully"),
 }
 
 kromium_orb_dict: Dict[str, LocData] = {
-    "Kromium Orb 1": LocData(0x4B00, "Cinder Canyon"), #ultra
-    "Kromium Orb 2": LocData(0x4B01, "Cinder Canyon"), #ultra
-    "Kromium Orb 3": LocData(0x4B02, "Cinder Canyon"), #earth
-    "Kromium Orb 4": LocData(0x4B03, "Mount Boom Basin"), #flame
-    "Kromium Orb 5": LocData(0x4B04, "Dead Dingo Marsh"),
-    "Kromium Orb 6": LocData(0x4B05, "Dead Dingo Marsh"), #earth, zoom/mega, lash
-    "Kromium Orb 7": LocData(0x4B06, "Dead Dingo Marsh"), #ultra
-    "Kromium Orb 8": LocData(0x4B07, "New Burramudgee"), #earth
-    "Kromium Orb 9": LocData(0x4B08, "New Burramudgee"),
-    "Kromium Orb 10": LocData(0x4B09, "Dead Dingo Marsh"), #ultra
-    "Kromium Orb 11": LocData(0x4B0A, "Cassopolis"), #boost panel
-    "Kromium Orb 12": LocData(0x4B0B, "Cassopolis"), #opened by hitting all 5 red buttons
-    "Kromium Orb 13": LocData(0x4B0C, "Mount Boom Basin"),
-    "Kromium Orb 14": LocData(0x4B0D, "Mount Boom Basin"), #earth
-    "Kromium Orb 15": LocData(0x4B0E, "Mount Boom Basin"),
-    "Kromium Orb 16": LocData(0x4B0F, "Kaka Boom Island"),
-    "Kromium Orb 17": LocData(0x4B10, "Kaka Boom Island"),
-    "Kromium Orb 18": LocData(0x4B11, "Pippy Beach"), #water
-    "Kromium Orb 19": LocData(0x4B12, "SR Swamp"),
-    "Kromium Orb 20": LocData(0x4B13, "Pippy Beach"),
-    "Kromium Orb 21": LocData(0x4B14, "Kaka Boom Island"),
-    "Kromium Orb 22": LocData(0x4B15, "Kaka Boom Island"), #ultra
-    "Kromium Orb 23": LocData(0x4B16, "Gooboo Gully"), #ultra
-    "Kromium Orb 24": LocData(0x4B17, "Gooboo Gully"),
-    "Kromium Orb 25": LocData(0x4B18, "Gooboo Gully"), #lash
-    "Kromium Orb 26": LocData(0x4B19, "Gooboo Gully"), #ultra
-    "Kromium Orb 27": LocData(0x4B1A, "Cinder Canyon"), #ultra
-    "Kromium Orb 28": LocData(0x4B1B, "SR Desert"),
-    "Kromium Orb 29": LocData(0x4B1C, "Razorback Stream"),
-    "Kromium Orb 30": LocData(0x4B1D, "SR Desert"),
+    "Kromium Orb 1": LocData(0x4300, "Cinder Canyon"), #ultra
+    "Kromium Orb 2": LocData(0x4301, "Cinder Canyon"), #ultra
+    "Kromium Orb 3": LocData(0x4302, "Cinder Canyon"), #earth
+    "Kromium Orb 4": LocData(0x4303, "Mount Boom Basin"), #flame
+    "Kromium Orb 5": LocData(0x4304, "Dead Dingo Marsh"),
+    "Kromium Orb 6": LocData(0x4305, "Dead Dingo Marsh"), #earth, zoom/mega, lash
+    "Kromium Orb 7": LocData(0x4306, "Dead Dingo Marsh"), #ultra
+    "Kromium Orb 8": LocData(0x4307, "New Burramudgee"), #earth
+    "Kromium Orb 9": LocData(0x4308, "New Burramudgee"),
+    "Kromium Orb 10": LocData(0x4309, "Dead Dingo Marsh"), #ultra
+    "Kromium Orb 11": LocData(0x430A, "Cassopolis"), #boost panel
+    "Kromium Orb 12": LocData(0x430B, "Cassopolis"), #opened by hitting all 5 red buttons
+    "Kromium Orb 13": LocData(0x430C, "Mount Boom Basin"),
+    "Kromium Orb 14": LocData(0x430D, "Mount Boom Basin"), #earth
+    "Kromium Orb 15": LocData(0x430E, "Mount Boom Basin"),
+    "Kromium Orb 16": LocData(0x430F, "Kaka Boom Island"),
+    "Kromium Orb 17": LocData(0x4310, "Kaka Boom Island"),
+    "Kromium Orb 18": LocData(0x4311, "Pippy Beach"), #water
+    "Kromium Orb 19": LocData(0x4312, "SR Swamp"),
+    "Kromium Orb 20": LocData(0x4313, "Pippy Beach"),
+    "Kromium Orb 21": LocData(0x4314, "Kaka Boom Island"),
+    "Kromium Orb 22": LocData(0x4315, "Kaka Boom Island"), #ultra
+    "Kromium Orb 23": LocData(0x4316, "Gooboo Gully"), #ultra
+    "Kromium Orb 24": LocData(0x4317, "Gooboo Gully"),
+    "Kromium Orb 25": LocData(0x4318, "Gooboo Gully"), #lash
+    "Kromium Orb 26": LocData(0x4319, "Gooboo Gully"), #ultra
+    "Kromium Orb 27": LocData(0x431A, "Cinder Canyon"), #ultra
+    "Kromium Orb 28": LocData(0x431B, "SR Desert"),
+    "Kromium Orb 29": LocData(0x431C, "Razorback Stream"),
+    "Kromium Orb 30": LocData(0x431D, "SR Desert"),
 }
 
 bilby_dict: Dict[str, LocData] = {
-    "Bilby 1": LocData(0x4200, "New Burramudgee"),
-    "Bilby 2": LocData(0x4201, "New Burramudgee"), #air
-    "Bilby 3": LocData(0x4202, "Cinder Canyon"), #fire
-    "Bilby 4": LocData(0x4203, "Cinder Canyon"), #warp
-    "Bilby 5": LocData(0x4204, "Winter Woods"),
-    "Bilby 6": LocData(0x4205, "Backwood Blizzard"), #grav grenade or satellite strike
-    "Bilby 7": LocData(0x4206, "Backwood Blizzard"), #grav grenade or satellite strike
-    "Bilby 8": LocData(0x4207, "Winter Woods"),
-    "Bilby 9": LocData(0x4208, "Dead Dingo Marsh"), #lash
-    "Bilby 10": LocData(0x4209, "Dead Dingo Marsh"),
-    "Bilby 11": LocData(0x420A, "Frozen Forest"),
-    "Bilby 12": LocData(0x420B, "Frozen Forest"), #grav grenade
-    "Bilby 13": LocData(0x420C, "Dead Dingo Marsh"),
-    "Bilby 14": LocData(0x420D, "Cassopolis"),
-    "Bilby 15": LocData(0x420E, "Cassopolis"), #hardcore parkour
-    "Bilby 16": LocData(0x420F, "Mount Boom Basin"),
-    "Bilby 17": LocData(0x4210, "Mount Boom Basin"),
-    "Bilby 18": LocData(0x4211, "Mount Boom Basin"),
-    "Bilby 19": LocData(0x4212, "Winter Woods"), #grav grenade
-    "Bilby 20": LocData(0x4213, "Kaka Boom Island"),
-    "Bilby 21": LocData(0x4214, "Kaka Boom Island"),
-    "Bilby 22": LocData(0x4215, "Kaka Boom Island"), #earth
-    "Bilby 23": LocData(0x4216, "New Burramudgee"),
-    "Bilby 24": LocData(0x4217, "SR Swamp"), #lash
-    "Bilby 25": LocData(0x4218, "Pippy Beach"),
-    "Bilby 26": LocData(0x4219, "Pippy Beach"),
-    "Bilby 27": LocData(0x421A, "Pippy Beach"), #top of airship to KBI
-    "Bilby 28": LocData(0x421B, "Gooboo Gully"),
-    "Bilby 29": LocData(0x421C, "Gooboo Gully"),
-    "Bilby 30": LocData(0x421D, "Gooboo Gully"),
-    "Bilby 31": LocData(0x421E, "Backwood Blizzard"),
-    "Bilby 32": LocData(0x421F, "Backwood Blizzard"),
-    "Bilby 33": LocData(0x4220, "Cassopolis"),
-    "Bilby 34": LocData(0x4221, "Cinder Canyon"),
-    "Bilby 35": LocData(0x4222, "Frozen Forest"),
-    "Bilby 36": LocData(0x4223, "Razorback Stream"), #Warp, possible without
-    "Bilby 37": LocData(0x4224, "SR Swamp"),
-    "Bilby 38": LocData(0x4225, "SR Desert"), #in building with final redback race mission
-    "Bilby 39": LocData(0x4226, "SR Desert"),
-    "Bilby 40": LocData(0x4227, "Winter Woods"),
+    "Bilby 1": LocData(0x4100, "New Burramudgee"),
+    "Bilby 2": LocData(0x4101, "New Burramudgee"), #air
+    "Bilby 3": LocData(0x4102, "Cinder Canyon"), #fire
+    "Bilby 4": LocData(0x4103, "Cinder Canyon"), #warp
+    "Bilby 5": LocData(0x4104, "Winter Woods"),
+    "Bilby 6": LocData(0x4105, "Backwood Blizzard"), #grav grenade or satellite strike
+    "Bilby 7": LocData(0x4106, "Backwood Blizzard"), #grav grenade or satellite strike
+    "Bilby 8": LocData(0x4107, "Winter Woods"),
+    "Bilby 9": LocData(0x4108, "Dead Dingo Marsh"), #lash
+    "Bilby 10": LocData(0x4109, "Dead Dingo Marsh"),
+    "Bilby 11": LocData(0x410A, "Frozen Forest"),
+    "Bilby 12": LocData(0x410B, "Frozen Forest"), #grav grenade
+    "Bilby 13": LocData(0x410C, "Dead Dingo Marsh"),
+    "Bilby 14": LocData(0x410D, "Cassopolis"),
+    "Bilby 15": LocData(0x410E, "Cassopolis"), #hardcore parkour
+    "Bilby 16": LocData(0x410F, "Mount Boom Basin"),
+    "Bilby 17": LocData(0x4110, "Mount Boom Basin"),
+    "Bilby 18": LocData(0x4111, "Mount Boom Basin"),
+    "Bilby 19": LocData(0x4112, "Winter Woods"), #grav grenade
+    "Bilby 20": LocData(0x4113, "Kaka Boom Island"),
+    "Bilby 21": LocData(0x4114, "Kaka Boom Island"),
+    "Bilby 22": LocData(0x4115, "Kaka Boom Island"), #earth
+    "Bilby 23": LocData(0x4116, "New Burramudgee"),
+    "Bilby 24": LocData(0x4117, "SR Swamp"), #lash
+    "Bilby 25": LocData(0x4118, "Pippy Beach"),
+    "Bilby 26": LocData(0x4119, "Pippy Beach"),
+    "Bilby 27": LocData(0x411A, "Pippy Beach"), #top of airship to KBI
+    "Bilby 28": LocData(0x411B, "Gooboo Gully"),
+    "Bilby 29": LocData(0x411C, "Gooboo Gully"),
+    "Bilby 30": LocData(0x411D, "Gooboo Gully"),
+    "Bilby 31": LocData(0x411E, "Backwood Blizzard"),
+    "Bilby 32": LocData(0x411F, "Backwood Blizzard"),
+    "Bilby 33": LocData(0x4120, "Cassopolis"),
+    "Bilby 34": LocData(0x4121, "Cinder Canyon"),
+    "Bilby 35": LocData(0x4122, "Frozen Forest"),
+    "Bilby 36": LocData(0x4123, "Razorback Stream"), #Warp, possible without
+    "Bilby 37": LocData(0x4124, "SR Swamp"),
+    "Bilby 38": LocData(0x4125, "SR Desert"), #in building with final redback race mission
+    "Bilby 39": LocData(0x4126, "SR Desert"),
+    "Bilby 40": LocData(0x4127, "Winter Woods"),
 }
 
 
@@ -234,135 +234,135 @@ stone_dict: Dict[str, LocData] = {
 }
 
 steve_dict: Dict[str, LocData] = {
-    "Steve - New Burramudgee": LocData(0x5300, "New Burramudgee"),
-    "Steve - Kaka Boom Island": LocData(0x5301, "Kaka Boom Island"), #Earth
-    "Steve - Razorback Stream": LocData(0x5302, "SR Razorback Stream"), #Fire
-    "Steve - Mount Boom Basin": LocData(0x5303, "Mount Boom Basin"),
-    "Steve - Dead Dingo Marsh": LocData(0x5304, "Dead Dingo Marsh"),
-    "Steve - Pippy Beach": LocData(0x5305, "SR Pippy Beach"),
+    "Steve - New Burramudgee": LocData(0x4400, "New Burramudgee"),
+    "Steve - Kaka Boom Island": LocData(0x4401, "Kaka Boom Island"), #Earth
+    "Steve - Razorback Stream": LocData(0x4402, "SR Razorback Stream"), #Fire
+    "Steve - Mount Boom Basin": LocData(0x4403, "Mount Boom Basin"),
+    "Steve - Dead Dingo Marsh": LocData(0x4404, "Dead Dingo Marsh"),
+    "Steve - Pippy Beach": LocData(0x4405, "SR Pippy Beach"),
 }
 
 picture_frame_dict: Dict[str, LocData] = {
-    "Picture Frame 1": LocData(0x5000, "Dead Dingo Marsh"), #ultra
-    "Picture Frame 2": LocData(0x5001, "Dead Dingo Marsh"), #ultra, earth
-    "Picture Frame 3": LocData(0x5002, "Dead Dingo Marsh"), #ultra, earth
-    "Picture Frame 4": LocData(0x5003, "Dead Dingo Marsh"), #ultra, earth
-    "Picture Frame 5": LocData(0x5004, "Dead Dingo Marsh"), #ultra, earth
-    "Picture Frame 6": LocData(0x5005, "Dead Dingo Marsh"), #ultra, earth
-    "Picture Frame 7": LocData(0x5006, "Dead Dingo Marsh"),
-    "Picture Frame 8": LocData(0x5007, "Dead Dingo Marsh"), #Lash
-    "Picture Frame 9": LocData(0x5008, "Dead Dingo Marsh"),
-    "Picture Frame 10": LocData(0x5009, "Dead Dingo Marsh"),
-    "Picture Frame 11": LocData(0x500A, "Dead Dingo Marsh"),
-    "Picture Frame 12": LocData(0x500B, "Cassopolis"), #earth
-    "Picture Frame 13": LocData(0x500C, "Cassopolis"),
-    "Picture Frame 14": LocData(0x500D, "Dead Dingo Marsh"),
-    "Picture Frame 15": LocData(0x500E, "Dead Dingo Marsh"),
-    "Picture Frame 16": LocData(0x500F, "Dead Dingo Marsh"), #lash
-    "Picture Frame 17": LocData(0x5010, "Dead Dingo Marsh"), #earth, zoom or mega, lash
-    "Picture Frame 18": LocData(0x5011, "Kaka Boom Island"),
-    "Picture Frame 19": LocData(0x5012, "Kaka Boom Island"),
-    "Picture Frame 20": LocData(0x5013, "Kaka Boom Island"),
-    "Picture Frame 21": LocData(0x5014, "Kaka Boom Island"),
-    "Picture Frame 22": LocData(0x5015, "Kaka Boom Island"),
-    "Picture Frame 23": LocData(0x5016, "Kaka Boom Island"),
-    "Picture Frame 24": LocData(0x5017, "Kaka Boom Island"),
-    "Picture Frame 25": LocData(0x5018, "Kaka Boom Island"),
-    "Picture Frame 26": LocData(0x5019, "Kaka Boom Island"),
-    "Picture Frame 27": LocData(0x501A, "Kaka Boom Island"), #ultra
-    "Picture Frame 28": LocData(0x501B, "Kaka Boom Island"), #ultra
-    "Picture Frame 29": LocData(0x501C, "Kaka Boom Island"), #ultra
-    "Picture Frame 30": LocData(0x501D, "Kaka Boom Island"), #ultra
-    "Picture Frame 31": LocData(0x501E, "Kaka Boom Island"), #ultra
-    "Picture Frame 32": LocData(0x501F, "Kaka Boom Island"), #ultra
-    "Picture Frame 33": LocData(0x5020, "Winter Woods"), #grav grenade
-    "Picture Frame 34": LocData(0x5021, "Winter Woods"), #extreme
-    "Picture Frame 35": LocData(0x5022, "Winter Woods"), #extreme
-    "Picture Frame 36": LocData(0x5023, "Winter Woods"), #extreme
-    "Picture Frame 37": LocData(0x5024, "Winter Woods"), #extreme
-    "Picture Frame 38": LocData(0x5025, "Winter Woods"), #extreme
-    "Picture Frame 39": LocData(0x5026, "Winter Woods"), #extreme
-    "Picture Frame 40": LocData(0x5027, "Winter Woods"), #extreme
-    "Picture Frame 41": LocData(0x5028, "Winter Woods"), #extreme
-    "Picture Frame 42": LocData(0x5029, "Winter Woods"), #grav grenade
-    "Picture Frame 43": LocData(0x502A, "Gooboo Gully"),
-    "Picture Frame 44": LocData(0x502B, "Gooboo Gully"),
-    "Picture Frame 45": LocData(0x502C, "Gooboo Gully"),
-    "Picture Frame 46": LocData(0x502D, "Gooboo Gully"),
-    "Picture Frame 47": LocData(0x502E, "Gooboo Gully"),
-    "Picture Frame 48": LocData(0x502F, "Gooboo Gully"),
-    "Picture Frame 49": LocData(0x5030, "Gooboo Gully"),
-    "Picture Frame 50": LocData(0x5031, "Gooboo Gully"),
-    "Picture Frame 51": LocData(0x5032, "Gooboo Gully"),
-    "Picture Frame 52": LocData(0x5033, "Mount Boom Basin"), #earth
-    "Picture Frame 53": LocData(0x5034, "Mount Boom Basin"), #earth
-    "Picture Frame 54": LocData(0x5035, "Mount Boom Basin"), #earth
-    "Picture Frame 55": LocData(0x5036, "Mount Boom Basin"), #earth
-    "Picture Frame 56": LocData(0x5037, "Mount Boom Basin"), #ultra
-    "Picture Frame 57": LocData(0x5038, "Mount Boom Basin"), #ultra
-    "Picture Frame 58": LocData(0x5039, "Mount Boom Basin"), #ultra
-    "Picture Frame 59": LocData(0x503A, "Mount Boom Basin"), #ultra
-    "Picture Frame 60": LocData(0x503B, "Mount Boom Basin"), #ultra
-    "Picture Frame 61": LocData(0x503C, "Mount Boom Basin"), #ultra
-    "Picture Frame 62": LocData(0x503D, "Frozen Forest"), #extreme
-    "Picture Frame 63": LocData(0x503E, "Frozen Forest"), #extreme
-    "Picture Frame 64": LocData(0x503F, "Frozen Forest"), #extreme
-    "Picture Frame 65": LocData(0x5040, "Frozen Forest"), #extreme
-    "Picture Frame 66": LocData(0x5041, "Frozen Forest"), #extreme
-    "Picture Frame 67": LocData(0x5042, "Cinder Canyon"),
-    "Picture Frame 68": LocData(0x5043, "Cinder Canyon"),
-    "Picture Frame 69": LocData(0x5044, "Cinder Canyon"),
-    "Picture Frame 70": LocData(0x5045, "Cinder Canyon"), #earth
-    "Picture Frame 71": LocData(0x5046, "Cinder Canyon"), #earth
-    "Picture Frame 72": LocData(0x5047, "Cinder Canyon"), #earth
-    "Picture Frame 73": LocData(0x5048, "Cinder Canyon"), #earth
-    "Picture Frame 74": LocData(0x5049, "Cinder Canyon"), #earth
-    "Picture Frame 75": LocData(0x504A, "Cinder Canyon"),
-    "Picture Frame 76": LocData(0x504B, "Cinder Canyon"),
-    "Picture Frame 77": LocData(0x504C, "Backwood Blizzard"),
-    "Picture Frame 78": LocData(0x504D, "Backwood Blizzard"),
-    "Picture Frame 79": LocData(0x504E, "Backwood Blizzard"),
-    "Picture Frame 80": LocData(0x504F, "Backwood Blizzard"),
-    "Picture Frame 81": LocData(0x5050, "Backwood Blizzard"), #grav grenade shadow or satellite cannon extreme
-    "Picture Frame 82": LocData(0x5051, "Backwood Blizzard"), #grav grenade shadow or satellite cannon extreme
-    "Picture Frame 83": LocData(0x5052, "SR Swamp"),
-    "Picture Frame 84": LocData(0x5053, "SR Swamp"),
-    "Picture Frame 85": LocData(0x5054, "SR Swamp"),
-    "Picture Frame 86": LocData(0x5055, "Pippy Beach"),
-    "Picture Frame 87": LocData(0x5056, "SR Swamp"),
-    "Picture Frame 88": LocData(0x5057, "Pippy Beach"),
-    "Picture Frame 89": LocData(0x5058, "Pippy Beach"),
-    "Picture Frame 90": LocData(0x5059, "Pippy Beach"),
-    "Picture Frame 91": LocData(0x505A, "SR Swamp"),
-    "Picture Frame 92": LocData(0x505B, "SR Swamp"),
-    "Picture Frame 93": LocData(0x505C, "SR Swamp"),
-    "Picture Frame 94": LocData(0x505D, "SR Swamp"),
-    "Picture Frame 95": LocData(0x505E, "Pippy Beach"),
-    "Picture Frame 96": LocData(0x505F, "SR Swamp"), #ultra
-    "Picture Frame 97": LocData(0x5060, "SR Swamp"),
-    "Picture Frame 98": LocData(0x5061, "New Burramudgee"),
-    "Picture Frame 99": LocData(0x5062, "New Burramudgee"),
-    "Picture Frame 100": LocData(0x5063, "New Burramudgee"),
-    "Picture Frame 101": LocData(0x5064, "New Burramudgee"),
-    "Picture Frame 102": LocData(0x5065, "New Burramudgee"),
-    "Picture Frame 103": LocData(0x5066, "New Burramudgee"),
-    "Picture Frame 104": LocData(0x5067, "New Burramudgee"), #Magnet x2
-    "Picture Frame 105": LocData(0x5068, "New Burramudgee"), #Accessible in prologue
-    "Picture Frame 106": LocData(0x5069, "New Burramudgee"),
-    "Picture Frame 107": LocData(0x506A, "New Burramudgee"), #Accessible in prologue
-    "Picture Frame 108": LocData(0x506B, "Cassopolis"), #earth
-    "Picture Frame 109": LocData(0x506C, "Cassopolis"), #earth
-    "Picture Frame 110": LocData(0x506D, "Cassopolis"),
-    "Picture Frame 111": LocData(0x506E, "Cassopolis"), #earth, Lash
-    "Picture Frame 112": LocData(0x506F, "Cassopolis"), #earth
-    "Picture Frame 113": LocData(0x5070, "Cassopolis"), #hardcore parkour
-    "Picture Frame 114": LocData(0x5071, "Cassopolis"), #earth
-    "Picture Frame 115": LocData(0x5072, "Cassopolis"), #earth
-    "Picture Frame 116": LocData(0x5073, "Dead Dingo Marsh"), #ultra
-    "Picture Frame 117": LocData(0x5074, "Dead Dingo Marsh"), #ultra
-    "Picture Frame 118": LocData(0x5075, "Dead Dingo Marsh"), #ultra
-    "Picture Frame 119": LocData(0x5076, "Dead Dingo Marsh"), #ultra
-    "Picture Frame 120": LocData(0x5077, "Dead Dingo Marsh"), #ultra
+    "Picture Frame 1": LocData(0x4200, "Dead Dingo Marsh"), #ultra
+    "Picture Frame 2": LocData(0x4201, "Dead Dingo Marsh"), #ultra, earth
+    "Picture Frame 3": LocData(0x4202, "Dead Dingo Marsh"), #ultra, earth
+    "Picture Frame 4": LocData(0x4203, "Dead Dingo Marsh"), #ultra, earth
+    "Picture Frame 5": LocData(0x4204, "Dead Dingo Marsh"), #ultra, earth
+    "Picture Frame 6": LocData(0x4205, "Dead Dingo Marsh"), #ultra, earth
+    "Picture Frame 7": LocData(0x4206, "Dead Dingo Marsh"),
+    "Picture Frame 8": LocData(0x4207, "Dead Dingo Marsh"), #Lash
+    "Picture Frame 9": LocData(0x4208, "Dead Dingo Marsh"),
+    "Picture Frame 10": LocData(0x4209, "Dead Dingo Marsh"),
+    "Picture Frame 11": LocData(0x420A, "Dead Dingo Marsh"),
+    "Picture Frame 12": LocData(0x420B, "Cassopolis"), #earth
+    "Picture Frame 13": LocData(0x420C, "Cassopolis"),
+    "Picture Frame 14": LocData(0x420D, "Dead Dingo Marsh"),
+    "Picture Frame 15": LocData(0x420E, "Dead Dingo Marsh"),
+    "Picture Frame 16": LocData(0x420F, "Dead Dingo Marsh"), #lash
+    "Picture Frame 17": LocData(0x4210, "Dead Dingo Marsh"), #earth, zoom or mega, lash
+    "Picture Frame 18": LocData(0x4211, "Kaka Boom Island"),
+    "Picture Frame 19": LocData(0x4212, "Kaka Boom Island"),
+    "Picture Frame 20": LocData(0x4213, "Kaka Boom Island"),
+    "Picture Frame 21": LocData(0x4214, "Kaka Boom Island"),
+    "Picture Frame 22": LocData(0x4215, "Kaka Boom Island"),
+    "Picture Frame 23": LocData(0x4216, "Kaka Boom Island"),
+    "Picture Frame 24": LocData(0x4217, "Kaka Boom Island"),
+    "Picture Frame 25": LocData(0x4218, "Kaka Boom Island"),
+    "Picture Frame 26": LocData(0x4219, "Kaka Boom Island"),
+    "Picture Frame 27": LocData(0x421A, "Kaka Boom Island"), #ultra
+    "Picture Frame 28": LocData(0x421B, "Kaka Boom Island"), #ultra
+    "Picture Frame 29": LocData(0x421C, "Kaka Boom Island"), #ultra
+    "Picture Frame 30": LocData(0x421D, "Kaka Boom Island"), #ultra
+    "Picture Frame 31": LocData(0x421E, "Kaka Boom Island"), #ultra
+    "Picture Frame 32": LocData(0x421F, "Kaka Boom Island"), #ultra
+    "Picture Frame 33": LocData(0x4220, "Winter Woods"), #grav grenade
+    "Picture Frame 34": LocData(0x4221, "Winter Woods"), #extreme
+    "Picture Frame 35": LocData(0x4222, "Winter Woods"), #extreme
+    "Picture Frame 36": LocData(0x4223, "Winter Woods"), #extreme
+    "Picture Frame 37": LocData(0x4224, "Winter Woods"), #extreme
+    "Picture Frame 38": LocData(0x4225, "Winter Woods"), #extreme
+    "Picture Frame 39": LocData(0x4226, "Winter Woods"), #extreme
+    "Picture Frame 40": LocData(0x4227, "Winter Woods"), #extreme
+    "Picture Frame 41": LocData(0x4228, "Winter Woods"), #extreme
+    "Picture Frame 42": LocData(0x4229, "Winter Woods"), #grav grenade
+    "Picture Frame 43": LocData(0x422A, "Gooboo Gully"),
+    "Picture Frame 44": LocData(0x422B, "Gooboo Gully"),
+    "Picture Frame 45": LocData(0x422C, "Gooboo Gully"),
+    "Picture Frame 46": LocData(0x422D, "Gooboo Gully"),
+    "Picture Frame 47": LocData(0x422E, "Gooboo Gully"),
+    "Picture Frame 48": LocData(0x422F, "Gooboo Gully"),
+    "Picture Frame 49": LocData(0x4230, "Gooboo Gully"),
+    "Picture Frame 50": LocData(0x4231, "Gooboo Gully"),
+    "Picture Frame 51": LocData(0x4232, "Gooboo Gully"),
+    "Picture Frame 52": LocData(0x4233, "Mount Boom Basin"), #earth
+    "Picture Frame 53": LocData(0x4234, "Mount Boom Basin"), #earth
+    "Picture Frame 54": LocData(0x4235, "Mount Boom Basin"), #earth
+    "Picture Frame 55": LocData(0x4236, "Mount Boom Basin"), #earth
+    "Picture Frame 56": LocData(0x4237, "Mount Boom Basin"), #ultra
+    "Picture Frame 57": LocData(0x4238, "Mount Boom Basin"), #ultra
+    "Picture Frame 58": LocData(0x4239, "Mount Boom Basin"), #ultra
+    "Picture Frame 59": LocData(0x423A, "Mount Boom Basin"), #ultra
+    "Picture Frame 60": LocData(0x423B, "Mount Boom Basin"), #ultra
+    "Picture Frame 61": LocData(0x423C, "Mount Boom Basin"), #ultra
+    "Picture Frame 62": LocData(0x423D, "Frozen Forest"), #extreme
+    "Picture Frame 63": LocData(0x423E, "Frozen Forest"), #extreme
+    "Picture Frame 64": LocData(0x423F, "Frozen Forest"), #extreme
+    "Picture Frame 65": LocData(0x4240, "Frozen Forest"), #extreme
+    "Picture Frame 66": LocData(0x4241, "Frozen Forest"), #extreme
+    "Picture Frame 67": LocData(0x4242, "Cinder Canyon"),
+    "Picture Frame 68": LocData(0x4243, "Cinder Canyon"),
+    "Picture Frame 69": LocData(0x4244, "Cinder Canyon"),
+    "Picture Frame 70": LocData(0x4245, "Cinder Canyon"), #earth
+    "Picture Frame 71": LocData(0x4246, "Cinder Canyon"), #earth
+    "Picture Frame 72": LocData(0x4247, "Cinder Canyon"), #earth
+    "Picture Frame 73": LocData(0x4248, "Cinder Canyon"), #earth
+    "Picture Frame 74": LocData(0x4249, "Cinder Canyon"), #earth
+    "Picture Frame 75": LocData(0x424A, "Cinder Canyon"),
+    "Picture Frame 76": LocData(0x424B, "Cinder Canyon"),
+    "Picture Frame 77": LocData(0x424C, "Backwood Blizzard"),
+    "Picture Frame 78": LocData(0x424D, "Backwood Blizzard"),
+    "Picture Frame 79": LocData(0x424E, "Backwood Blizzard"),
+    "Picture Frame 80": LocData(0x424F, "Backwood Blizzard"),
+    "Picture Frame 81": LocData(0x4250, "Backwood Blizzard"), #grav grenade shadow or satellite cannon extreme
+    "Picture Frame 82": LocData(0x4251, "Backwood Blizzard"), #grav grenade shadow or satellite cannon extreme
+    "Picture Frame 83": LocData(0x4252, "SR Swamp"),
+    "Picture Frame 84": LocData(0x4253, "SR Swamp"),
+    "Picture Frame 85": LocData(0x4254, "SR Swamp"),
+    "Picture Frame 86": LocData(0x4255, "Pippy Beach"),
+    "Picture Frame 87": LocData(0x4256, "SR Swamp"),
+    "Picture Frame 88": LocData(0x4257, "Pippy Beach"),
+    "Picture Frame 89": LocData(0x4258, "Pippy Beach"),
+    "Picture Frame 90": LocData(0x4259, "Pippy Beach"),
+    "Picture Frame 91": LocData(0x425A, "SR Swamp"),
+    "Picture Frame 92": LocData(0x425B, "SR Swamp"),
+    "Picture Frame 93": LocData(0x425C, "SR Swamp"),
+    "Picture Frame 94": LocData(0x425D, "SR Swamp"),
+    "Picture Frame 95": LocData(0x425E, "Pippy Beach"),
+    "Picture Frame 96": LocData(0x425F, "SR Swamp"), #ultra
+    "Picture Frame 97": LocData(0x4260, "SR Swamp"),
+    "Picture Frame 98": LocData(0x4261, "New Burramudgee"),
+    "Picture Frame 99": LocData(0x4262, "New Burramudgee"),
+    "Picture Frame 100": LocData(0x4263, "New Burramudgee"),
+    "Picture Frame 101": LocData(0x4264, "New Burramudgee"),
+    "Picture Frame 102": LocData(0x4265, "New Burramudgee"),
+    "Picture Frame 103": LocData(0x4266, "New Burramudgee"),
+    "Picture Frame 104": LocData(0x4267, "New Burramudgee"), #Magnet x2
+    "Picture Frame 105": LocData(0x4268, "New Burramudgee"), #Accessible in prologue
+    "Picture Frame 106": LocData(0x4269, "New Burramudgee"),
+    "Picture Frame 107": LocData(0x426A, "New Burramudgee"), #Accessible in prologue
+    "Picture Frame 108": LocData(0x426B, "Cassopolis"), #earth
+    "Picture Frame 109": LocData(0x426C, "Cassopolis"), #earth
+    "Picture Frame 110": LocData(0x426D, "Cassopolis"),
+    "Picture Frame 111": LocData(0x426E, "Cassopolis"), #earth, Lash
+    "Picture Frame 112": LocData(0x426F, "Cassopolis"), #earth
+    "Picture Frame 113": LocData(0x4270, "Cassopolis"), #hardcore parkour
+    "Picture Frame 114": LocData(0x4271, "Cassopolis"), #earth
+    "Picture Frame 115": LocData(0x4272, "Cassopolis"), #earth
+    "Picture Frame 116": LocData(0x4273, "Dead Dingo Marsh"), #ultra
+    "Picture Frame 117": LocData(0x4274, "Dead Dingo Marsh"), #ultra
+    "Picture Frame 118": LocData(0x4275, "Dead Dingo Marsh"), #ultra
+    "Picture Frame 119": LocData(0x4276, "Dead Dingo Marsh"), #ultra
+    "Picture Frame 120": LocData(0x4277, "Dead Dingo Marsh"), #ultra
 }
 
 def get_mission_complete_events(world):
