@@ -84,7 +84,7 @@ def add_mission_complete_events(world):
 barriers: Dict[str, ItemData] = {
     "Sly": ItemData(980, ItemClassification.progression),
     "Duke": ItemData(981, ItemClassification.progression),
-    "Hexaquin Arena Parking Bay": ItemData(982, ItemClassification.progression),
+    "Hexaquin Arena Access": ItemData(982, ItemClassification.progression),
 }
 
 gate: Dict[str, ItemData] = {
@@ -94,33 +94,33 @@ gate: Dict[str, ItemData] = {
 item_dict: Dict[str, ItemData] = {
     "Shadow Beam": ItemData(51, ItemClassification.progression),
     "Grav Grenade": ItemData(52, ItemClassification.progression),
-    "Satellite Strike": ItemData(55, ItemClassification.progression),
-    "Thermo Cannon": ItemData(56, ItemClassification.progression),
-    "Nucleon Shield": ItemData(57, ItemClassification.useful),
-    "Orbidrills": ItemData(59, ItemClassification.useful),
-    "Missing Persons Map": ItemData(77, ItemClassification.useful),
-    "Shiny Thing Map": ItemData(78, ItemClassification.useful),
-    "Sekrit Map": ItemData(79, ItemClassification.useful),
-    "Priceless Art Map": ItemData(80, ItemClassification.useful),
-    "Forbidden Fruit Map": ItemData(81, ItemClassification.useful),
-    "Bunyip Gauntlet": ItemData(82, ItemClassification.progression),
-    "Shadow Stone 1": ItemData(83, ItemClassification.progression),
-    "Shadow Stone 2": ItemData(84, ItemClassification.progression),
-    "Shadow Stone 3": ItemData(85, ItemClassification.progression),
+    "Satellite Strike": ItemData(53, ItemClassification.progression),
+    "Thermo Cannon": ItemData(54, ItemClassification.progression),
+    "Nucleon Shield": ItemData(55, ItemClassification.useful),
+    "Orbidrills": ItemData(56, ItemClassification.useful),
+    "Missing Persons Map": ItemData(57, ItemClassification.useful),
+    "Shiny Thing Map": ItemData(58, ItemClassification.useful),
+    "Sekrit Map": ItemData(59, ItemClassification.useful),
+    "Priceless Art Map": ItemData(60, ItemClassification.useful),
+    "Forbidden Fruit Map": ItemData(61, ItemClassification.useful),
+    "Bunyip Gauntlet": ItemData(62, ItemClassification.progression),
+    "Shadow Stone 1": ItemData(63, ItemClassification.progression),
+    "Shadow Stone 2": ItemData(64, ItemClassification.progression),
+    "Shadow Stone 3": ItemData(65, ItemClassification.progression),
 }
 
 def get_rangs(world) -> Dict[str, ItemData]:
         return individual_rangs
 
 individual_rangs: Dict[str, ItemData] = {
-    "Mono Chassis": ItemData(0x13, ItemClassification.progression),
-    "Duo Chassis": ItemData(0x01, ItemClassification.useful),
-    "Lash Chassis": ItemData(0x02, ItemClassification.useful),
-    "Smash Chassis": ItemData(0x03, ItemClassification.useful),
-    "Mega Chassis": ItemData(0x04, ItemClassification.useful),
-    "Ring Chassis": ItemData(0x05, ItemClassification.useful),
-    "Shadow Chassis": ItemData(0x06, ItemClassification.progression),
-    "Doom Chassis": ItemData(0x07, ItemClassification.useful),
+    "Mono Chassis": ItemData(0x01, ItemClassification.progression),
+    "Duo Chassis": ItemData(0x02, ItemClassification.useful),
+    "Lash Chassis": ItemData(0x03, ItemClassification.useful),
+    "Smash Chassis": ItemData(0x04, ItemClassification.useful),
+    "Mega Chassis": ItemData(0x05, ItemClassification.useful),
+    "Ring Chassis": ItemData(0x06, ItemClassification.useful),
+    "Shadow Chassis": ItemData(0x07, ItemClassification.progression),
+    "Doom Chassis": ItemData(0x08, ItemClassification.useful),
 
 }
 
@@ -129,17 +129,17 @@ def get_bunyip_stones(world) -> Dict[str, ItemData]:
 
 
 bunyip_stones: Dict[str, ItemData] = {
-    "Fire Stone": ItemData(3736, ItemClassification.progression, 3),
-    "Water Stone": ItemData(3689, ItemClassification.progression, 3),
-    "Air Stone": ItemData(3688, ItemClassification.progression, 3),
-    "Earth Stone": ItemData(4092, ItemClassification.progression, 3),
-    "Chrono Stone": ItemData(3692, ItemClassification.useful, 6),
-    "Warp Stone": ItemData(3306, ItemClassification.progression, 3),
-    "Ultra Stone": ItemData(3285, ItemClassification.useful, 3),
-    "Mega Stone": ItemData(3287, ItemClassification.progression, 3),
-    "Multi Stone": ItemData(3712, ItemClassification.useful, 3),
-    "Zoom Stone": ItemData(3735, ItemClassification.progression, 3),
-    "Magnet Stone": ItemData(3694, ItemClassification.progression, 3),
+    "Fire Stone": ItemData(4601, ItemClassification.progression, 3),
+    "Water Stone": ItemData(4602, ItemClassification.progression, 3),
+    "Air Stone": ItemData(4603, ItemClassification.progression, 3),
+    "Earth Stone": ItemData(4604, ItemClassification.progression, 3),
+    "Chrono Stone": ItemData(4605, ItemClassification.useful, 6),
+    "Warp Stone": ItemData(4606, ItemClassification.progression, 3),
+    "Ultra Stone": ItemData(4607, ItemClassification.useful, 3),
+    "Mega Stone": ItemData(4608, ItemClassification.progression, 3),
+    "Multi Stone": ItemData(4609, ItemClassification.useful, 5),
+    "Zoom Stone": ItemData(4610, ItemClassification.progression, 3),
+    "Magnet Stone": ItemData(4610, ItemClassification.progression, 3),
 }
 
 
@@ -153,7 +153,7 @@ def get_collectable_currencies(world) -> Dict[str, ItemData]:
 
 collectibles: Dict[str, ItemData] = {
     "Kromium Orb": ItemData(0x20, ItemClassification.progression_skip_balancing, 30),
-    "Gooboo Berry": ItemData(0x21, ItemClassification.progression_skip_balancing, 9),
+    "Gooboo Berry": ItemData(0x21, ItemClassification.progression_skip_balancing, 10),
     "Bilby": ItemData(0x22, ItemClassification.progression_skip_balancing, 40)
 }
 
@@ -175,8 +175,8 @@ junk_weights = {
     "50 Opals": 15,
     "100 Opals": 20,
     "200 Opals": 20,
-    "500 Opals": 5,
-    "Pie Slice": 10,
+    "500 Opals": 10,
+    "5000 Opals": 5,
     "Full Heal": 15,
 }
 
