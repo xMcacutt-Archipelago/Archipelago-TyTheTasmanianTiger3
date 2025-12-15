@@ -2,33 +2,41 @@ from dataclasses import dataclass
 
 from Options import Choice, Range, Toggle, DeathLink, DefaultOnToggle, OptionGroup, PerGameCommonOptions
 
-class Goal(Choice):
+class StoryMissionsForGoal(Range):
     """
-    Determines the goal of the seed
+    How many story missions (missions played as Ty) do you need to unlock the airship that leads to Quinking?
+    """
+    display_name = "Story Missions For Goal"
+    range_start = 0
+    range_end = 12
+    default = 8
 
-    Quinking: Defeat the Quinking
-    All Missions: Complete all missions (including defeat Quinking)
+class BunyipMissionsForGoal(Range):
     """
-    display_name = "Goal"
-    option_final_battle = 0
-    default = 0
+    How many Bunyip missions do you need to unlock the airship that leads to Quinking?
+    """
+    display_name = "Bunyip Missions For Goal"
+    range_start = 0
+    range_end = 6
+    default = 3
 
-class TotalMissionsForGoal(Range):
+class GunyipMissionsForGoal(Range):
     """
-    How Many Missions do you need to unlock the airship that leads to Quinking?
+    How many Gunyip missions do you need to unlock the airship that leads to Quinking?
+    """
+    display_name = "Gunyip Missions For Goal"
+    range_start = 0
+    range_end = 4
+    default = 1
+
+class RaceMissionsForGoal(Range):
+    """
+    How many race missions do you need to unlock the airship that leads to Quinking?
     """
     display_name = "Missions For Goal"
     range_start = 0
-    range_end = 26
-    default = 15
-
-class QuinkingRequiresShadow(Choice):
-    """
-    Determines if you need the completed Shadow Chassis and 3 shadow stones to defeat Quinking.
-    """
-    display_name = "Require Shadow"
-    option_shadow = 0
-    option_rawdog = 1
+    range_end = 6
+    default = 0
 
 #class StartingLocation(Choice):
 #    """
@@ -39,54 +47,6 @@ class QuinkingRequiresShadow(Choice):
 #    option_NewBurramudgee = 0
 #    option_Cassopolis = 1
 #    default = 0
-
-class SouthernRiversGateUnlock(Choice):
-    """
-    When should the gate between Southern Rivers Desert and Swamp be unlocked? (this does not affect parking pads)
-    On Item Receive: Unlocks when you receive Southern Rivers Gate
-    Open World: Southern Rivers is completely open
-    """
-    display_name = "Gate Unlock Conditions"
-    option_items = 0
-    option_open_world = 1
-    default = 0
-
-class ShopPrices(Choice):
-    """
-    Determines how expensive the shops are
-    """
-    display_name = "Shop Prices"
-    option_cheap = 0
-    option_normal = 1
-    option_expensive = 2
-    default = 1
-
-class ExtraBerries(Range):
-    """
-    Sets number of additional Gooboo Berries to add to the pool
-    """
-    display_name = "Extra Berries"
-    range_start = 0
-    range_end = 5
-    default = 2
-
-class ExtraBilbies(Range):
-    """
-    Sets number of additional Bilbies to add to the pool
-    """
-    display_name = "Extra Bilbies"
-    range_start = 0
-    range_end = 20
-    default = 10
-
-class ExtraOrbs(Range):
-    """
-    Sets number of additional Kromium Orbs to add to the pool
-    """
-    display_name = "Extra Orbs"
-    range_start = 0
-    range_end = 20
-    default = 10
 
 class StartWithMaps(Toggle):
     """
@@ -159,16 +119,13 @@ class StoneSanity(Toggle):
 @dataclass
 class Ty3OptionGroups(PerGameCommonOptions):
     OptionGroup("Goal Options", [
-        Goal,
-        TotalMissionsForGoal,
+        StoryMissionsForGoal,
+        BunyipMissionsForGoal,
+        GunyipMissionsForGoal,
+        RaceMissionsForGoal,
         #StartingLocation
-        SouthernRiversGateUnlock,
     ]),
     OptionGroup("General Options", [
-        ShopPrices,
-        ExtraBerries,
-        ExtraBilbies,
-        ExtraOrbs,
         ChecksRequireInfra,
         StartWithMaps
     ]),
@@ -185,20 +142,14 @@ class Ty3OptionGroups(PerGameCommonOptions):
 
 @dataclass
 class Ty3Options(PerGameCommonOptions):
-    goal: Goal
-    missions_for_goal: TotalMissionsForGoal
-    require_shadow: QuinkingRequiresShadow
+    story_missions_for_goal: StoryMissionsForGoal
+    bunyip_missions_for_goal: BunyipMissionsForGoal
+    gunyip_missions_for_goal: GunyipMissionsForGoal
+    race_missions_for_goal: RaceMissionsForGoal
     #starting_location: StartingLocation
-    gate_unlock: SouthernRiversGateUnlock
-    shop_difficulty: ShopPrices
-    extra_berries: ExtraBerries
-    extra_bilbies: ExtraBilbies
-    extra_orbs: ExtraOrbs
     require_infra: ChecksRequireInfra
     start_with_maps: StartWithMaps
-
     frame_sanity: FrameSanity
     steve_sanity: SteveSanity
     stone_sanity: StoneSanity
-
     death_link: DeathLink

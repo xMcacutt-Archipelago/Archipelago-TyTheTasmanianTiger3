@@ -18,9 +18,11 @@ ty3_levels: Dict[str, str] = {
     "M34": "Quinking",
 }
 
+
 def create_location(world, region, name: str, code: int):
     location = Location(world.player, name, code, region)
     region.locations.append(location)
+
 
 def create_locations(world, region, loc_dict):
     for (key, data) in loc_dict.items():
@@ -29,11 +31,9 @@ def create_locations(world, region, loc_dict):
         create_location(world, region, key, data.code)
 
 
-
-
-def create_region(world, name: str, location_dict):
+def create_region(world, name: str, loc_dict):
     region = Region(name, world.player, world.multiworld)
-    create_locations(world, region, location_dict)
+    create_locations(world, region, loc_dict)
     world.multiworld.regions.append(region)
     return region
 
@@ -61,57 +61,58 @@ def create_ty3_regions(world, location_dict):
     create_region(world, "SR Swamp - Duke", location_dict)
     create_region(world, "SR Swamp - Sly", location_dict)
 
+
 def connect_regions(world, from_name: str, to_name: str, entrance_name: str, entrance_group = 0, two_way = False) -> Entrance:
     entrance_region = world.get_region(from_name)
     exit_region = world.get_region(to_name)
     entrance = entrance_region.connect(exit_region, entrance_name)
-    entrance.randomization_group = entrance_group
     return entrance
+
 
 def connect_ty3_regions(world):
     connect_regions(world, "Menu", "The Dreaming",
-                    "Start", 3)
+                    "Start")
     connect_regions(world, "The Dreaming", "New Burramudgee - Prologue",
-                    "Time Warp", 1)
+                    "Time Warp")
     connect_regions(world, "New Burramudgee - Prologue", "New Burramudgee",
-                    "Save the General", 1)
+                    "Save the General")
     connect_regions(world, "New Burramudgee", "Cassopolis",
-                    "Portal", 1)
+                    "Portal")
     connect_regions(world, "New Burramudgee", "Razorback Stream",
-                    "Elevator", 1)
+                    "Elevator")
     connect_regions(world, "Razorback Stream", "SR Desert",
-                    "Razorback Stream Crab", 1)
+                    "Razorback Stream Crab")
     connect_regions(world, "Razorback Stream", "Cinder Canyon",
-                    "Cinder Canyon Cave", 1)
+                    "Cinder Canyon Cave")
     connect_regions(world, "SR Desert", "SR Desert - Duke",
-                    "Desert Duke Airship", 1)
+                    "Desert Duke Airship")
     connect_regions(world, "SR Desert", "SR Desert - Sly",
-                    "Desert Sly Airship", 1)
+                    "Desert Sly Airship")
     connect_regions(world, "SR Desert - Sly", "Frozen Forest",
-                    "Sly Airship - FF", 1)
+                    "Sly Airship - FF")
     connect_regions(world, "SR Desert - Sly", "Backwood Blizzard",
-                    "Sly Airship - BB", 1)
+                    "Sly Airship - BB")
     connect_regions(world, "SR Desert - Duke", "Mount Boom Basin",
-                    "Duke Airship - MBB", 1)
+                    "Duke Airship - MBB")
     connect_regions(world, "SR Desert", "SR Swamp",
-                    "SR Gate", 1)
+                    "SR Gate")
     connect_regions(world, "SR Swamp", "Dead Dingo Marsh",
-                    "Dead Dingo Marsh Tunnel", 1)
+                    "Dead Dingo Marsh Tunnel")
     connect_regions(world, "SR Swamp", "Cassopolis",
-                    "Cassopolis Sewers", 1)
+                    "Cassopolis Sewers")
     connect_regions(world, "SR Swamp", "Gooboo Gully",
-                    "Gooboo Gully Tunnel", 1)
+                    "Gooboo Gully Tunnel")
     connect_regions(world, "SR Swamp", "SR Swamp - Duke",
-                    "Swamp Duke Airship", 1)
+                    "Swamp Duke Airship")
     connect_regions(world, "SR Swamp", "SR Swamp - Sly",
-                    "Swamp Sly Airship", 1)
+                    "Swamp Sly Airship")
     connect_regions(world, "SR Swamp - Sly", "Winter Woods",
-                    "Sly Airship - WW", 1)
+                    "Sly Airship - WW")
     connect_regions(world, "SR Swamp", "Pippy Beach",
-                    "Pippy Beach Parking Bay", 1)
+                    "Pippy Beach Parking Bay")
     connect_regions(world, "Pippy Beach", "SR Swamp - Duke",
-                    "Pippy Beach Duke Airship",1 )
+                    "Pippy Beach Duke Airship")
     connect_regions(world, "SR Swamp - Duke", "Kaka Boom Island",
-                    "Duke Airship - KBI",1 )
+                    "Duke Airship - KBI")
     connect_regions(world, "SR Swamp", "Quinking",
-                    "Airship - Quinking", 1)
+                    "Airship - Quinking")
