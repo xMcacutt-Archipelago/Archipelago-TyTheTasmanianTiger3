@@ -56,7 +56,7 @@ class Ty3World(World):
 
     def fill_slot_data(self) -> id:
         return {
-            "ModVersion": "1.0.1",
+            "ModVersion": "1.1.0",
             "StoryMissionsToGoal": self.options.story_missions_for_goal.value,
             "BunyipMissionsToGoal": self.options.bunyip_missions_for_goal.value,
             "GunyipMissionsToGoal": self.options.gunyip_missions_for_goal.value,

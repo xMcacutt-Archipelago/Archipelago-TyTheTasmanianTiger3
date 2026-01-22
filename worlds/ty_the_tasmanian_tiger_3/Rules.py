@@ -1,6 +1,6 @@
 from BaseClasses import ItemClassification, CollectionState, Location
 from worlds.ty_the_tasmanian_tiger_3.Items import Ty3Item, full_item_dict
-from worlds.ty_the_tasmanian_tiger_3.Locations import Ty3Location, mission_dict, shop_location_dict
+from worlds.ty_the_tasmanian_tiger_3.Locations import *
 from worlds.generic.Rules import forbid_item
 
 def has_infra(world, state):
@@ -205,6 +205,8 @@ def get_rules(world):
                 can_swing(world, state),
             "Bilby 12": lambda state:
                 state.has("Grav Grenade", world.player),
+            "Bilby 13": lambda state:
+                state.has("Water Stone", world.player),
             "Bilby 19": lambda state:
                 state.has("Grav Grenade", world.player),
             "Bilby 22": lambda state:
@@ -422,18 +424,28 @@ def set_rules(world):
         try:
             world.get_entrance(entrance_name).access_rule = rule
         except KeyError as e:
-            print(f"Key error, {e}")
+            #print(f"Key error, {e}")
             pass
 
     for location_name, rule in rules_lookup["locations"].items():
         try:
             world.get_location(location_name).access_rule = rule
         except KeyError as e:
-            print(f"Key error, {e}")
+            #print(f"Key error, {e}")
             pass
 
-    for location_name in shop_location_dict:
-        world.get_location(location_name).item_rule = lambda item: not full_item_dict[item.name].is_currency
+    for location_name in opal_shop_location_dict:
+        world.get_location(location_name).item_rule = \
+            lambda item: item.name not in full_item_dict or full_item_dict[item.name].currency_type != "Opal"
+    for location_name in korb_shop_location_dict:
+        world.get_location(location_name).item_rule = \
+            lambda item: item.name not in full_item_dict or full_item_dict[item.name].currency_type not in {"Opal", "KOrb"}
+    for location_name in berry_shop_location_dict:
+        world.get_location(location_name).item_rule = \
+            lambda item: item.name not in full_item_dict or full_item_dict[item.name].currency_type not in {"Opal", "Berry"}
+    for location_name in bilby_shop_location_dict:
+        world.get_location(location_name).item_rule = \
+            lambda item: item.name not in full_item_dict or full_item_dict[item.name].currency_type not in {"Opal", "Bilby"}
 
     world.multiworld.get_location(f"Quinking", world.player).place_locked_item(
         Ty3Item("Victory", ItemClassification.progression, None, world.player))

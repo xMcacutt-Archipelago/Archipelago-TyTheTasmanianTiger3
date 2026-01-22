@@ -17,7 +17,7 @@ class ItemData:
     classification: ItemClassification
     amount: Optional[int] = 1
     extra_amount: Optional[int] = 0
-    is_currency: Optional[bool] = False
+    currency_type: Optional[str] = ""
 
 def get_junk_item_names(rand, k: int) -> str:
     junk = rand.choices(
@@ -133,17 +133,17 @@ bunyip_stones: Dict[str, ItemData] = {
 }
 
 collectibles: Dict[str, ItemData] = {
-    "Kromium Orb": ItemData(0x20, ItemClassification.progression_skip_balancing, 24, 6, True),
-    "Gooboo Berry": ItemData(0x21, ItemClassification.progression_skip_balancing, 8, 2, True),
-    "Bilby": ItemData(0x22, ItemClassification.progression_skip_balancing, 35, 5, True)
+    "Kromium Orb": ItemData(0x20, ItemClassification.progression_skip_balancing, 24, 6, currency_type="KOrb"),
+    "Gooboo Berry": ItemData(0x21, ItemClassification.progression_skip_balancing, 8, 2, currency_type="Berry"),
+    "Bilby": ItemData(0x22, ItemClassification.progression_skip_balancing, 35, 5, currency_type="Bilby")
 }
 
 junk_items: Dict[str, ItemData] = {
-    "50 Opals": ItemData(0x25, ItemClassification.skip_balancing, is_currency=True),
-    "100 Opals": ItemData(0x26, ItemClassification.skip_balancing, is_currency=True),
-    "250 Opals": ItemData(0x27, ItemClassification.skip_balancing, is_currency=True),
-    "500 Opals": ItemData(0x28, ItemClassification.skip_balancing, is_currency=True),
-    "1000 Opals": ItemData(0x29, ItemClassification.skip_balancing, is_currency=True),
+    "50 Opals": ItemData(0x25, ItemClassification.skip_balancing, currency_type="Opal"),
+    "100 Opals": ItemData(0x26, ItemClassification.skip_balancing, currency_type="Opal"),
+    "250 Opals": ItemData(0x27, ItemClassification.skip_balancing, currency_type="Opal"),
+    "500 Opals": ItemData(0x28, ItemClassification.skip_balancing, currency_type="Opal"),
+    "1000 Opals": ItemData(0x29, ItemClassification.skip_balancing, currency_type="Opal"),
     "Full Heal": ItemData(0x2A, ItemClassification.skip_balancing),
 }
 
@@ -153,7 +153,7 @@ junk_weights = {
     "250 Opals": 20,
     "500 Opals": 10,
     "1000 Opals": 5,
-    "Full Heal": 15,
+    "Full Heal": 20,
 }
 
 full_item_dict: Dict[str, ItemData] = {

@@ -1,0 +1,10 @@
+Ty the Tasmanian Tiger 3:
+  accessibility: 'minimal'
+  frame_sanity: 'false'
+  steve_sanity: 'false'
+  stone_sanity: 'false'
+  story_missions_for_goal: 0
+  bunyip_missions_for_goal: 0
+  gunyip_missions_for_goal: 0
+  race_missions_for_goal: 0
+  require_infra: 'true'

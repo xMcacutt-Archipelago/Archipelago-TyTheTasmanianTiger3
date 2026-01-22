@@ -15,7 +15,8 @@ class LocData(NamedTuple):
 
 
 def create_ty3_locations(world):
-    all_locations = {**story_dict, **shop_location_dict, **gooboo_berry_dict,
+    all_locations = {**story_dict, **opal_shop_location_dict, **korb_shop_location_dict,
+                    **berry_shop_location_dict, **bilby_shop_location_dict, **gooboo_berry_dict,
                      **kromium_orb_dict, **bilby_dict, **mission_dict}
 
     all_locations.update(get_mission_complete_events(world))
@@ -52,54 +53,64 @@ story_dict: Dict[str, LocData] = {
 }
 
 
-shop_location_dict: Dict[str, LocData] = {
+opal_shop_location_dict: Dict[str, LocData] = {
     "Rang Shop 1": LocData(0x6900 + 1,  "New Burramudgee"),  #fire
     "Rang Shop 2": LocData(0x6900 + 2,  "New Burramudgee"),  #water
     "Rang Shop 3": LocData(0x6900 + 7,  "New Burramudgee"),  #mega
     "Rang Shop 4": LocData(0x6900 + 23, "New Burramudgee"),  #duo chassis
     "Rang Shop 5": LocData(0x6900 + 5,  "New Burramudgee"),  #ultra
     "Rang Shop 6": LocData(0x6900 + 24, "New Burramudgee"),  #lash chassis
-
-    "Rang Shop Korb 1": LocData(0x6900 + 201, "New Burramudgee"), #Original Ty Skin
-    "Rang Shop Korb 2": LocData(0x6900 + 202, "New Burramudgee"), #Sly Skin
-    "Rang Shop Korb 3": LocData(0x6900 + 203, "New Burramudgee"), #Team Krome Skin
-    "Rang Shop Korb 4": LocData(0x6900 + 204, "New Burramudgee"), #Commando Skin
-    "Rang Shop Korb 5": LocData(0x6900 + 205, "New Burramudgee"), #Zombie Skin
-    "Rang Shop Korb 6": LocData(0x6900 + 206, "New Burramudgee"), #Quinkan Skin
-    "Rang Shop Korb 7": LocData(0x6900 + 207, "New Burramudgee"), #Ridge Skin
-    "Rang Shop Korb 8": LocData(0x6900 + 208, "New Burramudgee"), #Ghost Tiger Skin
-
-    "Cassopolis Rang Shop 1":  LocData(0x6900 + 3,  "Cassopolis"), #air
-    "Cassopolis Rang Shop 2":  LocData(0x6900 + 14, "Cassopolis"), #magnet
-    "Cassopolis Rang Shop 3":  LocData(0x6900 + 9,  "Cassopolis"), #warp
-    "Cassopolis Rang Shop 4":  LocData(0x6900 + 4,  "Cassopolis"), #earth
-    "Cassopolis Rang Shop 5":  LocData(0x6900 + 11, "Cassopolis"), #zoom
-    "Cassopolis Rang Shop 6":  LocData(0x6900 + 13, "Cassopolis"), #chrono
-    "Cassopolis Rang Shop 7":  LocData(0x6900 + 10, "Cassopolis"), #multi
-    "Cassopolis Rang Shop 8":  LocData(0x6900 + 20, "Cassopolis"), #mega chassis
-    "Cassopolis Rang Shop 9":  LocData(0x6900 + 21, "Cassopolis"), #smash chassis
-    "Cassopolis Rang Shop 10": LocData(0x6900 + 22, "Cassopolis"), #ring chassis
-    "Cassopolis Rang Shop 11": LocData(0x6900 + 26, "Cassopolis"), #doom chassis
-    "Naomi's Ice Cream Truck 1": LocData(0x6900 + 150, "New Burramudgee"), #Grav Grenade
-    "Naomi's Ice Cream Truck 2": LocData(0x6900 + 151, "New Burramudgee"), #Satellite Strike
-    "Naomi's Ice Cream Truck 3": LocData(0x6900 + 152, "New Burramudgee"), #Shadow Beam
-    "Naomi's Ice Cream Truck 4": LocData(0x6900 + 153, "New Burramudgee"), #Thermo Cannon
-    "Naomi's Ice Cream Truck 5": LocData(0x6900 + 154, "New Burramudgee"), #Nucleon Shield
-    "Naomi's Ice Cream Truck 6": LocData(0x6900 + 155, "New Burramudgee"), #Orbidrills
-    "Naomi's Ice Cream Truck Berry Blast 1": LocData(0x6900 + 221, "New Burramudgee"), #Midnight Crab Skin
-    "Naomi's Ice Cream Truck Berry Blast 2": LocData(0x6900 + 222, "New Burramudgee"), #Crab Tank Crab Skin
-    "Naomi's Ice Cream Truck Berry Blast 3": LocData(0x6900 + 223, "New Burramudgee"), #White Knight Crab Skin
-    "Naomi's Ice Cream Truck Berry Blast 4": LocData(0x6900 + 224, "New Burramudgee"), #Mean Green Crab Skin
-    "Naomi's Ice Cream Truck Bilby Banana Split 1": LocData(0x6900 + 231, "New Burramudgee"), #Cammo Gunyip Skin
-    "Naomi's Ice Cream Truck Bilby Banana Split 2": LocData(0x6900 + 232, "New Burramudgee"), #Bush Rescue Gunyip Skin
-    "Naomi's Ice Cream Truck Bilby Banana Split 3": LocData(0x6900 + 233, "New Burramudgee"), #Nightmare Gunyip Skin
-    "Naomi's Ice Cream Truck Bilby Banana Split 4": LocData(0x6900 + 234, "New Burramudgee"), #Sky Force Gunyip Skin
-    "Naomi's Ice Cream Truck Bilby Banana Split 5": LocData(0x6900 + 235, "New Burramudgee"), #Spitfire Gunyip Skin
-    "Parrotbeard's Shop - Bilby Map":         LocData(0x6900 + 35, "Pippy Beach"),
-    "Parrotbeard's Shop - Kromium Orb Map":   LocData(0x6900 + 36, "Pippy Beach"),
-    "Parrotbeard's Shop - Steve Map":         LocData(0x6900 + 37, "Pippy Beach"),
+    "Cassopolis Rang Shop 1": LocData(0x6900 + 3, "Cassopolis"),  # air
+    "Cassopolis Rang Shop 2": LocData(0x6900 + 14, "Cassopolis"),  # magnet
+    "Cassopolis Rang Shop 3": LocData(0x6900 + 9, "Cassopolis"),  # warp
+    "Cassopolis Rang Shop 4": LocData(0x6900 + 4, "Cassopolis"),  # earth
+    "Cassopolis Rang Shop 5": LocData(0x6900 + 11, "Cassopolis"),  # zoom
+    "Cassopolis Rang Shop 6": LocData(0x6900 + 13, "Cassopolis"),  # chrono
+    "Cassopolis Rang Shop 7": LocData(0x6900 + 10, "Cassopolis"),  # multi
+    "Cassopolis Rang Shop 8": LocData(0x6900 + 20, "Cassopolis"),  # mega chassis
+    "Cassopolis Rang Shop 9": LocData(0x6900 + 21, "Cassopolis"),  # smash chassis
+    "Cassopolis Rang Shop 10": LocData(0x6900 + 22, "Cassopolis"),  # ring chassis
+    "Cassopolis Rang Shop 11": LocData(0x6900 + 26, "Cassopolis"),  # doom chassis
+    "Naomi's Ice Cream Truck 1": LocData(0x6900 + 150, "New Burramudgee"),  # Grav Grenade
+    "Naomi's Ice Cream Truck 2": LocData(0x6900 + 151, "New Burramudgee"),  # Satellite Strike
+    "Naomi's Ice Cream Truck 3": LocData(0x6900 + 152, "New Burramudgee"),  # Shadow Beam
+    "Naomi's Ice Cream Truck 4": LocData(0x6900 + 153, "New Burramudgee"),  # Thermo Cannon
+    "Naomi's Ice Cream Truck 5": LocData(0x6900 + 154, "New Burramudgee"),  # Nucleon Shield
+    "Naomi's Ice Cream Truck 6": LocData(0x6900 + 155, "New Burramudgee"),  # Orbidrills
+    "Parrotbeard's Shop - Bilby Map": LocData(0x6900 + 35, "Pippy Beach"),
+    "Parrotbeard's Shop - Kromium Orb Map": LocData(0x6900 + 36, "Pippy Beach"),
+    "Parrotbeard's Shop - Steve Map": LocData(0x6900 + 37, "Pippy Beach"),
     "Parrotbeard's Shop - Picture Frame Map": LocData(0x6900 + 38, "Pippy Beach"),
-    "Parrotbeard's Shop - Gooboo Berry Map":  LocData(0x6900 + 39, "Pippy Beach"),
+    "Parrotbeard's Shop - Gooboo Berry Map": LocData(0x6900 + 39, "Pippy Beach"),
+}
+
+
+korb_shop_location_dict: Dict[str, LocData] = {
+    "Rang Shop Korb 1": LocData(0x6900 + 201, "New Burramudgee"),  # Original Ty Skin
+    "Rang Shop Korb 2": LocData(0x6900 + 202, "New Burramudgee"),  # Sly Skin
+    "Rang Shop Korb 3": LocData(0x6900 + 203, "New Burramudgee"),  # Team Krome Skin
+    "Rang Shop Korb 4": LocData(0x6900 + 204, "New Burramudgee"),  # Commando Skin
+    "Rang Shop Korb 5": LocData(0x6900 + 205, "New Burramudgee"),  # Zombie Skin
+    "Rang Shop Korb 6": LocData(0x6900 + 206, "New Burramudgee"),  # Quinkan Skin
+    "Rang Shop Korb 7": LocData(0x6900 + 207, "New Burramudgee"),  # Ridge Skin
+    "Rang Shop Korb 8": LocData(0x6900 + 208, "New Burramudgee"),  # Ghost Tiger Skin
+}
+
+
+berry_shop_location_dict: Dict[str, LocData] = {
+    "Naomi's Ice Cream Truck Berry Blast 1": LocData(0x6900 + 221, "New Burramudgee"),  # Midnight Crab Skin
+    "Naomi's Ice Cream Truck Berry Blast 2": LocData(0x6900 + 222, "New Burramudgee"),  # Crab Tank Crab Skin
+    "Naomi's Ice Cream Truck Berry Blast 3": LocData(0x6900 + 223, "New Burramudgee"),  # White Knight Crab Skin
+    "Naomi's Ice Cream Truck Berry Blast 4": LocData(0x6900 + 224, "New Burramudgee"),  # Mean Green Crab Skin
+}
+
+
+bilby_shop_location_dict = {
+    "Naomi's Ice Cream Truck Bilby Banana Split 1": LocData(0x6900 + 231, "New Burramudgee"),  # Cammo Gunyip Skin
+    "Naomi's Ice Cream Truck Bilby Banana Split 2": LocData(0x6900 + 232, "New Burramudgee"),  # Bush Rescue Gunyip Skin
+    "Naomi's Ice Cream Truck Bilby Banana Split 3": LocData(0x6900 + 233, "New Burramudgee"),  # Nightmare Gunyip Skin
+    "Naomi's Ice Cream Truck Bilby Banana Split 4": LocData(0x6900 + 234, "New Burramudgee"),  # Sky Force Gunyip Skin
+    "Naomi's Ice Cream Truck Bilby Banana Split 5": LocData(0x6900 + 235, "New Burramudgee"),  # Spitfire Gunyip Skin
 }
 
 
@@ -164,7 +175,7 @@ bilby_dict: Dict[str, LocData] = {
     "Bilby 10": LocData(0x4109, "Dead Dingo Marsh"),
     "Bilby 11": LocData(0x410A, "Frozen Forest"),
     "Bilby 12": LocData(0x410B, "Frozen Forest"), #grav grenade
-    "Bilby 13": LocData(0x410C, "Dead Dingo Marsh"),
+    "Bilby 13": LocData(0x410C, "Dead Dingo Marsh"), # water stone
     "Bilby 14": LocData(0x410D, "Cassopolis"),
     "Bilby 15": LocData(0x410E, "Cassopolis"), #hardcore parkour
     "Bilby 16": LocData(0x410F, "Mount Boom Basin"),
@@ -259,10 +270,10 @@ stone_dict: Dict[str, LocData] = {
 steve_dict: Dict[str, LocData] = {
     "Steve - New Burramudgee": LocData(0x4400, "New Burramudgee"),
     "Steve - Kaka Boom Island": LocData(0x4401, "Kaka Boom Island"), #Earth
-    "Steve - Razorback Stream": LocData(0x4402, "SR Razorback Stream"), #Fire
+    "Steve - Razorback Stream": LocData(0x4402, "Razorback Stream"), #Fire
     "Steve - Mount Boom Basin": LocData(0x4403, "Mount Boom Basin"),
     "Steve - Dead Dingo Marsh": LocData(0x4404, "Dead Dingo Marsh"),
-    "Steve - Pippy Beach": LocData(0x4405, "SR Pippy Beach"),
+    "Steve - Pippy Beach": LocData(0x4405, "Pippy Beach"),
 }
 
 
@@ -430,7 +441,10 @@ mission_dict: Dict[str, LocData] = {
 
 full_location_dict: Dict[str, LocData] = {
     **story_dict,
-    **shop_location_dict,
+    **opal_shop_location_dict,
+    **korb_shop_location_dict,
+    **berry_shop_location_dict,
+    **bilby_shop_location_dict,
     **gooboo_berry_dict,
     **kromium_orb_dict,
     **bilby_dict,
