@@ -2,7 +2,7 @@ from typing import ClassVar, Dict, Optional
 from BaseClasses import Tutorial, Item, ItemClassification, CollectionState, Location
 from Utils import visualize_regions
 from worlds.AutoWorld import WebWorld, World
-from worlds.ty_the_tasmanian_tiger_3.Items import create_ty3_items, full_item_dict, Ty3Item, junk_weights
+from worlds.ty_the_tasmanian_tiger_3.Items import *
 from worlds.ty_the_tasmanian_tiger_3.Locations import create_ty3_locations, full_location_dict
 from worlds.ty_the_tasmanian_tiger_3.Options import Ty3OptionGroups, Ty3Options
 from worlds.ty_the_tasmanian_tiger_3.Regions import create_ty3_regions, connect_ty3_regions
@@ -64,6 +64,8 @@ class Ty3World(World):
             "DeathLink": self.options.death_link.value,
         }
 
+    def get_filler_item_name(self) -> str:
+        return get_junk_item_names(self.random, 1)[0]
 
     def generate_early(self):
         self.locations = create_ty3_locations(self)
