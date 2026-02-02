@@ -62,41 +62,41 @@ def get_rules(world):
     rules = {
         "locations": {
             # Shops
-            "Naomi's Ice Cream Truck Berry Blast 1": lambda state:
+            "Naomi's Ice Cream Truck Berry Purchase 1": lambda state:
                 state.has("Gooboo Berry", world.player, 2),
-            "Naomi's Ice Cream Truck Berry Blast 2": lambda state:
+            "Naomi's Ice Cream Truck Berry Purchase 2": lambda state:
                 state.has("Gooboo Berry", world.player, 4),
-            "Naomi's Ice Cream Truck Berry Blast 3": lambda state:
+            "Naomi's Ice Cream Truck Berry Purchase 3": lambda state:
                 state.has("Gooboo Berry", world.player, 6),
-            "Naomi's Ice Cream Truck Berry Blast 4": lambda state:
+            "Naomi's Ice Cream Truck Berry Purchase 4": lambda state:
                 state.has("Gooboo Berry", world.player, 8),
 
-            "Naomi's Ice Cream Truck Bilby Banana Split 1": lambda state:
+            "Naomi's Ice Cream Truck Bilby Purchase 1": lambda state:
                 state.has("Bilby", world.player, 7),
-            "Naomi's Ice Cream Truck Bilby Banana Split 2": lambda state:
+            "Naomi's Ice Cream Truck Bilby Purchase 2": lambda state:
                 state.has("Bilby", world.player, 14),
-            "Naomi's Ice Cream Truck Bilby Banana Split 3": lambda state:
+            "Naomi's Ice Cream Truck Bilby Purchase 3": lambda state:
                 state.has("Bilby", world.player, 21),
-            "Naomi's Ice Cream Truck Bilby Banana Split 4": lambda state:
+            "Naomi's Ice Cream Truck Bilby Purchase 4": lambda state:
                 state.has("Bilby", world.player, 28),
-            "Naomi's Ice Cream Truck Bilby Banana Split 5": lambda state:
+            "Naomi's Ice Cream Truck Bilby Purchase 5": lambda state:
                 state.has("Bilby", world.player, 35),
 
-            "Rang Shop Korb 1": lambda state:
+            "Rang Shop Purchase 1": lambda state:
                 state.has("Kromium Orb", world.player, 3),
-            "Rang Shop Korb 2": lambda state:
+            "Rang Shop Purchase 2": lambda state:
                 state.has("Kromium Orb", world.player, 6),
-            "Rang Shop Korb 3": lambda state:
+            "Rang Shop Purchase 3": lambda state:
                 state.has("Kromium Orb", world.player, 9),
-            "Rang Shop Korb 4": lambda state:
+            "Rang Shop Purchase 4": lambda state:
                 state.has("Kromium Orb", world.player, 12),
-            "Rang Shop Korb 5": lambda state:
+            "Rang Shop Purchase 5": lambda state:
                 state.has("Kromium Orb", world.player, 15),
-            "Rang Shop Korb 6": lambda state:
+            "Rang Shop Purchase 6": lambda state:
                 state.has("Kromium Orb", world.player, 18),
-            "Rang Shop Korb 7": lambda state:
+            "Rang Shop Purchase 7": lambda state:
                 state.has("Kromium Orb", world.player, 21),
-            "Rang Shop Korb 8": lambda state:
+            "Rang Shop Purchase 8": lambda state:
                 state.has("Kromium Orb", world.player, 24),
 
             #Missions
@@ -156,106 +156,104 @@ def get_rules(world):
                 and state.has("Shadow Stone 3", world.player),
 
             #Orbs
-            "Kromium Orb 1": lambda state:
+            "Cinder Canyon Orb 1": lambda state:
                 has_infra(world, state),
-            "Kromium Orb 2": lambda state:
+            "Cinder Canyon Orb 2": lambda state:
                 has_infra(world, state),
-            "Kromium Orb 3": lambda state:
+            "Cinder Canyon Orb 3": lambda state:
                 can_smash(world, state),
-            "Kromium Orb 4": lambda state:
+            "Mount Boom Basin Orb 1": lambda state:
                 can_burn(world, state),
-            "Kromium Orb 6": lambda state:
+            "Dead Dingo Marsh Orb 2": lambda state:
                 can_swing(world, state) and can_smash(world, state) and
                 (state.has("Zoom Stone", world.player) or state.has("Mega Stone", world.player)),
-            "Kromium Orb 7": lambda state:
+            "Dead Dingo Marsh Orb 3": lambda state:
                 has_infra(world, state),
-            "Kromium Orb 8": lambda state:
+            "New Burramudgee Orb 1": lambda state:
                 can_smash(world, state),
-            "Kromium Orb 10": lambda state:
+            "Dead Dingo Marsh Orb 4": lambda state:
                 has_infra(world, state),
-            "Kromium Orb 14": lambda state:
+            "Mount Boom Basin Orb 3": lambda state:
                 can_smash(world, state),
-            "Kromium Orb 18": lambda state:
+            "SR Swamp Orb 1": lambda state:
                 can_freeze(world, state),
-            "Kromium Orb 20": lambda state:
+            "SR Swamp Orb 3": lambda state:
                 can_gunyip(world, state),
-            "Kromium Orb 22": lambda state:
+            "Kaka Boom Island Orb 4": lambda state:
                 has_infra(world, state),
-            "Kromium Orb 23": lambda state:
+            "Gooboo Gully Orb 1": lambda state:
                 has_infra(world, state),
-            "Kromium Orb 25": lambda state:
+            "Gooboo Gully Orb 3": lambda state:
                 can_swing(world, state),
-            "Kromium Orb 26": lambda state:
+            "Gooboo Gully Orb 4": lambda state:
                 has_infra(world, state),
-            "Kromium Orb 27": lambda state:
+            "Cinder Canyon Orb 4": lambda state:
                 has_infra(world, state),
 
             #Bilbies
-            "Bilby 2": lambda state:
+            "New Burramudgee Bilby 2": lambda state:
                 can_zap(world,state),
-            "Bilby 3": lambda state:
+            "Cinder Canyon Bilby 1": lambda state:
                 can_burn(world, state),
-            "Bilby 4": lambda state:
+            "Cinder Canyon Bilby 2": lambda state:
                 can_tp(world, state),
-            "Bilby 6": lambda state:
+            "Backwood Blizzard Bilby 1": lambda state:
                 state.has("Grav Grenade", world.player) or state.has("Satellite Strike", world.player),
-            "Bilby 7": lambda state:
+            "Backwood Blizzard Bilby 2": lambda state:
             state.has("Grav Grenade", world.player) or state.has("Satellite Strike", world.player),
-            "Bilby 9": lambda state:
+            "Dead Dingo Marsh Bilby 1": lambda state:
                 can_swing(world, state),
-            "Bilby 12": lambda state:
+            "Frozen Forest Bilby 2": lambda state:
                 state.has("Grav Grenade", world.player),
-            "Bilby 13": lambda state:
+            "Dead Dingo Marsh Bilby 3": lambda state:
                 state.has("Water Stone", world.player),
-            "Bilby 19": lambda state:
+            "Winter Woods Bilby 3": lambda state:
                 state.has("Grav Grenade", world.player),
-            "Bilby 22": lambda state:
+            "Kaka Boom Island Bilby 3": lambda state:
                 can_smash(world, state),
-            "Bilby 24": lambda state:
+            "SR Swamp Bilby 1": lambda state:
                 can_smash(world, state),
-            "Bilby 27": lambda state:
+            "SR Swamp Bilby 4": lambda state:
                 state.has("Level - Kaka Boom Island", world.player),
-            "Bilby 36": lambda state:
+            "Razorback Stream Bilby": lambda state:
                 can_tp(world, state), #jump is possible without warp
 
             #Stones
-            "Stone 1": lambda state:
+            "Razorback Stream Stone 1": lambda state:
                 state.has("Karlos", world.player),
-            "Stone 2": lambda state:
+            "Razorback Stream Stone 2": lambda state:
                 state.has("Karlos", world.player),
-            "Stone 3": lambda state:
+            "Dead Dingo Marsh Stone 1": lambda state:
                 has_infra(world, state) and can_swing(world, state),
-            "Stone 6": lambda state:
+            "Kaka Boom Island Stone 1": lambda state:
                 can_magnet(world, state),
-            "Stone 8": lambda state:
-                can_magnet(world, state),
-            "Stone 9": lambda state:
+            "SR Swamp Stone 1": lambda state:
                 state.has("Karlos", world.player),
-            "Stone 10": lambda state:
+            "SR Swamp Stone 2": lambda state:
                 state.has("Karlos", world.player),
-            "Stone 14": lambda state:
+            "SR Swamp Stone 3": lambda state:
                 state.has("Karlos", world.player),
-            "Stone 15": lambda state:
+            "SR Swamp Stone 4": lambda state:
                 state.has("Karlos", world.player),
-            "Stone 16": lambda state:
+            "Frozen Forest Stone 1": lambda state:
                 state.has("Grav Grenade", world.player),
-            "Stone 28": lambda state:
+            "New Burramudgee Stone 1": lambda state:
                 can_smash(world, state),
-            "Stone 29": lambda state:
+            "New Burramudgee Stone 2": lambda state:
                 can_magnet(world, state),
-            "Stone 31": lambda state:
+            "Razorback Stream Stone 4": lambda state:
                 can_burn(world, state),
-            "Stone 39": lambda state:
-                can_magnet(world, state),
-            "Stone 42": lambda state:
+            "Cinder Canyon Stone 2": lambda state:
+                can_zap(world, state),
+            "Mount Boom Basin Stone 2": lambda state:
                 has_infra(world, state) and can_burn(world, state),
-            "Stone 49": lambda state:
+            "Cassopolis Stone 1": lambda state:
                 can_swing(world, state),
-            "Stone 50": lambda state:
+            "Cassopolis Stone 2": lambda state:
                 has_infra(world, state),
-            "Stone 55": lambda state:
+            "Razorback Stream Stone 5": lambda state:
                 has_infra(world, state),
-            "Stone 56": lambda state:
+            "Razorback Stream Stone 6": lambda state:
                 can_burn(world, state) and can_zap(world, state),
 
             #Steves
@@ -265,114 +263,114 @@ def get_rules(world):
                 can_smash(world, state),
 
             #Berries
-            "Gooboo Berry 1": lambda state:
+            "Cinder Canyon Gooboo Berry": lambda state:
                 can_smash(world, state),
-            "Gooboo Berry 3": lambda state:
+            "Dead Dingo Marsh Gooboo Berry": lambda state:
                 can_swing(world, state),
-            "Gooboo Berry 4": lambda state:
+            "Mount Boom Basin Gooboo Berry": lambda state:
                 can_swing(world, state) and can_burn(world, state),
-            "Gooboo Berry 6": lambda state:
+            "Kaka Boom Island Gooboo Berry": lambda state:
                 can_smash(world, state),
 
             #Frames
-            "Picture Frame 1": lambda state:
+            "Dead Dingo Marsh Picture Frame 1": lambda state:
                 has_infra(world, state),
-            "Picture Frame 2": lambda state:
+            "Dead Dingo Marsh Picture Frame 2": lambda state:
                 has_infra(world, state) and can_smash(world, state),
-            "Picture Frame 3": lambda state:
+            "Dead Dingo Marsh Picture Frame 3": lambda state:
                 has_infra(world, state) and can_smash(world, state),
-            "Picture Frame 4": lambda state:
+            "Dead Dingo Marsh Picture Frame 4": lambda state:
                 has_infra(world, state) and can_smash(world, state),
-            "Picture Frame 5": lambda state:
+            "Dead Dingo Marsh Picture Frame 5": lambda state:
                 has_infra(world, state) and can_smash(world, state),
-            "Picture Frame 6": lambda state:
+            "Dead Dingo Marsh Picture Frame 6": lambda state:
                 has_infra(world, state) and can_smash(world, state),
-            "Picture Frame 8": lambda state:
+            "Dead Dingo Marsh Picture Frame 7": lambda state:
                 can_swing(world, state),
-            "Picture Frame 12": lambda state:
+            "Cassopolis Picture Frame 1": lambda state:
                 can_smash(world, state),
-            "Picture Frame 16": lambda state:
+            "Dead Dingo Marsh Picture Frame 14": lambda state:
                 can_swing(world, state),
-            "Picture Frame 17": lambda state:
+            "Dead Dingo Marsh Picture Frame 15": lambda state:
                 can_swing(world, state) and can_smash(world, state) and
                 (state.has("Zoom Stone", world.player) or state.has("Mega Stone", world.player)),
-            "Picture Frame 27": lambda state:
+            "Kaka Boom Island Picture Frame 10": lambda state:
                 has_infra(world, state),
-            "Picture Frame 28": lambda state:
+            "Kaka Boom Island Picture Frame 11": lambda state:
                 has_infra(world, state),
-            "Picture Frame 29": lambda state:
+            "Kaka Boom Island Picture Frame 12": lambda state:
                 has_infra(world, state),
-            "Picture Frame 30": lambda state:
+            "Kaka Boom Island Picture Frame 13": lambda state:
                 has_infra(world, state),
-            "Picture Frame 31": lambda state:
+            "Kaka Boom Island Picture Frame 14": lambda state:
                 has_infra(world, state),
-            "Picture Frame 32": lambda state:
+            "Kaka Boom Island Picture Frame 15": lambda state:
                 has_infra(world, state),
-            "Picture Frame 33": lambda state:
+            "Winter Woods Picture Frame 1": lambda state:
                 state.has("Grav Grenade", world.player),
-            "Picture Frame 42": lambda state:
+            "Winter Woods Picture Frame 10": lambda state:
                 state.has("Grav Grenade", world.player),
-            "Picture Frame 52": lambda state:
+            "Mount Boom Basin Picture Frame 1": lambda state:
                 can_smash(world, state),
-            "Picture Frame 53": lambda state:
+            "Mount Boom Basin Picture Frame 2": lambda state:
                 can_smash(world, state),
-            "Picture Frame 54": lambda state:
+            "Mount Boom Basin Picture Frame 3": lambda state:
                 can_smash(world, state),
-            "Picture Frame 55": lambda state:
+            "Mount Boom Basin Picture Frame 4": lambda state:
                 can_smash(world, state),
-            "Picture Frame 56": lambda state:
+            "Mount Boom Basin Picture Frame 5": lambda state:
                 has_infra(world, state),
-            "Picture Frame 57": lambda state:
+            "Mount Boom Basin Picture Frame 6": lambda state:
                 has_infra(world, state),
-            "Picture Frame 58": lambda state:
+            "Mount Boom Basin Picture Frame 7": lambda state:
                 has_infra(world, state),
-            "Picture Frame 59": lambda state:
+            "Mount Boom Basin Picture Frame 8": lambda state:
                 has_infra(world, state),
-            "Picture Frame 60": lambda state:
+            "Mount Boom Basin Picture Frame 9": lambda state:
                 has_infra(world, state),
-            "Picture Frame 61": lambda state:
+            "Mount Boom Basin Picture Frame 10": lambda state:
                 has_infra(world, state),
-            "Picture Frame 70": lambda state:
+            "Cinder Canyon Picture Frame 4": lambda state:
                 can_smash(world, state),
-            "Picture Frame 71": lambda state:
+            "Cinder Canyon Picture Frame 5": lambda state:
                 can_smash(world, state),
-            "Picture Frame 72": lambda state:
+            "Cinder Canyon Picture Frame 6": lambda state:
                 can_smash(world, state),
-            "Picture Frame 73": lambda state:
+            "Cinder Canyon Picture Frame 7": lambda state:
                 can_smash(world, state),
-            "Picture Frame 74": lambda state:
+            "Cinder Canyon Picture Frame 8": lambda state:
                 can_smash(world, state),
-            "Picture Frame 81": lambda state:
+            "Backwood Blizzard Picture Frame 5": lambda state:
                 state.has("Grav Grenade", world.player)
                 or state.has("Satellite Cannon", world.player),
-            "Picture Frame 82": lambda state:
+            "Backwood Blizzard Picture Frame 6": lambda state:
                 state.has("Grav Grenade", world.player)
                 or state.has("Satellite Cannon", world.player),
-            "Picture Frame 96": lambda state:
+            "SR Swamp Picture Frame 14": lambda state:
                 has_infra(world, state),
-            "Picture Frame 104": lambda state:
+            "New Burramudgee Picture Frame 7": lambda state:
                 state.has("Magnet Stone", world.player, 2) and has_chassis(world, state, 0b10111010),
-            "Picture Frame 108": lambda state:
+            "Cassopolis Picture Frame 3": lambda state:
                 can_smash(world, state),
-            "Picture Frame 109": lambda state:
+            "Cassopolis Picture Frame 4": lambda state:
                 can_smash(world, state),
-            "Picture Frame 111": lambda state:
+            "Cassopolis Picture Frame 6": lambda state:
                 can_smash(world, state) and can_swing(world, state),
-            "Picture Frame 112": lambda state:
+            "Cassopolis Picture Frame 7": lambda state:
                 can_smash(world, state),
-            "Picture Frame 114": lambda state:
+            "Cassopolis Picture Frame 9": lambda state:
                 can_smash(world, state),
-            "Picture Frame 115": lambda state:
+            "Cassopolis Picture Frame 10": lambda state:
                 can_smash(world, state),
-            "Picture Frame 116": lambda state:
+            "Dead Dingo Marsh Picture Frame 16": lambda state:
                 has_infra(world, state),
-            "Picture Frame 117": lambda state:
+            "Dead Dingo Marsh Picture Frame 17": lambda state:
                 has_infra(world, state),
-            "Picture Frame 118": lambda state:
+            "Dead Dingo Marsh Picture Frame 18": lambda state:
                 has_infra(world, state),
-            "Picture Frame 119": lambda state:
+            "Dead Dingo Marsh Picture Frame 19": lambda state:
                 has_infra(world, state),
-            "Picture Frame 120": lambda state:
+            "Dead Dingo Marsh Picture Frame 20": lambda state:
                 has_infra(world, state),
         },
         "entrances": {

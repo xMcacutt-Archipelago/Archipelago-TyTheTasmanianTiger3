@@ -3,7 +3,7 @@ from BaseClasses import Tutorial, Item, ItemClassification, CollectionState, Loc
 from Utils import visualize_regions
 from worlds.AutoWorld import WebWorld, World
 from worlds.ty_the_tasmanian_tiger_3.Items import *
-from worlds.ty_the_tasmanian_tiger_3.Locations import create_ty3_locations, full_location_dict
+from worlds.ty_the_tasmanian_tiger_3.Locations import create_ty3_locations, full_location_dict, ty3_location_groups
 from worlds.ty_the_tasmanian_tiger_3.Options import Ty3OptionGroups, Ty3Options
 from worlds.ty_the_tasmanian_tiger_3.Regions import create_ty3_regions, connect_ty3_regions
 from worlds.ty_the_tasmanian_tiger_3.Rules import set_rules
@@ -46,6 +46,9 @@ class Ty3World(World):
     location_name_to_id: ClassVar[Dict[str, int]] = \
         {loc_name: loc_data.code for loc_name, loc_data in full_location_dict.items()}
 
+    item_name_groups = ty3_item_groups
+
+    location_name_groups = ty3_location_groups
 
     def __init__(self, multiworld, player):
         super().__init__(multiworld, player)
@@ -106,7 +109,8 @@ class Ty3World(World):
 
 
     def generate_output(self, output_directory: str):
-        visualize_regions(self.multiworld.get_region("Menu", self.player), f"Player{self.player}.puml",
-                          show_entrance_names=True,
-                          regions_to_highlight=self.multiworld.get_all_state(self.player).reachable_regions[
-                              self.player])
+        pass
+        # visualize_regions(self.multiworld.get_region("Menu", self.player), f"Player{self.player}.puml",
+        #                   show_entrance_names=True,
+        #                   regions_to_highlight=self.multiworld.get_all_state(self.player).reachable_regions[
+        #                       self.player])

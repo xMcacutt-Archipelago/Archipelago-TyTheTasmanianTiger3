@@ -77,6 +77,7 @@ def add_mission_complete_events(world):
             print(f"Location {mission_name} not found in multiworld, skipping.")
     return count
 
+
 barriers: Dict[str, ItemData] = {
     "Sly": ItemData(0x981, ItemClassification.progression),
     "Duke": ItemData(0x982, ItemClassification.progression),
@@ -89,6 +90,7 @@ barriers: Dict[str, ItemData] = {
     "Level - Kaka Boom Island": ItemData(0x949, ItemClassification.progression),
     "Level - Mount Boom Basin": ItemData(0x94A, ItemClassification.progression),
 }
+
 
 item_dict: Dict[str, ItemData] = {
     "Shadow Beam": ItemData(0x51, ItemClassification.progression),
@@ -108,6 +110,7 @@ item_dict: Dict[str, ItemData] = {
     "Shadow Stone 3": ItemData(0x5f, ItemClassification.progression),
 }
 
+
 individual_rangs: Dict[str, ItemData] = {
     "Duo Chassis": ItemData(0x02, ItemClassification.progression),
     "Lash Chassis": ItemData(0x03, ItemClassification.progression),
@@ -117,6 +120,7 @@ individual_rangs: Dict[str, ItemData] = {
     "Shadow Chassis": ItemData(0x07, ItemClassification.progression),
     "Doom Chassis": ItemData(0x08, ItemClassification.progression),
 }
+
 
 bunyip_stones: Dict[str, ItemData] = {
     "Fire Stone": ItemData(4601, ItemClassification.progression, 3),
@@ -132,11 +136,13 @@ bunyip_stones: Dict[str, ItemData] = {
     "Magnet Stone": ItemData(4611, ItemClassification.progression, 3),
 }
 
+
 collectibles: Dict[str, ItemData] = {
     "Kromium Orb": ItemData(0x20, ItemClassification.progression_skip_balancing, 24, 6, currency_type="KOrb"),
     "Gooboo Berry": ItemData(0x21, ItemClassification.progression_skip_balancing, 8, 2, currency_type="Berry"),
     "Bilby": ItemData(0x22, ItemClassification.progression_skip_balancing, 35, 5, currency_type="Bilby")
 }
+
 
 junk_items: Dict[str, ItemData] = {
     "50 Opals": ItemData(0x25, ItemClassification.skip_balancing, currency_type="Opal"),
@@ -147,14 +153,16 @@ junk_items: Dict[str, ItemData] = {
     "Full Heal": ItemData(0x2A, ItemClassification.skip_balancing),
 }
 
+
 junk_weights = {
     "50 Opals": 15,
     "100 Opals": 20,
     "250 Opals": 20,
-    "500 Opals": 10,
-    "1000 Opals": 5,
+    "500 Opals": 5,
+    "1000 Opals": 1,
     "Full Heal": 20,
 }
+
 
 full_item_dict: Dict[str, ItemData] = {
     **item_dict,
@@ -164,3 +172,27 @@ full_item_dict: Dict[str, ItemData] = {
     **collectibles,
     **junk_items,
 }
+
+
+def get_item_groups() -> dict[str, set[str]]:
+    return {
+        "Stone": set(bunyip_stones.keys()),
+        "Bunyip Upgrade": {
+            "Shadow Beam",
+            "Grav Grenade",
+            "Satellite Strike",
+            "Thermo Cannon",
+            "Nucleon Shield",
+            "Orbidrills"
+        },
+        "Barrier": set(barriers.keys()),
+        "Shadow Stone": {
+            "Shadow Stone 1",
+            "Shadow Stone 2",
+            "Shadow Stone 3",
+        },
+        "Rang": set(individual_rangs.keys())
+    }
+
+
+ty3_item_groups = get_item_groups()
