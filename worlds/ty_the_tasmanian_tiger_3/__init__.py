@@ -1,5 +1,6 @@
 from typing import ClassVar, Dict, Optional
 from BaseClasses import Tutorial, Item, ItemClassification, CollectionState, Location
+from Options import OptionError
 from Utils import visualize_regions
 from worlds.AutoWorld import WebWorld, World
 from worlds.ty_the_tasmanian_tiger_3.Items import *
@@ -59,7 +60,7 @@ class Ty3World(World):
 
     def fill_slot_data(self) -> id:
         return {
-            "ModVersion": "1.1.0",
+            "ModVersion": "1.2.0",
             "StoryMissionsToGoal": self.options.story_missions_for_goal.value,
             "BunyipMissionsToGoal": self.options.bunyip_missions_for_goal.value,
             "GunyipMissionsToGoal": self.options.gunyip_missions_for_goal.value,
@@ -71,17 +72,16 @@ class Ty3World(World):
         return get_junk_item_names(self.random, 1)[0]
 
     def generate_early(self):
+        if len(self.options.item_links.value) != 0:
+            raise OptionError("Ty the Tasmanian Tiger 3 does not support item links.")
         self.locations = create_ty3_locations(self)
-
 
     def create_regions(self):
         create_ty3_regions(self, self.locations)
         connect_ty3_regions(self)
 
-
     def create_item(self, item: str) -> Ty3Item:
         return Ty3Item(item, ItemClassification.useful, self.item_name_to_id[item], self.player)
-
 
     def create_items(self):
         create_ty3_items(self)
@@ -103,10 +103,8 @@ class Ty3World(World):
                 Item("Forbidden Fruit Map", ItemClassification.useful, self.item_name_to_id["Forbidden Fruit Map"], self.player)
             )
 
-
     def set_rules(self):
         set_rules(self)
-
 
     def generate_output(self, output_directory: str):
         pass
