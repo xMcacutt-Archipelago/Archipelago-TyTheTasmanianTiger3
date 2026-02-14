@@ -434,16 +434,16 @@ def set_rules(world):
 
     for location_name in opal_shop_location_dict:
         world.get_location(location_name).item_rule = \
-            lambda item: item.game is not "Ty the Tasmanian Tiger 3" or item.name not in full_item_dict or full_item_dict[item.name].currency_type != "Opal"
+            lambda item: item.game != "Ty the Tasmanian Tiger 3" or item.name not in full_item_dict or full_item_dict[item.name].currency_type != "Opal"
     for location_name in korb_shop_location_dict:
         world.get_location(location_name).item_rule = \
-            lambda item: item.game is not "Ty the Tasmanian Tiger 3" or item.name not in full_item_dict or full_item_dict[item.name].currency_type not in {"Opal", "KOrb"}
+            lambda item: item.game != "Ty the Tasmanian Tiger 3" or item.name not in full_item_dict or full_item_dict[item.name].currency_type not in {"Opal", "KOrb"}
     for location_name in berry_shop_location_dict:
         world.get_location(location_name).item_rule = \
-            lambda item: item.game is not "Ty the Tasmanian Tiger 3" or item.name not in full_item_dict or full_item_dict[item.name].currency_type not in {"Opal", "Berry"}
+            lambda item: item.game != "Ty the Tasmanian Tiger 3" or item.name not in full_item_dict or full_item_dict[item.name].currency_type not in {"Opal", "Berry"}
     for location_name in bilby_shop_location_dict:
         world.get_location(location_name).item_rule = \
-            lambda item: item.game is not "Ty the Tasmanian Tiger 3" or item.name not in full_item_dict or full_item_dict[item.name].currency_type not in {"Opal", "Bilby"}
+            lambda item: item.game != "Ty the Tasmanian Tiger 3" or item.name not in full_item_dict or full_item_dict[item.name].currency_type not in {"Opal", "Bilby"}
 
     world.multiworld.get_location(f"Quinking", world.player).place_locked_item(
         Ty3Item("Victory", ItemClassification.progression, None, world.player))
